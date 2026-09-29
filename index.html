@@ -2,33 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>John C D Doe v Big Brothers Big Sisters of Central Arizona and Big Brothers Big Sisters of America | CV2020-014920</title>
-  <meta name="description" content="Public case archive for John C D Doe v Big Brothers Big Sisters of Central Arizona and Big Brothers Big Sisters of America, a civil case involving claims of childhood sexual abuse. Maricopa County case CV2020-014920.">
+  <meta name="description" content="Independent case archive for John C D Doe v Big Brothers Big Sisters of Central Arizona and Big Brothers Big Sisters of America, a civil case involving claims of childhood sexual abuse in Arizona.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/">
   <meta name="theme-color" content="#101a2b">
 
-  <meta property="og:title" content="John C D Doe v Big Brothers Big Sisters of Central Arizona and Big Brothers Big Sisters of America | CV2020-014920">
-  <meta property="og:description" content="Independent public case archive for Maricopa County Superior Court case CV2020-014920.">
+  <meta property="og:title" content="John C D Doe v Big Brothers Big Sisters | CV2020-014920">
+  <meta property="og:description" content="Independent public case archive for Arizona Superior Court case CV2020-014920.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/">
+  <meta property="og:image" content="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/hero-court-archive.png">
+  <meta property="og:image:alt" content="Illustrative courthouse and archival folders artwork, not an actual court photograph">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="John C D Doe v Big Brothers Big Sisters | CV2020-014920">
+  <meta name="twitter:description" content="Independent public case archive for Arizona Superior Court case CV2020-014920.">
+  <meta name="twitter:image" content="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/hero-court-archive.png">
+
+  <link rel="preload" as="image" href="hero-court-archive.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "John C D Doe v Big Brothers Big Sisters of Central Arizona and Big Brothers Big Sisters of America",
+    "description": "Independent public-record reference for Maricopa County Superior Court case CV2020-014920.",
+    "url": "https://lawupdates.github.io/john-c-d-doe-cv2020-014920/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Lawupdates Public Case Archive",
+      "url": "https://lawupdates.github.io/"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Maricopa County Superior Court case CV2020-014920"
+    }
+  }
+  </script>
 
   <style>
     :root {
-      --night: #101a2b;
-      --night-soft: #1a2b45;
+      --navy: #101a2b;
+      --navy-light: #1b2d49;
+      --gold: #c7a35b;
+      --gold-pale: #f2ead8;
       --paper: #f5f3ee;
       --white: #fffefa;
       --ink: #202938;
       --muted: #667183;
       --line: #deded8;
-      --gold: #c7a35b;
-      --gold-pale: #f2ead8;
       --blue: #205883;
       --blue-pale: #eaf1f6;
-      --teal: #347d79;
       --shadow: 0 16px 44px rgba(16, 26, 43, 0.09);
       --radius: 18px;
     }
@@ -73,7 +100,7 @@
       padding: 10px 14px;
       border-radius: 8px;
       background: var(--white);
-      color: var(--night);
+      color: var(--navy);
     }
 
     .skip-link:focus {
@@ -81,7 +108,7 @@
     }
 
     .masthead {
-      background: var(--night);
+      background: var(--navy);
       color: #f7f5ef;
     }
 
@@ -121,26 +148,30 @@
     .hero {
       position: relative;
       overflow: hidden;
+      min-height: 420px;
       border-bottom: 5px solid var(--gold);
-      background:
-        radial-gradient(ellipse at 85% 10%, rgba(199, 163, 91, 0.2), transparent 27rem),
-        linear-gradient(125deg, var(--night), #1a2d49 75%);
+      background: var(--navy);
       color: var(--white);
     }
 
-    .hero::after {
+    .hero-art {
       position: absolute;
-      right: -90px;
-      bottom: -250px;
-      width: 520px;
-      height: 520px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 50%;
-      box-shadow:
-        0 0 0 48px rgba(255, 255, 255, 0.025),
-        0 0 0 96px rgba(255, 255, 255, 0.02);
-      content: "";
-      pointer-events: none;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(12, 22, 37, 0.88) 0%,
+        rgba(12, 22, 37, 0.66) 44%,
+        rgba(12, 22, 37, 0.10) 100%
+      );
     }
 
     .hero-inner {
@@ -148,7 +179,7 @@
       z-index: 1;
       width: min(1160px, calc(100% - 40px));
       margin: 0 auto;
-      padding: clamp(44px, 8vw, 86px) 0 56px;
+      padding: clamp(48px, 8vw, 88px) 0 58px;
     }
 
     .hero-kicker {
@@ -156,7 +187,7 @@
       align-items: center;
       gap: 10px;
       margin: 0 0 20px;
-      color: #e6d7b7;
+      color: #f0dcae;
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 0.16em;
@@ -164,7 +195,6 @@
     }
 
     .hero-kicker span {
-      display: inline-block;
       width: 28px;
       height: 2px;
       background: var(--gold);
@@ -174,16 +204,17 @@
       max-width: 980px;
       margin: 0;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(36px, 5.3vw, 66px);
+      font-size: clamp(36px, 5.2vw, 64px);
       font-weight: 700;
       letter-spacing: -0.045em;
-      line-height: 1.04;
+      line-height: 1.06;
+      text-shadow: 0 2px 18px rgba(0, 0, 0, 0.3);
     }
 
     .hero-subline {
       display: block;
       margin-top: 17px;
-      color: #d3dce7;
+      color: #e4e9ef;
       font-family: Arial, Helvetica, sans-serif;
       font-size: clamp(16px, 2vw, 20px);
       font-weight: 500;
@@ -192,9 +223,9 @@
     }
 
     .hero-description {
-      max-width: 730px;
-      margin: 24px 0 0;
-      color: #d5dce6;
+      max-width: 720px;
+      margin: 22px 0 0;
+      color: #edf0f4;
       font-size: clamp(16px, 2vw, 18px);
     }
 
@@ -202,7 +233,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 11px;
-      margin-top: 29px;
+      margin-top: 28px;
     }
 
     .button {
@@ -230,13 +261,13 @@
     }
 
     .button.light {
-      border-color: rgba(255, 255, 255, 0.32);
-      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.55);
+      background: rgba(16, 26, 43, 0.55);
       color: var(--white);
     }
 
     .button.light:hover {
-      background: rgba(255, 255, 255, 0.14);
+      background: rgba(16, 26, 43, 0.82);
       color: var(--white);
     }
 
@@ -263,7 +294,7 @@
     }
 
     .identity-copy strong {
-      color: var(--night);
+      color: var(--navy);
     }
 
     .search-terms {
@@ -272,12 +303,21 @@
       white-space: nowrap;
     }
 
+    .image-caption {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 7px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+      text-align: right;
+    }
+
     .layout {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 290px;
       gap: 26px;
       width: min(1160px, calc(100% - 40px));
-      margin: 32px auto 68px;
+      margin: 26px auto 68px;
       align-items: start;
     }
 
@@ -317,12 +357,11 @@
       color: #70551f;
       font-size: 13px;
       font-weight: 900;
-      letter-spacing: 0.04em;
     }
 
     h2 {
       margin: 0;
-      color: var(--night);
+      color: var(--navy);
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(23px, 3vw, 29px);
       letter-spacing: -0.025em;
@@ -361,10 +400,6 @@
     .case-value {
       color: var(--ink);
       font-weight: 650;
-    }
-
-    .case-value a {
-      font-weight: 700;
     }
 
     .callout {
@@ -418,7 +453,7 @@
 
     .timeline-item h3 {
       margin: 0 0 6px;
-      color: var(--night);
+      color: var(--navy);
       font-family: Georgia, "Times New Roman", serif;
       font-size: 19px;
       line-height: 1.3;
@@ -481,7 +516,7 @@
 
     .citation-card h3 {
       margin: 0 0 8px;
-      color: var(--night);
+      color: var(--navy);
       font-family: Georgia, "Times New Roman", serif;
       font-size: 18px;
       line-height: 1.25;
@@ -517,7 +552,7 @@
     .link-item strong {
       display: block;
       margin-bottom: 4px;
-      color: var(--night);
+      color: var(--navy);
       font-size: 15px;
     }
 
@@ -556,10 +591,6 @@
 
     .related-card {
       border-top: 4px solid var(--gold);
-    }
-
-    .related-card p {
-      color: #4f5968;
     }
 
     .side-column {
@@ -611,7 +642,7 @@
 
     footer {
       border-top: 5px solid var(--gold);
-      background: var(--night);
+      background: var(--navy);
       color: #d6deea;
     }
 
@@ -665,10 +696,27 @@
         font-size: 9px;
       }
 
+      .hero {
+        min-height: 460px;
+      }
+
+      .hero-art {
+        object-position: 61% center;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(
+          90deg,
+          rgba(12, 22, 37, 0.9),
+          rgba(12, 22, 37, 0.64)
+        );
+      }
+
       .hero-inner,
       .identity-inner,
       .layout,
-      .footer-inner {
+      .footer-inner,
+      .image-caption {
         width: calc(100% - 28px);
       }
 
@@ -679,6 +727,10 @@
       .identity-inner {
         align-items: flex-start;
         flex-direction: column;
+      }
+
+      .image-caption {
+        text-align: left;
       }
 
       .layout {
@@ -749,6 +801,12 @@
   </div>
 
   <header class="hero">
+    <img class="hero-art"
+         src="hero-court-archive.png"
+         alt="Illustrative artwork of courthouse-style architecture and archival folders; not an actual court photograph or case evidence."
+         fetchpriority="high">
+    <div class="hero-overlay" aria-hidden="true"></div>
+
     <div class="hero-inner">
       <p class="hero-kicker"><span aria-hidden="true"></span> Maricopa County, Arizona</p>
 
@@ -763,9 +821,7 @@
 
       <div class="hero-actions">
         <a class="button"
-           href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920"
-           target="_blank"
-           rel="noopener noreferrer">
+           href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920">
           Open the Official Case Docket
         </a>
         <a class="button light" href="#documented-timeline">
@@ -778,10 +834,15 @@
   <div class="identity-strip">
     <div class="identity-inner">
       <div class="identity-copy">
-        <strong>Case reference:</strong> John C D Doe v Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona
+        <strong>Case reference:</strong>
+        John C D Doe v Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona
       </div>
       <div class="search-terms">Also searched as BBBSCAZ · BBBSAZ</div>
     </div>
+  </div>
+
+  <div class="image-caption">
+    Hero artwork is illustrative; it does not depict a specific courthouse or case evidence.
   </div>
 
   <div class="layout">
@@ -840,13 +901,11 @@
               Later legal briefs identify a Superior Court decision in this case dated August 26, 2021, addressing Arizona’s law that revived certain child sexual abuse claims.
             </p>
             <div class="timeline-links">
-              <a href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920"
-                 target="_blank" rel="noopener noreferrer">
+              <a href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920">
                 Check the official trial court docket
               </a>
-              <a href="https://childusa.org/wp-content/uploads/2023/03/FINAL-PA-TESTIMONY_Const.-Amend._3.28.23.pdf"
-                 target="_blank" rel="noopener noreferrer">
-                See a later brief citing the decision
+              <a href="https://childusa.org/wp-content/uploads/2023/03/FINAL-PA-TESTIMONY_Const.-Amend._3.28.23.pdf">
+                Read a later filing citing the decision
               </a>
             </div>
           </article>
@@ -858,12 +917,10 @@
               Later legal filings report that the Arizona Supreme Court denied review in case CV-22-0003-PR.
             </p>
             <div class="timeline-links">
-              <a href="https://childusa.org/wp-content/uploads/2022/04/AscMinuteLetter-4415032-0.pdf"
-                 target="_blank" rel="noopener noreferrer">
+              <a href="https://childusa.org/wp-content/uploads/2022/04/AscMinuteLetter-4415032-0.pdf">
                 View a clerk letter copy hosted by CHILD USA
               </a>
-              <a href="https://www.azcourts.gov/appellatecourtcases/ASC"
-                 target="_blank" rel="noopener noreferrer">
+              <a href="https://www.azcourts.gov/appellatecourtcases/ASC">
                 Visit the Arizona Supreme Court case information page
               </a>
             </div>
@@ -876,13 +933,10 @@
               An amicus brief filed in Dupuis v Roman Catholic Bishop of Portland cited the Arizona case in its discussion of state laws concerning revival of child sexual abuse claims.
             </p>
             <div class="timeline-links">
-              <a href="https://www.courts.maine.gov/news/dupuis/23-122_amici_child_usa_brief.pdf"
-                 target="_blank" rel="noopener noreferrer">
-                Read the amicus brief on the Maine courts’ website
+              <a href="https://www.courts.maine.gov/news/dupuis/23-122_amici_child_usa_brief.pdf">
+                Read the brief on the Maine courts’ website
               </a>
-              <a href="other-cases.html">
-                See the case citation notes
-              </a>
+              <a href="other-cases.html">See the case citation notes</a>
             </div>
           </article>
 
@@ -893,13 +947,10 @@
               Valerie Bunker’s appellee brief in The Key School, Incorporated, et al. v Valerie Bunker cited the Arizona case in a discussion of child sexual abuse claim revival laws.
             </p>
             <div class="timeline-links">
-              <a href="https://www.mdcourts.gov/sites/default/files/import/coappeals/highlightedcases/keyschool/7-20240807briefforappellees.pdf"
-                 target="_blank" rel="noopener noreferrer">
+              <a href="https://www.mdcourts.gov/sites/default/files/import/coappeals/highlightedcases/keyschool/7-20240807briefforappellees.pdf">
                 Read the brief on the Maryland courts’ website
               </a>
-              <a href="other-cases.html">
-                See the case citation notes
-              </a>
+              <a href="other-cases.html">See the case citation notes</a>
             </div>
           </article>
         </div>
@@ -925,8 +976,7 @@
             <p>
               The amicus filing includes the Arizona case in a state-by-state discussion of revival laws. Its citation is part of the brief’s argument.
             </p>
-            <a href="https://www.courts.maine.gov/news/dupuis/23-122_amici_child_usa_brief.pdf"
-               target="_blank" rel="noopener noreferrer">
+            <a href="https://www.courts.maine.gov/news/dupuis/23-122_amici_child_usa_brief.pdf">
               Open the filed brief
             </a>
           </article>
@@ -937,8 +987,7 @@
             <p>
               The appellee brief cites the Arizona case among examples discussed in support of its position.
             </p>
-            <a href="https://www.mdcourts.gov/sites/default/files/import/coappeals/highlightedcases/keyschool/7-20240807briefforappellees.pdf"
-               target="_blank" rel="noopener noreferrer">
+            <a href="https://www.mdcourts.gov/sites/default/files/import/coappeals/highlightedcases/keyschool/7-20240807briefforappellees.pdf">
               Open the filed brief
             </a>
           </article>
@@ -966,8 +1015,7 @@
           <li class="link-item">
             <strong>Maricopa County Superior Court · Case CV2020-014920</strong>
             <p>Official trial court docket for this case.</p>
-            <a href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920"
-               target="_blank" rel="noopener noreferrer">
+            <a href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920">
               View the official case docket
             </a>
           </li>
@@ -975,8 +1023,7 @@
           <li class="link-item">
             <strong>Maricopa County Superior Court · Civil Case Search</strong>
             <p>Search civil matters in Maricopa County.</p>
-            <a href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseSearch.asp"
-               target="_blank" rel="noopener noreferrer">
+            <a href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseSearch.asp">
               Open the civil case search
             </a>
           </li>
@@ -984,14 +1031,11 @@
           <li class="link-item">
             <strong>Arizona Court of Appeals, Division One · Case 1 CA-SA 21-0223</strong>
             <p>Contact the court to request the case record.</p>
-            <a href="https://www.azcourts.gov/appellatecourtcases/Contact"
-               target="_blank" rel="noopener noreferrer">
+            <a href="https://www.azcourts.gov/appellatecourtcases/Contact">
               Request the 1 CA-SA 21-0223 case record
             </a>
             <br>
-            <a class="sub-link"
-               href="https://www.azcourts.gov/appellatecourtcases/COA1"
-               target="_blank" rel="noopener noreferrer">
+            <a class="sub-link" href="https://www.azcourts.gov/appellatecourtcases/COA1">
               Visit the Division One case information page
             </a>
           </li>
@@ -999,14 +1043,11 @@
           <li class="link-item">
             <strong>Arizona Supreme Court · Case CV-22-0003-PR</strong>
             <p>Case information and a linked copy of the clerk letter.</p>
-            <a href="https://www.azcourts.gov/appellatecourtcases/ASC"
-               target="_blank" rel="noopener noreferrer">
+            <a href="https://www.azcourts.gov/appellatecourtcases/ASC">
               Visit the Arizona Supreme Court case information page
             </a>
             <br>
-            <a class="sub-link"
-               href="https://childusa.org/wp-content/uploads/2022/04/AscMinuteLetter-4415032-0.pdf"
-               target="_blank" rel="noopener noreferrer">
+            <a class="sub-link" href="https://childusa.org/wp-content/uploads/2022/04/AscMinuteLetter-4415032-0.pdf">
               View the clerk letter copy hosted by CHILD USA
             </a>
           </li>
@@ -1014,8 +1055,7 @@
           <li class="link-item">
             <strong>Arizona Appellate Decisions</strong>
             <p>Search Arizona appellate opinions and memorandum decisions.</p>
-            <a href="https://www.azcourts.gov/opinions/Default"
-               target="_blank" rel="noopener noreferrer">
+            <a href="https://www.azcourts.gov/opinions/Default">
               Search appellate decisions
             </a>
           </li>
@@ -1023,8 +1063,7 @@
           <li class="link-item">
             <strong>UniCourt · Third-party case reference</strong>
             <p>Non-court listing for the case.</p>
-            <a href="https://unicourt.com/case/az-mars-john-c-d-doe-vs-big-brothers-big-sisters-of-america-et-al-1618230"
-               target="_blank" rel="noopener noreferrer">
+            <a href="https://unicourt.com/case/az-mars-john-c-d-doe-vs-big-brothers-big-sisters-of-america-et-al-1618230">
               View the UniCourt case reference
             </a>
           </li>
@@ -1050,6 +1089,10 @@
           <p>
             For current case status and authoritative proceedings, consult the official court docket.
           </p>
+          <p>
+            To report a broken link or suggest a source correction, use the
+            <a href="https://github.com/Lawupdates/john-c-d-doe-cv2020-014920/issues">website’s GitHub Issues page</a>.
+          </p>
         </div>
       </section>
     </main>
@@ -1062,8 +1105,7 @@
         <p><strong>Parties:</strong> John C D Doe; Big Brothers Big Sisters of Central Arizona; Big Brothers Big Sisters of America</p>
         <p><strong>Search terms:</strong> BBBSCAZ · BBBSAZ</p>
         <a class="button"
-           href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920"
-           target="_blank" rel="noopener noreferrer">
+           href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920">
           Open Official Docket
         </a>
       </section>
@@ -1082,10 +1124,7 @@
       <section class="side-card">
         <h2>Other Citing Cases</h2>
         <p>Open the companion page for the full list of public filings and citation notes.</p>
-        <a class="button"
-           href="other-cases.html">
-          View Other Cases
-        </a>
+        <a class="button" href="other-cases.html">View Other Cases</a>
       </section>
     </aside>
   </div>
