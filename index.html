@@ -81,7 +81,7 @@ nav{position:static}
 
 <section id="filings">
 <h2>Search the Court Documents</h2>
-<p>Search by document title, filing number, date, or document type. All 110 court filings open individually in the archive below.</p>
+<p>Search by document title, filing number, date, or document type. Each entry opens its complete individual PDF directly, with all pages available in your browser’s PDF reader.</p>
 
 <div class="controls">
 <input id="search" type="search" placeholder="Search all 110 court filings...">
@@ -304,8 +304,8 @@ actions.className="actions";
 
 const pdf=document.createElement("a");
 pdf.className="pdf";
-pdf.href=`viewer.html?file=${encodeURIComponent(d.id + ".pdf")}`;
-pdf.textContent="Read Filing ↗";
+pdf.href=`filings/${d.id}.pdf`;
+pdf.textContent="Open full PDF (all pages) ↗";
 pdf.target="_blank";
 pdf.rel="noopener noreferrer";
 
