@@ -87,6 +87,18 @@ footer a{color:var(--brass-light)}
 #more{background:var(--oxblood);color:white;border:1px solid #8D3743;padding:13px 25px;cursor:pointer;margin-top:20px;border-radius:3px;font-weight:bold}
 #more:hover,#more:focus-visible{background:var(--oxblood-dark)}
 :focus-visible{outline:3px solid var(--brass-light);outline-offset:3px}
+
+.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:20px 0}
+.resource-card{margin:0;padding:20px;background:#FFFEFA;border:1px solid var(--line);border-top:3px solid var(--brass);box-shadow:0 5px 15px rgba(7,20,29,.05)}
+.resource-card h3{font:21px Georgia,serif;color:var(--ink);margin:8px 0}
+.resource-card p{font-size:14px;color:#40474d;margin:0 0 13px}
+.resource-card a{display:block;margin:8px 0;color:var(--oxblood);font-weight:bold}
+.resource-label{display:block;color:var(--muted);font-size:11px;letter-spacing:1.7px;text-transform:uppercase;font-weight:bold}
+.support-card{border-top-color:var(--oxblood)}
+.source-note{font-size:13px;color:var(--muted);margin-top:18px}
+@media(max-width:850px){.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.resource-grid{grid-template-columns:1fr}}
+
 @media(max-width:700px){
   header{padding:55px 18px 50px}
   .controls{grid-template-columns:1fr}
@@ -183,10 +195,49 @@ footer a{color:var(--brass-light)}
 </section>
 
 <section id="sources">
-<h2>Official Sources and Research</h2>
-<p>For authoritative case status and complete official records, consult the court directly.</p>
-<a class="button dark" href="https://ecronline.clerkofcourt.maricopa.gov/CaseDocuments.aspx?caseNumber=CV2020-014920" target="_blank" rel="noopener">Maricopa County Court Records</a>
-<a class="button dark" href="https://github.com/Lawupdates/john-c-d-doe-cv2020-014920" target="_blank" rel="noopener">GitHub Archive</a>
+<h2>Research Links &amp; Survivor Resources</h2>
+<p>Use the official sources below to check the record and explore related information. The listed related case is separate from CV2020-014920; survivor resources are included for visitors who may want support.</p>
+<div class="resource-grid">
+<article class="resource-card">
+<span class="resource-label">Official record</span>
+<h3>Maricopa County case documents</h3>
+<p>Open the Clerk of Court’s document portal for case CV2020-014920.</p>
+<a href="https://ecronline.clerkofcourt.maricopa.gov/CaseDocuments.aspx?caseNumber=CV2020-014920" target="_blank" rel="noopener">View the official case docket ↗</a>
+</article>
+<article class="resource-card">
+<span class="resource-label">Arizona courts</span>
+<h3>Public case lookup</h3>
+<p>Search case information across participating Arizona courts. The Judicial Branch cautions that this service is not the official court record.</p>
+<a href="https://apps.azcourts.gov/publicaccess/caselookup.aspx" target="_blank" rel="noopener">Open Arizona Public Access ↗</a>
+</article>
+<article class="resource-card">
+<span class="resource-label">Legal research</span>
+<h3>Arizona opinions and decisions</h3>
+<p>Search Arizona Supreme Court and Court of Appeals opinions and memorandum decisions.</p>
+<a href="https://www.azcourts.gov/opinions" target="_blank" rel="noopener">Search Arizona court decisions ↗</a>
+</article>
+<article class="resource-card">
+<span class="resource-label">Related statute</span>
+<h3>A.R.S. § 12-514</h3>
+<p>Read the Arizona Legislature’s published text of the statute concerning certain civil actions arising from sexual conduct or contact against a minor.</p>
+<a href="https://www.azleg.gov/ars/12/00514.htm" target="_blank" rel="noopener">Read the statute text ↗</a>
+</article>
+<article class="resource-card">
+<span class="resource-label">Separate case</span>
+<h3>H.M. Doe appellate record</h3>
+<p>A different Arizona case, included here only as related legal context. It is not part of CV2020-014920.</p>
+<a href="https://www.azcourts.gov/Portals/0/21/ASC-CV230051%20-%204-2-2024%20-%20FILED%20-%20ORDER.pdf" target="_blank" rel="noopener">Read the Arizona Supreme Court order (CV-23-0051-PR) ↗</a>
+</article>
+<article class="resource-card support-card">
+<span class="resource-label">Support</span>
+<h3>Arizona and national survivor resources</h3>
+<p>For referrals in Arizona, contact the Attorney General’s victim resources page or the Arizona Coalition to End Sexual and Domestic Violence. RAINN offers confidential national hotline support.</p>
+<a href="https://www.azag.gov/criminal/victim-services/victim-referral-and-resources" target="_blank" rel="noopener">Arizona victim resources ↗</a>
+<a href="https://www.acesdv.org/" target="_blank" rel="noopener">Arizona Coalition to End Sexual and Domestic Violence ↗</a>
+<a href="https://rainn.org/help-and-healing/hotline/" target="_blank" rel="noopener">RAINN hotline and support ↗</a>
+</article>
+</div>
+<p class="source-note">This is an independent archive, not a court or legal service. Verify case information against the official docket. The links to legal materials are for research and do not state how any law applies to this case.</p>
 </section>
 </main>
 
