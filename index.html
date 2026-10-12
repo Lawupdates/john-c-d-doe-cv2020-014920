@@ -14,6 +14,8 @@ body{margin:0;background:var(--cream);color:#183345;font-family:Arial,Helvetica,
 header{background:linear-gradient(135deg,#091723,#234a60);color:white;text-align:center;padding:65px 20px;border-bottom:5px solid var(--gold)}
 header h1{font-family:Georgia,serif;font-size:clamp(36px,6vw,64px);margin:10px 0;color:#fff}
 header p{max-width:850px;margin:15px auto}
+.case-versus{font:italic 32px Georgia,serif;color:var(--gold);margin:4px auto!important}
+.case-defendants{font:clamp(19px,2.6vw,28px) Georgia,serif;line-height:1.4;font-weight:bold;max-width:900px;margin:8px auto 22px!important}
 .kicker{color:var(--gold);font-size:13px;letter-spacing:3px;text-transform:uppercase;font-weight:bold}
 nav{background:#fff;border-bottom:1px solid #ddd;padding:15px;text-align:center;position:sticky;top:0;z-index:2}
 nav a{margin:0 12px;color:#183345;text-decoration:none;font-weight:bold;font-size:14px}
@@ -52,7 +54,8 @@ nav{position:static}
 <header>
 <div class="kicker">Independent Arizona Court Record Archive</div>
 <h1>JOHN C D DOE</h1>
-<p>v. Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona</p>
+<p class="case-versus">v.</p>
+<p class="case-defendants">BIG BROTHERS BIG SISTERS OF AMERICA<br>and<br>BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA</p>
 <p>Maricopa County Superior Court | Case No. CV2020-014920</p>
 <a class="button" href="#filings">Explore 110 Court Documents</a>
 </header>
@@ -78,7 +81,7 @@ nav{position:static}
 
 <section id="filings">
 <h2>Search the Court Documents</h2>
-<p>Search by document title, filing number, date, or document type. Select any filing to open the complete casebook at that filing's starting page.</p>
+<p>Search by document title, filing number, date, or document type. Select a filing to open its individual PDF in the browser after the separate PDF files are uploaded.</p>
 
 <div class="controls">
 <input id="search" type="search" placeholder="Search all 110 court filings...">
