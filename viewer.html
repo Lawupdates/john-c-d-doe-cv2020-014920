@@ -7,6 +7,6 @@
 const name=new URLSearchParams(location.search).get("file")||"";
 const ok=/^a(?:[1-9]|[1-9][0-9]|10[0-9]|110)\.pdf$/.test(name);
 const status=document.getElementById("status"), frame=document.getElementById("reader");
-if(ok){const url="filings/"+name;document.getElementById("heading").textContent="Filing "+name.replace(".pdf","").toUpperCase();document.getElementById("direct").href=url;frame.src=url+"#toolbar=1&navpanes=0";status.textContent="If the filing does not appear, its individual PDF has not yet been uploaded to the filings folder.";}
+if(ok){const url="filings/"+name;document.getElementById("heading").textContent="Filing "+name.replace(".pdf","").toUpperCase();document.getElementById("direct").href=url;frame.src=url+"#toolbar=1&navpanes=0";status.textContent="The complete filing PDF is shown below, starting at page 1. Use the PDF page controls, thumbnails, or scroll to read every page. On a phone, tap “Open PDF separately” for easier reading.";}
 else{status.textContent="Invalid filing name.";document.getElementById("direct").hidden=true;}
 </script></body></html>
