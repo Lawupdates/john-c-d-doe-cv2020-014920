@@ -105,7 +105,7 @@ nav{position:static}
 <button id="more" type="button">Load More Documents</button>
 
 <div class="note">
-<strong>Document title verification:</strong> Some headings are incomplete or not yet verified against their original PDFs. Those entries are clearly marked. Document links open the complete court-record casebook at the listed compiled page. Some browsers download the PDF instead of opening directly to the page.
+<strong>Document title verification:</strong> Some headings are incomplete or not yet verified against their original PDFs. Those entries are clearly marked. Each filing opens in an in-browser reader once its PDF has been uploaded to the filings folder.
 </div>
 </section>
 
@@ -301,10 +301,10 @@ actions.className="actions";
 
 const pdf=document.createElement("a");
 pdf.className="pdf";
-pdf.href=`https://github.com/Lawupdates/john-c-d-doe-cv2020-014920/releases/download/court-record-v1.0/JOHN_C_D_DOE_Casebook_Previous_and_Current_Captions.pdf#page=${d.page}`;
+pdf.href=`viewer.html?file=${encodeURIComponent(d.id + ".pdf")}`;
 pdf.target="_blank";
 pdf.rel="noopener noreferrer";
-pdf.textContent="Open in Casebook ↗";
+pdf.textContent="Read Filing ↗";
 pdf.setAttribute("aria-label",`View PDF for ${d.id}: ${d.title}`);
 
 actions.append(pdf);
