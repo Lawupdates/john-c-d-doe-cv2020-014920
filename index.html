@@ -4,779 +4,255 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101e2b">
-<meta name="description" content="JOHN C D DOE v Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona. Independent court archive with 110 searchable filings.">
-<link rel="canonical" href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/">
-<title>JOHN C D DOE | The Court Record | CV2020-014920</title>
-
+<meta name="description" content="JOHN C D DOE court record archive, CV2020-014920. Search and view 110 court documents.">
+<title>JOHN C D DOE | Complete Court Record</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap');
-
-:root {
-  --navy:#101e2b;
-  --navy2:#1b3b4d;
-  --gold:#d6aa60;
-  --cream:#f7f5f0;
-  --ink:#152b3d;
-  --muted:#60717c;
-  --line:#dce2e3;
-}
-
-* {box-sizing:border-box}
-html {scroll-behavior:smooth}
-body {
-  margin:0;
-  background:var(--cream);
-  color:var(--ink);
-  font:16px/1.65 'DM Sans',Arial,sans-serif;
-}
-a {color:#195b7a}
-button,input,select {font:inherit}
-a:focus-visible,button:focus-visible,
-input:focus-visible,select:focus-visible {
-  outline:3px solid var(--gold);
-  outline-offset:3px;
-}
-.wrap {width:min(1140px,calc(100% - 36px));margin:auto}
-.skip {position:absolute;left:-9999px}
-.skip:focus {left:10px;top:10px;background:white;padding:12px;z-index:100}
-
-.top {
-  background:#0b1620;
-  color:#d6e0e5;
-  padding:11px 0;
-  text-align:center;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-}
-
-.hero {
-  background:
-    radial-gradient(ellipse at 50% 0%,#31576b,transparent 55%),
-    linear-gradient(135deg,#0c1926,#152f41);
-  color:white;
-  text-align:center;
-  padding:85px 20px 80px;
-  border-bottom:3px solid var(--gold);
-}
-
-.eyebrow {
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:.19em;
-  text-transform:uppercase;
-  color:#e2bf82;
-}
-
-.hero h1 {
-  font:400 clamp(39px,5vw,63px)/1.2 'Libre Baskerville',Georgia,serif;
-  letter-spacing:-.035em;
-  margin:23px 0;
-}
-
-.hero .versus {
-  max-width:850px;
-  margin:0 auto 20px;
-  font-size:clamp(17px,2vw,22px);
-  color:#f1f0e9;
-}
-
-.hero .description {
-  max-width:680px;
-  margin:0 auto;
-  font-size:15px;
-  color:#c6d6df;
-}
-
-.actions {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:13px;
-  margin-top:35px;
-}
-
-.btn {
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  padding:14px 22px;
-  border:1px solid var(--gold);
-  border-radius:5px;
-  text-decoration:none;
-  font-size:13px;
-  font-weight:800;
-  cursor:pointer;
-  transition:.2s;
-}
-
-.btn:hover {transform:translateY(-2px)}
-.gold {background:var(--gold);color:var(--navy)}
-.gold:hover {background:#f4dcae;color:var(--navy)}
-.outline {background:transparent;color:white}
-.outline:hover {background:#ffffff19;color:white}
-
-nav {
-  background:#fff;
-  border-bottom:1px solid var(--line);
-  position:sticky;
-  top:0;
-  z-index:20;
-}
-
-nav .wrap {
-  display:flex;
-  gap:25px;
-  overflow-x:auto;
-  padding:17px 0;
-  white-space:nowrap;
-}
-
-nav a {
-  color:#304b5b;
-  font-size:12px;
-  font-weight:800;
-  text-decoration:none;
-}
-
-nav a:hover {color:#986a31}
-
-.stats {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1px;
-  margin:30px 0;
-  background:var(--line);
-  border:1px solid var(--line);
-}
-
-.stat {background:white;padding:24px;text-align:center}
-.stat strong {
-  display:block;
-  font:400 clamp(27px,4vw,42px) 'Libre Baskerville',Georgia,serif;
-}
-.stat span {color:var(--muted);font-size:12px}
-
-section {
-  background:white;
-  border:1px solid var(--line);
-  padding:clamp(24px,4vw,48px);
-  margin:28px 0;
-  scroll-margin-top:85px;
-}
-
-section h2 {
-  margin:0 0 13px;
-  font:400 clamp(27px,3.5vw,39px)/1.25 'Libre Baskerville',Georgia,serif;
-}
-
-.kicker {
-  color:#9b743e;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  margin-bottom:12px;
-}
-
-.intro {color:var(--muted);max-width:800px}
-
-.steps {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-  margin-top:25px;
-}
-
-.step {
-  background:#f8f7f3;
-  padding:25px;
-  border-top:3px solid var(--gold);
-}
-
-.step small {color:#9b743e;font-weight:800}
-.step h3 {font:400 20px 'Libre Baskerville',Georgia,serif}
-.step p {font-size:13px;color:var(--muted)}
-.step a {font-size:13px;font-weight:800}
-
-.feature {
-  background:linear-gradient(135deg,#18364a,#0d1c2a);
-  color:white;
-  border-top:4px solid var(--gold);
-}
-
-.feature h2 {color:white}
-.feature p {color:#d3e0e5}
-.feature .btn {margin-top:16px}
-
-.filters {
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  gap:12px;
-  margin:25px 0 18px;
-}
-
-.filters input,.filters select {
-  width:100%;
-  padding:13px;
-  min-height:49px;
-  border:1px solid #c9d3d6;
-  border-radius:5px;
-  background:white;
-  color:var(--ink);
-}
-
-.results {
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  flex-wrap:wrap;
-  color:var(--muted);
-  font-size:12px;
-  margin-bottom:12px;
-}
-
-.doc {
-  display:grid;
-  grid-template-columns:55px minmax(0,1fr) auto;
-  gap:18px;
-  align-items:center;
-  border-top:1px solid var(--line);
-  padding:19px 10px;
-}
-
-.doc:hover {background:#f8faf9}
-.doc-id {color:#987039;font-size:12px;font-weight:800}
-.doc h3 {margin:0 0 7px;font-size:15px;line-height:1.4}
-.meta {color:var(--muted);font-size:12px}
-
-.tag {
-  display:inline-block;
-  padding:3px 9px;
-  margin-right:8px;
-  background:#eaf0f0;
-  color:#315563;
-  font-size:10px;
-  font-weight:800;
-  text-transform:uppercase;
-}
-
-.doc-actions {
-  display:flex;
-  flex-direction:column;
-  align-items:flex-end;
-  gap:8px;
-}
-
-.doc-actions a {
-  font-size:12px;
-  font-weight:800;
-  white-space:nowrap;
-}
-
-.individual {
-  background:var(--navy2);
-  color:white;
-  padding:10px 14px;
-  border-radius:4px;
-  text-decoration:none;
-}
-
-.individual:hover {background:#2e6077;color:white}
-.combined {text-underline-offset:3px}
-.more {margin-top:22px}
-.empty {padding:30px;text-align:center;color:var(--muted)}
-
-.note {
-  margin-top:24px;
-  padding:18px;
-  background:#faf6ed;
-  border-left:4px solid var(--gold);
-  color:#59646a;
-  font-size:13px;
-}
-
-.timeline {border-left:2px solid var(--gold);padding-left:26px}
-.event {position:relative;margin:0 0 27px}
-.event:before {
-  content:"";
-  position:absolute;
-  left:-34px;
-  top:8px;
-  width:14px;
-  height:14px;
-  border:3px solid white;
-  border-radius:50%;
-  background:var(--gold);
-}
-.event time {color:#926b34;font-size:12px;font-weight:800}
-.event h3 {margin:5px 0;font:400 20px 'Libre Baskerville',Georgia,serif}
-.event p {margin:0;color:var(--muted);font-size:14px}
-
-.links {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:13px;
-}
-
-.links a {
-  display:block;
-  padding:19px;
-  background:#f8f9f8;
-  border:1px solid var(--line);
-  font-size:13px;
-  font-weight:800;
-  text-decoration:none;
-}
-
-.links a:hover {background:#f8f0e0}
-
-footer {
-  margin-top:50px;
-  padding:45px 0;
-  background:var(--navy);
-  color:#d6e0e5;
-  border-top:3px solid var(--gold);
-  font-size:13px;
-}
-footer a {color:#f4dcae}
-
-@media(max-width:760px) {
-  .hero {padding:65px 18px}
-  nav {position:static}
-  .steps,.filters,.links {grid-template-columns:1fr}
-  .doc {grid-template-columns:42px minmax(0,1fr)}
-  .doc-actions {grid-column:2;align-items:flex-start}
-  .stats {grid-template-columns:1fr}
-  .actions .btn {width:100%}
-}
-
-@media(prefers-reduced-motion:reduce) {
-  html {scroll-behavior:auto}
-  .btn {transition:none}
+:root{--navy:#102637;--gold:#d6aa60;--cream:#f7f5ef}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:#183345;font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+header{background:linear-gradient(135deg,#091723,#234a60);color:white;text-align:center;padding:65px 20px;border-bottom:5px solid var(--gold)}
+header h1{font-family:Georgia,serif;font-size:clamp(36px,6vw,64px);margin:10px 0;color:#fff}
+header p{max-width:850px;margin:15px auto}
+.kicker{color:var(--gold);font-size:13px;letter-spacing:3px;text-transform:uppercase;font-weight:bold}
+nav{background:#fff;border-bottom:1px solid #ddd;padding:15px;text-align:center;position:sticky;top:0;z-index:2}
+nav a{margin:0 12px;color:#183345;text-decoration:none;font-weight:bold;font-size:14px}
+main{max-width:1150px;margin:auto;padding:20px}
+section{background:white;padding:clamp(20px,4vw,42px);margin:24px 0;border:1px solid #dce2e3}
+h2{font-family:Georgia,serif;font-size:30px;margin-top:0}
+.button{display:inline-block;background:var(--gold);color:#172634;padding:12px 20px;border-radius:4px;text-decoration:none;font-weight:bold;margin:7px}
+.button.dark{background:#23475c;color:white}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;text-align:center}
+.stats div{background:#f5f5f2;padding:22px}
+.stats strong{display:block;font-size:35px;font-family:Georgia,serif}
+.controls{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:25px 0}
+input,select{padding:13px;border:1px solid #becbd0;border-radius:4px;width:100%;font-size:15px}
+.doc{display:grid;grid-template-columns:65px 1fr auto;gap:18px;align-items:center;padding:20px 8px;border-top:1px solid #dce2e3}
+.doc h3{font-size:16px;line-height:1.45;margin:0 0 8px;overflow-wrap:anywhere}
+.doc small{color:#62747e}
+.number{color:#a77d40;font-weight:bold}
+.actions{display:flex;flex-direction:column;gap:8px}
+.actions a{font-size:13px;font-weight:bold;white-space:nowrap}
+.actions .pdf{background:#23475c;color:white;padding:10px 14px;text-decoration:none;border-radius:4px}
+.note{background:#faf4e9;border-left:4px solid var(--gold);padding:18px;margin-top:20px}
+footer{background:#102637;color:white;text-align:center;padding:35px 20px;margin-top:35px}
+footer a{color:#f3d49e}
+#more{background:var(--navy);color:white;border:0;padding:13px 25px;cursor:pointer;margin-top:20px}
+@media(max-width:700px){
+.controls{grid-template-columns:1fr}
+.doc{grid-template-columns:45px 1fr}
+.actions{grid-column:2}
+.stats{grid-template-columns:1fr}
+nav{position:static}
 }
 </style>
 </head>
-
 <body>
-<a class="skip" href="#filings">Skip to filings</a>
 
-<div class="top">
-  INDEPENDENT COURT RECORD ARCHIVE · MARICOPA COUNTY · CV2020-014920
-</div>
-
-<header class="hero">
-  <div class="eyebrow">Arizona Superior Court · Public Records</div>
-  <h1>JOHN C D DOE</h1>
-  <p class="versus">
-    v. Big Brothers Big Sisters of America<br>
-    and Big Brothers Big Sisters of Central Arizona
-  </p>
-  <p class="description">
-    An independent, organized public court archive.
-    Explore individual documents, follow the case history,
-    or read the complete compiled court record.
-  </p>
-  <div class="actions">
-    <a class="btn gold" href="#filings">EXPLORE 110 FILINGS ↓</a>
-    <a class="btn outline" id="heroBook" href="#">VIEW COMPLETE CASEBOOK ↗</a>
-  </div>
+<header>
+<div class="kicker">Independent Arizona Court Record Archive</div>
+<h1>JOHN C D DOE</h1>
+<p>v. Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona</p>
+<p>Maricopa County Superior Court | Case No. CV2020-014920</p>
+<a class="button" href="#filings">Explore 110 Court Documents</a>
 </header>
 
-<nav aria-label="Main navigation">
-  <div class="wrap">
-    <a href="#start">Start Here</a>
-    <a href="#filings">Individual Filings</a>
-    <a href="#casebook">Complete Casebook</a>
-    <a href="#timeline">Timeline</a>
-    <a href="#about">Case Information</a>
-    <a href="#sources">Official Sources</a>
-    <a href="other-cases.html">Other Citing Cases</a>
-  </div>
+<nav>
+<a href="#about">About</a>
+<a href="#filings">Court Filings</a>
+<a href="#timeline">Timeline</a>
+<a href="#sources">Official Sources</a>
 </nav>
 
-<main class="wrap">
-
+<main>
+<section id="about">
+<h2>The Court Record</h2>
+<p>This independent archive organizes court documents relating to JOHN C D DOE v. Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona.</p>
+<p>The archive is intended to make court filings easier to locate, search, and read. It is not an official court website.</p>
 <div class="stats">
-  <div class="stat">
-    <strong>110</strong>
-    <span>Indexed Court Documents</span>
-  </div>
-  <div class="stat">
-    <strong>1,340</strong>
-    <span>Pages in Complete Casebook</span>
-  </div>
-  <div class="stat">
-    <strong>2020–2026</strong>
-    <span>Filing Dates Represented</span>
-  </div>
+<div><strong>110</strong>Indexed Documents</div>
+<div><strong>1,340</strong>Compiled Pages</div>
+<div><strong>2020–2026</strong>Filing Period</div>
 </div>
-
-<section id="start">
-  <div class="kicker">A Guide to the Record</div>
-  <h2>Where Would You Like to Begin?</h2>
-  <p class="intro">
-    This archive is designed for journalists, researchers,
-    legal professionals and anyone seeking to understand
-    the publicly documented history of this case.
-  </p>
-
-  <div class="steps">
-    <div class="step">
-      <small>01 · DISCOVER</small>
-      <h3>Understand the Case</h3>
-      <p>Review the parties, court and basic case information.</p>
-      <a href="#about">Explore case information →</a>
-    </div>
-    <div class="step">
-      <small>02 · EXPLORE</small>
-      <h3>Search the Filings</h3>
-      <p>Browse motions, complaints, court orders and exhibits.</p>
-      <a href="#filings">Open document library →</a>
-    </div>
-    <div class="step">
-      <small>03 · READ</small>
-      <h3>Complete Court Record</h3>
-      <p>Read the compiled 1,340-page casebook.</p>
-      <a href="#casebook">Open casebook →</a>
-    </div>
-  </div>
-</section>
-
-<section id="casebook" class="feature">
-  <div class="kicker">The Complete Compiled Collection</div>
-  <h2>One Case. One Organized Record.</h2>
-  <p>
-    The casebook combines 110 indexed documents and
-    1,327 original court-record pages, with additional
-    introductory and navigation pages.
-  </p>
-  <p>
-    View the complete compilation or browse individual
-    documents in the searchable library below.
-  </p>
-  <a class="btn gold" id="fullBook" href="#">
-    OPEN COMPLETE 1,340-PAGE CASEBOOK ↗
-  </a>
 </section>
 
 <section id="filings">
-  <div class="kicker">Primary Source Document Library</div>
-  <h2>Explore the Court Filings</h2>
-  <p class="intro">
-    Search 110 indexed filings. Each entry offers a separate
-    individual PDF and a link to its location within the
-    complete casebook.
-  </p>
+<h2>Search the Court Documents</h2>
+<p>Search by document title, filing number, date, or document type. Select any filing to open its individual PDF.</p>
 
-  <div class="filters">
-    <input id="search" type="search"
-      placeholder="Search title, date or document number..."
-      aria-label="Search filings">
+<div class="controls">
+<input id="search" type="search" placeholder="Search all 110 court filings...">
+<select id="category">
+<option value="">All Document Types</option>
+<option>Motion</option>
+<option>Order</option>
+<option>Notice</option>
+<option>Complaint</option>
+<option>Response</option>
+<option>Exhibit</option>
+<option>Other</option>
+</select>
+<select id="sort">
+<option value="index">Document Number</option>
+<option value="recent">Newest First</option>
+<option value="oldest">Oldest First</option>
+<option value="title">Alphabetical Title</option>
+</select>
+</div>
 
-    <select id="category" aria-label="Filter by type">
-      <option value="">All Document Types</option>
-      <option value="Complaint">Complaints</option>
-      <option value="Motion">Motions</option>
-      <option value="Order">Orders</option>
-      <option value="Notice">Notices</option>
-      <option value="Response">Responses</option>
-      <option value="Exhibit">Exhibits</option>
-      <option value="Other">Other Filings</option>
-    </select>
+<p id="count"></p>
+<div id="documents"></div>
+<button id="more" type="button">Load More Documents</button>
 
-    <select id="sort" aria-label="Sort filings">
-      <option value="index">Casebook Order</option>
-      <option value="recent">Newest First</option>
-      <option value="oldest">Oldest First</option>
-      <option value="title">Title A–Z</option>
-    </select>
-  </div>
-
-  <div class="results">
-    <span id="count" aria-live="polite"></span>
-    <span>Individual PDFs · Complete Casebook</span>
-  </div>
-
-  <div id="documents"></div>
-
-  <button class="btn gold more" id="more" type="button">
-    LOAD MORE DOCUMENTS ↓
-  </button>
-
-  <div class="note">
-    Document titles and dates are drawn from the supplied
-    casebook index. Some are abbreviated or unverified.
-    Confirm official filing details against the court docket.
-  </div>
+<div class="note">
+<strong>Document title verification:</strong> Some headings are incomplete or not yet verified against their original PDFs. Those entries are clearly marked. Individual PDF links require files named a1.pdf through a110.pdf in the repository's filings folder.
+</div>
 </section>
 
 <section id="timeline">
-  <div class="kicker">Documented Case History</div>
-  <h2>A Timeline of the Court Record</h2>
-  <div class="timeline">
-    <div class="event">
-      <time>November 2020</time>
-      <h3>Civil Case Filed</h3>
-      <p>Case CV2020-014920 appears in Maricopa County Superior Court records.</p>
-    </div>
-    <div class="event">
-      <time>June 29, 2021</time>
-      <h3>First Amended Complaint</h3>
-      <p>The archive includes the First Amended Complaint, indexed as a16.</p>
-    </div>
-    <div class="event">
-      <time>August 2021</time>
-      <h3>Motion-to-Dismiss Ruling</h3>
-      <p>The court record includes an order denying a defendant's motion to dismiss, indexed as a23.</p>
-    </div>
-    <div class="event">
-      <time>2022–2024</time>
-      <h3>Continued Litigation</h3>
-      <p>The archive includes pleadings, orders, scheduling materials and other filings.</p>
-    </div>
-    <div class="event">
-      <time>2025–2026</time>
-      <h3>Additional Court Proceedings</h3>
-      <p>Later documents are included in the archive. Consult the official docket for the latest case status.</p>
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="kicker">Case Information</div>
-  <h2>About the Litigation</h2>
-  <p><strong>Case Number:</strong> CV2020-014920</p>
-  <p><strong>Court:</strong> Superior Court of Arizona, Maricopa County</p>
-  <p>
-    <strong>Original Caption:</strong><br>
-    JOHN C D DOE v. Big Brothers Big Sisters of America
-    and Big Brothers Big Sisters of Central Arizona
-  </p>
-  <p>
-    <strong>Later-Filing Caption:</strong><br>
-    Maureen Gaughan, Bankruptcy Trustee for the
-    Bankruptcy Estates of JOHN C D DOE, v.
-    Big Brothers Big Sisters of America and
-    Big Brothers Big Sisters of Central Arizona,
-    with additional defendant designations.
-  </p>
-  <p>
-    The case concerns allegations of childhood sexual abuse
-    and associated civil claims. A complaint contains allegations;
-    a court order records judicial action. They should not
-    be treated as equivalent.
-  </p>
+<h2>Case Timeline</h2>
+<p><strong>2020:</strong> Civil case filed in Maricopa County Superior Court.</p>
+<p><strong>2021:</strong> Amended complaint and motion-to-dismiss briefing.</p>
+<p><strong>2022–2024:</strong> Answers, notices, scheduling proceedings, and additional filings.</p>
+<p><strong>2025:</strong> Bankruptcy-related proceedings, motions concerning the real party in interest, and amended complaints.</p>
+<p><strong>2026:</strong> Settlement notice and motion seeking correction of the record and restoration of the active trial calendar.</p>
 </section>
 
 <section id="sources">
-  <div class="kicker">Research & Verification</div>
-  <h2>Official Records & Legal Research</h2>
-  <div class="links">
-    <a target="_blank" rel="noopener"
-      href="https://ecronline.clerkofcourt.maricopa.gov/CaseDocuments.aspx?caseNumber=CV2020-014920">
-      Maricopa County Court Documents ↗
-    </a>
-    <a target="_blank" rel="noopener"
-      href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920">
-      Official Civil Case Docket ↗
-    </a>
-    <a target="_blank" rel="noopener"
-      href="https://www.azcourts.gov/appellatecourtcases/ASC">
-      Arizona Supreme Court ↗
-    </a>
-    <a target="_blank" rel="noopener"
-      href="https://www.azcourts.gov/appellatecourtcases/COA1">
-      Arizona Court of Appeals ↗
-    </a>
-    <a href="other-cases.html">
-      Other Cases Citing JOHN C D DOE ↗
-    </a>
-    <a target="_blank" rel="noopener"
-      href="https://github.com/Lawupdates/john-c-d-doe-cv2020-014920/issues">
-      Report a Correction ↗
-    </a>
-  </div>
+<h2>Official Sources and Research</h2>
+<p>For authoritative case status and complete official records, consult the court directly.</p>
+<a class="button dark" href="https://ecronline.clerkofcourt.maricopa.gov/CaseDocuments.aspx?caseNumber=CV2020-014920" target="_blank" rel="noopener">Maricopa County Court Records</a>
+<a class="button dark" href="https://github.com/Lawupdates/john-c-d-doe-cv2020-014920" target="_blank" rel="noopener">GitHub Archive</a>
 </section>
-
-<section id="standards">
-  <div class="kicker">Archive Transparency</div>
-  <h2>Publication Standards</h2>
-  <p>
-    This independently maintained website is intended
-    for public information, research and historical reference.
-    It is not an official court publication.
-  </p>
-  <p>
-    The 110-document collection may not contain every
-    filing on the official docket. Some filing titles and
-    dates remain unverified.
-  </p>
-  <p>
-    Court filings may contain allegations, advocacy or
-    disputed positions rather than judicial findings.
-  </p>
-  <p>
-    Documents should be reviewed for sealed information,
-    protected personal data and applicable court orders
-    before unrestricted publication.
-  </p>
-</section>
-
 </main>
 
 <footer>
-  <div class="wrap">
-    <strong>JOHN C D DOE · CV2020-014920</strong>
-    <p>Independent Public Court Record Archive · Maricopa County, Arizona</p>
-    <p>
-      <a href="#filings">Individual Filings</a> ·
-      <a href="#casebook">Complete Casebook</a> ·
-      <a href="#standards">Publication Standards</a>
-    </p>
-  </div>
+<strong>JOHN C D DOE | CV2020-014920</strong>
+<p>Independent public court-record archive. Not affiliated with the court or any party's legal counsel.</p>
 </footer>
 
 <script>
-"use strict";
-
-const casebook =
-"https://github.com/Lawupdates/john-c-d-doe-cv2020-014920/releases/download/court-record-v1.0/JOHN_C_D_DOE_Casebook_Previous_and_Current_Captions.pdf";
-
-for (const id of ["heroBook","fullBook"]) {
-  const a=document.getElementById(id);
-  a.href=casebook;
-  a.target="_blank";
-  a.rel="noopener noreferrer";
-}
-
-/*
-Each row:
-Document ID | Title | Date | Starting page in casebook | Type
-*/
-
-const raw=`
+const raw = `
 a1|SUMMONS|11/18/2020|14|Other
-a2|Court Filing / Document|11/18/2020|16|Other
-a3|CERTIFICATE OF|11/18/2020|40|Other
+a2|Document A2 — complete title not yet verified|11/18/2020|16|Other
+a3|CERTIFICATE OF COMPULSORY ARBITRATION|11/18/2020|40|Other
 a4|SUMMONS|11/18/2020|41|Other
-a5|Court Filing / Document|11/18/2020|43|Other
-a6|Court Filing / Document|1/13/2021|44|Other
-a7|Court Filing / Document|2/12/2021|46|Other
+a5|Document A5 — complete title not yet verified|11/18/2020|43|Other
+a6|Document A6 — complete title not yet verified|1/13/2021|44|Other
+a7|Document A7 — complete title not yet verified|2/12/2021|46|Other
 a8|MOTION TO DISMISS|4/12/2021|48|Motion
-a9|Court Filing / Document|4/20/2021|67|Other
-a10|CERTIFICATE|5/15/2021|68|Other
-a11|Court Filing / Document|Date not verified|70|Other
-a12|Court Filing / Document|Date not verified|71|Other
-a13|JOINT NOTICE OF FIRST EXTENSION|5/26/2021|72|Notice
+a9|Document A9 — complete title not yet verified|4/20/2021|67|Other
+a10|GOOD FAITH CONSULTATION CERTIFICATE|5/15/2021|68|Other
+a11|Document A11 — complete title not yet verified|Date not verified|70|Other
+a12|Document A12 — complete title not yet verified|Date not verified|71|Other
+a13|JOINT NOTICE OF FIRST EXTENSION OF TIME REGARDING BRIEFING ON DEFENDANT BIG BROTHERS BIG SISTERS OF AMERICA’S MOTION TO DISMISS|5/26/2021|72|Notice
 a14|NOTICE OF APPEARANCE|5/30/2021|75|Notice
-a15|Court Filing / Document|Date not verified|77|Other
+a15|Document A15 — complete title not yet verified|Date not verified|77|Other
 a16|FIRST AMENDED COMPLAINT|6/29/2021|79|Complaint
-a17|RESPONSE TO|6/29/2021|105|Response
-a18|JOINT NOTICE OF SECOND|7/27/2021|374|Notice
-a19|JOINT NOTICE OF THIRD|8/3/2021|376|Notice
-a20|REPLY IN SUPPORT OF MOTION TO|Date not verified|378|Motion
-a21|MOTION TO EXCEED THE PAGE|8/6/2021|396|Motion
-a22|BBBSA Motion to Exceed Page Limit for Reply|8/25/2021|399|Motion
-a23|DENIAL OF DEFENDANT'S MOTION TO DISMISS|8/26/2021|403|Order
-a24|JOINT MOTION REGARDING|9/24/2021|408|Motion
-a25|Joint Stipulated Motion Regarding Case Deadlines|9/30/2021|411|Motion
-a26|NOTICE OF APPEARANCE AND|10/8/2021|414|Notice
-a27|MOTION TO STAY CASE PENDING|10/8/2021|416|Motion
-a28|MOTION TO EXTEND TIME TO|11/5/2021|428|Motion
-a29|ORDER GRANTING MOTION TO|11/5/2021|431|Order
-a30|Motion to Extend Time / Scheduling Order|12/2/2021|434|Order
-a31|Court Filing / Document|Date not verified|437|Other
-a32|Court Filing / Document|Date not verified|439|Other
+a17|RESPONSE TO MOTION TO DISMISS|6/29/2021|105|Response
+a18|JOINT NOTICE OF SECOND EXTENSION OF TIME FOR DEFENDANT BIG BROTHERS BIG SISTERS OF AMERICA TO FILE REPLY IN SUPPORT OF MOTION TO DISMISS|7/27/2021|374|Notice
+a19|JOINT NOTICE OF THIRD EXTENSION OF TIME FOR [TITLE CONTINUES — VERIFY PDF]|8/3/2021|376|Notice
+a20|REPLY IN SUPPORT OF MOTION TO [TITLE CONTINUES — VERIFY PDF]|Date not verified|378|Motion
+a21|MOTION TO EXCEED THE PAGE LIMIT FOR REPLY IN SUPPORT OF MOTION TO DISMISS|8/6/2021|396|Motion
+a22|Order concerning motion to exceed page limit — full title not verified|8/25/2021|399|Order
+a23|DENIAL OF DEFENDANT’S MOTION TO DISMISS|08/26/2021|403|Order
+a24|JOINT MOTION REGARDING JOINT REPORT AND PROPOSED SCHEDULING ORDER REQUIRED BY RULE 16, ARIZONA RULES OF CIVIL PROCEDURE|9/24/2021|408|Motion
+a25|Court order or minute entry — complete title not yet verified|9/30/2021|411|Order
+a26|NOTICE OF APPEARANCE AND ASSOCIATION OF COUNSEL|10/8/2021|414|Notice
+a27|MOTION TO STAY CASE PENDING SPECIAL ACTION OR, IN THE ALTERNATIVE, MOTION TO EXTEND TIME TO FILE ANSWER|10/8/2021|416|Motion
+a28|MOTION TO EXTEND TIME TO FILE JOINT STATUS REPORT AND PROPOSED SCHEDULING ORDER|11/5/2021|428|Motion
+a29|ORDER GRANTING MOTION TO EXTEND TIME TO FILE ANSWER|11/5/2021|431|Order
+a30|Order concerning motion to extend time for joint status report — full title not verified|12/2/2021|434|Order
+a31|Document A31 — complete title not yet verified|Date not verified|437|Other
+a32|Document A32 — complete title not yet verified|Date not verified|439|Other
 a33|JOINT STATUS MEMORANDUM|5/18/2022|441|Other
-a34|NOTICE OF DISASSOCIATION|5/18/2022|444|Notice
-a35|MINUTE ENTRY|5/26/2022|446|Order
+a34|NOTICE OF DISASSOCATION OF COUNSEL|5/18/2022|444|Notice
+a35|MINUTE ENTRY|05/26/2022|446|Order
 a36|EXHIBIT 1|Date not verified|447|Exhibit
-a37|ANSWER TO PLAINTIFF'S|6/10/2022|511|Other
-a38|AMENDED ANSWER TO PLAINTIFF'S|7/1/2022|534|Other
-a39|AMERICA'S CERTIFICATE|7/1/2022|625|Other
-a40|AMERICA'S NOTICE OF NON|11/7/2022|627|Notice
-a41|APPLICATION AND NOTICE OF|11/21/2022|630|Notice
+a37|DEFENDANT BIG BROTHERS BIG SISTERS OF AMERICA’S ANSWER TO PLAINTIFF’S FIRST AMENDED COMPLAINT|6/10/2022|511|Other
+a38|DEFENDANT BIG BROTHERS BIG SISTERS OF AMERICA’S AMENDED ANSWER TO PLAINTIFF’S FIRST AMENDED COMPLAINT|7/1/2022|534|Other
+a39|BIG BROTHERS BIG SISTERS OF AMERICA’S CERTIFICATE REGARDING COMPULSORY ARBITRATION|7/1/2022|625|Other
+a40|BIG BROTHERS BIG SISTERS OF AMERICA’S NOTICE OF NON-PARTIES AT FAULT|11/7/2022|627|Notice
+a41|APPLICATION & NOTICE OF DEFAULT JUDGMENT – BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA|11/21/2022|630|Notice
 a42|ORDER ENTERED BY COURT|11/23/2022|633|Order
-a43|ARIZONA'S ANSWER|11/29/2022|635|Other
-a44|NOTICE OF ASSOCIATION AND|12/1/2022|646|Notice
-a45|CENTRAL ARIZONA'S NOTICE OF|4/25/2023|648|Notice
-a46|Court Minute Entry|8/2/2023|652|Order
-a47|SCHEDULING ORDER|9/8/2023|653|Order
-a48|NOTICE OF SUBSTITUTION OF|9/21/2023|657|Notice
-a49|ORDER UNDER RULE 16|10/5/2023|660|Order
-a50|STIPULATED MOTION TO AMEND|7/22/2024|665|Motion
-a51|Court Ruling on Motion to Amend|8/28/2024|668|Order
-a52|STIPULATED MOTION TO AMEND|9/27/2024|673|Motion
-a53|Court Ruling on Motion to Amend|10/24/2024|676|Order
-a54|FIRST SUPPLEMENTAL NOTICE|11/13/2024|681|Notice
-a55|NOTICE OF NON-PARTIES AT FAULT|11/13/2024|685|Notice
-a56|STIPULATED MOTION TO AMEND|12/6/2024|688|Motion
-a57|Court Ruling on Motion to Amend|12/20/2024|692|Order
-a58|MOTION FOR SUMMARY|12/26/2024|696|Motion
-a59|STATEMENT OF FACTS IN|12/26/2024|703|Other
+a43|DEFENDANT BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA’S ANSWER|11/29/2022|635|Other
+a44|NOTICE OF ASSOCIATION AND SUBSTITUTION OF COUNSEL WITHIN FIRM|12/1/2022|646|Notice
+a45|BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA’S NOTICE OF NON-PARTIES AT FAULT|4/25/2023|648|Notice
+a46|Court order or minute entry — complete title not yet verified|08/02/2023|652|Order
+a47|SCHEDULING ORDER, ARIZONA RULES OF CIVIL PROCEDURE|9/8/2023|653|Order
+a48|NOTICE OF SUBSTITUTION OF COUNSEL WITHIN FIRM|9/21/2023|657|Notice
+a49|ORDER, ARIZONA RULES OF CIVIL PROCEDURE RULE 16|10/5/2023|660|Order
+a50|STIPULATED MOTION TO AMEND SCHEDULING ORDER AND RESET TRIAL SETTING CONFERENCE|7/22/2024|665|Motion
+a51|Court order or minute entry — complete title not yet verified|8/28/2024|668|Order
+a52|STIPULATED MOTION TO AMEND SCHEDULING ORDER AND RESET TRIAL SETTING CONFERENCE|9/27/2024|673|Motion
+a53|Court order or minute entry — complete title not yet verified|10/24/2024|676|Order
+a54|DEFENDANT BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA’S FIRST SUPPLEMENTAL NOTICE OF NON-PARTIES AT FAULT|11/13/2024|681|Notice
+a55|BIG BROTHERS BIG SISTERS OF AMERICA’S FIRST SUPPLEMENTAL NOTICE OF NON-PARTIES AT FAULT|11/13/2024|685|Notice
+a56|STIPULATED MOTION TO AMEND SCHEDULING ORDER AND RESET TRIAL SETTING CONFERENCE|12/6/2024|688|Motion
+a57|Court order or minute entry — complete title not yet verified|12/20/2024|692|Order
+a58|DEFENDANT BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA’S MOTION FOR SUMMARY JUDGMENT|12/26/2024|696|Motion
+a59|DEFENDANT BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA’S STATEMENT OF FACTS IN SUPPORT OF MOTION FOR SUMMARY JUDGMENT|12/26/2024|703|Other
 a60|EXHIBIT J|Date not verified|707|Exhibit
 a61|EXHIBIT I|Date not verified|796|Exhibit
 a62|EXHIBIT F|Date not verified|848|Exhibit
 a63|EXHIBIT A|Date not verified|867|Exhibit
 a64|EXHIBIT E|Date not verified|887|Exhibit
-a65|STIPULATION AND NOTICE OF|1/31/2025|929|Notice
-a66|STIPULATED MOTION TO AMEND|2/7/2025|932|Motion
+a65|STIPULATION AND NOTICE OF EXTENSION OF TIME (FULL TITLE NOT VERIFIED)|1/31/2025|929|Notice
+a66|STIPULATED MOTION TO AMEND SCHEDULING ORDER AND RESET TRIAL SETTING CONFERENCE|2/7/2025|932|Motion
 a67|EXHIBIT 2|Date not verified|936|Exhibit
-a68|PLAINTIFF'S RESPONSE IN|2/24/2025|939|Response
+a68|PLAINTIFF’S RESPONSE IN OPPOSITION TO DEFENDANT BBBS OF CENTRAL ARIZONA’S MOTION FOR SUMMARY JUDGMENT|2/24/2025|939|Response
 a69|EXHIBIT 3|Date not verified|951|Exhibit
 a70|NOTICE OF BANKRUPTCY|2/24/2025|993|Notice
-a71|ORDER GRANTING IN PART|Date not verified|1001|Order
-a72|STATEMENT OF FACTS IN|2/24/2025|1008|Other
-a73|NOTICE OF BANKRUPTCY|2/28/2025|1011|Notice
-a74|MOTION TO VACATE FEBRUARY 26|3/7/2025|1013|Motion
+a71|ORDER GRANTING IN PART — COMPLETE TITLE NOT VERIFIED|Date not verified|1001|Order
+a72|STATEMENT OF FACTS IN [TITLE CONTINUES — VERIFY PDF]|2/24/2025|1008|Other
+a73|NOTICE OF BANKRUPTCY|02/28/2025|1011|Notice
+a74|DEFENDANT BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA’S MOTION VACATE FEBRUARY 26, 2025 ORDER RE: BANKRUPTCY|3/7/2025|1013|Motion
 a75|EXHIBIT 3|Date not verified|1018|Exhibit
-a76|ORDER APPROVING EMPLOYMENT OF|Date not verified|1050|Order
-a77|ORDER GRANTING IN PART|Date not verified|1052|Order
-a78|MOTION TO AMEND|3/20/2025|1059|Motion
-a79|RESPONSE TO MOTION TO AMEND|3/26/2025|1064|Response
-a80|MINUTE ENTRY|4/23/2025|1072|Order
-a81|JOINDER TO RESPONSE TO|4/28/2025|1073|Response
-a82|Bankruptcy-Related Court Order|5/2/2025|1080|Order
-a83|MINUTE ENTRY|5/7/2025|1083|Order
+a76|ORDER APPROVING EMPLOYMENT OF [TITLE CONTINUES — VERIFY PDF]|Date not verified|1050|Order
+a77|ORDER GRANTING IN PART — COMPLETE TITLE NOT VERIFIED|Date not verified|1052|Order
+a78|MOTION TO AMEND COMPLAINT IN THE NAME OF THE REAL PARTY IN INTEREST|3/20/2025|1059|Motion
+a79|RESPONSE TO MOTION TO AMEND COMPLAINT IN THE NAME OF THE REAL PARTY IN INTEREST|3/26/2025|1064|Response
+a80|MINUTE ENTRY|04/23/2025|1072|Order
+a81|JOINDER TO RESPONSE TO [TITLE CONTINUES — VERIFY PDF]|4/28/2025|1073|Response
+a82|Bankruptcy-related order — complete title not yet verified|5/2/2025|1080|Order
+a83|MINUTE ENTRY|05/07/2025|1083|Order
 a84|MINUTE ENTRY ORDER|Date not verified|1084|Order
 a85|EXHIBIT 4|Date not verified|1087|Exhibit
-a86|MOTION TO AMEND|7/25/2025|1121|Motion
-a87|ORDER GRANTING IN PART|Date not verified|1126|Order
-a88|ORDER APPROVING EMPLOYMENT OF|Date not verified|1133|Order
-a89|DEFENDANT'S NOTICE OF|8/6/2025|1135|Notice
-a90|JOINDER TO RESPONSE IN|8/8/2025|1137|Response
-a91|RESPONSE IN OPPOSITION TO|8/8/2025|1140|Response
-a92|PLAINTIFF'S REPLY IN|8/20/2025|1150|Response
-a93|MINUTE ENTRY|9/19/2025|1153|Order
-a94|COMPLAINT|10/7/2025|1155|Complaint
-a95|STIPULATED MOTION TO AMEND|10/10/2025|1181|Motion
+a86|MOTION TO AMEND COMPLAINT IN THE NAME OF THE REAL PARTY IN INTEREST|7/25/2025|1121|Motion
+a87|ORDER GRANTING IN PART — COMPLETE TITLE NOT VERIFIED|Date not verified|1126|Order
+a88|ORDER APPROVING EMPLOYMENT OF [TITLE CONTINUES — VERIFY PDF]|Date not verified|1133|Order
+a89|DEFENDANT’S NOTICE OF WITHDRAWAL OF MOTION FOR SUMMARY JUDGMENT|8/6/2025|1135|Notice
+a90|DEFENDANT BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA’S JOINDER TO RESPONSE IN OPPOSITION TO MOTION TO AMEND COMPLAINT IN THE NAME OF THE REAL PARTY IN INTEREST FILED JULY 25, 2025|8/8/2025|1137|Response
+a91|RESPONSE IN OPPOSITION TO MOTION TO AMEND COMPLAINT IN THE NAME OF THE REAL PARTY IN INTEREST FILED JULY 25, 2025|8/8/2025|1140|Response
+a92|PLAINTIFF’S REPLY IN SUPPORT OF HIS MOTION TO AMEND COMPLAINT|8/20/2025|1150|Response
+a93|MINUTE ENTRY|09/19/2025|1153|Order
+a94|SECOND AMENDED COMPLAINT|10/7/2025|1155|Complaint
+a95|STIPULATED MOTION TO AMEND SCHEDULING ORDER AND RESET TRIAL SETTING CONFERENCE|10/10/2025|1181|Motion
 a96|THIRD AMENDED COMPLAINT|10/27/2025|1184|Complaint
-a97|Court Ruling on Motion to Amend|10/29/2025|1210|Order
-a98|Court Ruling on Motion to Amend|10/29/2025|1214|Order
-a99|Court Filing / Document|Date not verified|1218|Other
-a100|Court Filing / Document|Date not verified|1234|Other
-a101|ANSWER TO PLAINTIFF'S|11/17/2025|1237|Other
-a102|Court Filing / Document|Date not verified|1266|Other
-a103|Court Filing / Document|Date not verified|1292|Other
-a104|UNOPPOSED MOTION TO AMEND|3/24/2026|1311|Motion
-a105|Court Ruling / Minute Entry|4/1/2026|1314|Order
-a106|Court Filing / Document|Date not verified|1318|Other
-a107|Court Filing / Document|Date not verified|1321|Other
+a97|Court order or minute entry — complete title not yet verified|10/29/2025|1210|Order
+a98|Court order or minute entry — complete title not yet verified|10/29/2025|1214|Order
+a99|Document A99 — complete title not yet verified|Date not verified|1218|Other
+a100|Document A100 — complete title not yet verified|Date not verified|1234|Other
+a101|DEFENDANT BIG BROTHERS BIG SISTERS OF AMERICA’S ANSWER TO PLAINTIFF’S THIRD AMENDED COMPLAINT|11/17/2025|1237|Other
+a102|Document A102 — complete title not yet verified|Date not verified|1266|Other
+a103|Document A103 — complete title not yet verified|Date not verified|1292|Other
+a104|UNOPPOSED MOTION TO AMEND SCHEDULING ORDER AND RESET TRIAL SETTING CONFERENCE|3/24/2026|1311|Motion
+a105|Court order or minute entry — complete title not yet verified|4/1/2026|1314|Order
+a106|Document A106 — complete title not yet verified|Date not verified|1318|Other
+a107|Document A107 — complete title not yet verified|Date not verified|1321|Other
 a108|NOTICE OF SETTLEMENT|9/17/2026|1328|Notice
-a109|Court Minute Entry|9/22/2026|1331|Order
-a110|MOTION TO CORRECT THE|10/5/2026|1332|Motion
+a109|Court order or minute entry — complete title not yet verified|09/22/2026|1331|Order
+a110|JOHN C D DOE’S LIMITED MOTION TO CORRECT THE RECORD, VACATE SETTLEMENT-BASED INACTIVE STATUS, RESTORE CASE TO ACTIVE CALENDAR, AND REINSTATE PRETRIAL/TRIAL-SETTING CONFERENCE|10/5/2026|1332|Motion
 `;
 
 const docs=raw.trim().split("\n").map((line,i)=>{
-  const [id,title,date,page,type]=line.split("|");
-  const valid=/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(date);
-  return {
-    id,title,date,page:Number(page),type,order:i,
-    timestamp:valid?new Date(date).getTime():0
-  };
+const [id,title,date,page,type]=line.split("|");
+const valid=/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(date);
+return {
+id,title,date,page:Number(page),type,
+index:i,
+timestamp:valid?new Date(date).getTime():null
+};
 });
 
 const search=document.getElementById("search");
@@ -785,108 +261,70 @@ const sort=document.getElementById("sort");
 const list=document.getElementById("documents");
 const count=document.getElementById("count");
 const more=document.getElementById("more");
-
 let shown=20;
 
 function render(){
-  const q=search.value.trim().toLowerCase();
+const q=search.value.trim().toLowerCase();
+let filtered=docs.filter(d=>{
+const text=[d.id,d.title,d.date,d.type,d.page].join(" ").toLowerCase();
+return text.includes(q)&&(!category.value||d.type===category.value);
+});
 
-  let filtered=docs.filter(d=>{
-    const text=[d.id,d.title,d.date,d.type,d.page]
-      .join(" ").toLowerCase();
-    return (!q||text.includes(q)) &&
-      (!category.value||d.type===category.value);
-  });
-
-  if(sort.value==="recent"){
-    filtered.sort((a,b)=>b.timestamp-a.timestamp||a.order-b.order);
-  }else if(sort.value==="oldest"){
-    filtered.sort((a,b)=>
-      (a.timestamp||Infinity)-(b.timestamp||Infinity)||
-      a.order-b.order);
-  }else if(sort.value==="title"){
-    filtered.sort((a,b)=>a.title.localeCompare(b.title));
-  }
-
-  list.replaceChildren();
-
-  count.textContent=
-    `Showing ${Math.min(shown,filtered.length)} of ${filtered.length} filings`;
-
-  if(!filtered.length){
-    const p=document.createElement("p");
-    p.className="empty";
-    p.textContent="No matching filings. Try another search.";
-    list.append(p);
-  }
-
-  for(const d of filtered.slice(0,shown)){
-    const row=document.createElement("article");
-    row.className="doc";
-
-    const number=document.createElement("span");
-    number.className="doc-id";
-    number.textContent=d.id.toUpperCase();
-
-    const info=document.createElement("div");
-
-    const title=document.createElement("h3");
-    title.textContent=d.title;
-
-    const meta=document.createElement("div");
-    meta.className="meta";
-
-    const tag=document.createElement("span");
-    tag.className="tag";
-    tag.textContent=d.type;
-
-    meta.append(tag,
-      document.createTextNode(
-        `${d.date} · Casebook page ${d.page}`
-      )
-    );
-
-    info.append(title,meta);
-
-    const actions=document.createElement("div");
-    actions.className="doc-actions";
-
-    const individual=document.createElement("a");
-    individual.className="individual";
-    individual.href="filings/"+d.id+".pdf";
-    individual.target="_blank";
-    individual.rel="noopener noreferrer";
-    individual.textContent="View Individual PDF ↗";
-    individual.setAttribute("aria-label",
-      `View ${d.id}: ${d.title} as individual PDF`);
-
-    const combined=document.createElement("a");
-    combined.className="combined";
-    combined.href=casebook+"#page="+d.page;
-    combined.target="_blank";
-    combined.rel="noopener noreferrer";
-    combined.textContent="In Full Casebook ↗";
-
-    actions.append(individual,combined);
-    row.append(number,info,actions);
-    list.append(row);
-  }
-
-  more.hidden=shown>=filtered.length;
+if(sort.value==="recent"){
+filtered.sort((a,b)=>(b.timestamp??-Infinity)-(a.timestamp??-Infinity)||a.index-b.index);
+}else if(sort.value==="oldest"){
+filtered.sort((a,b)=>(a.timestamp??Infinity)-(b.timestamp??Infinity)||a.index-b.index);
+}else if(sort.value==="title"){
+filtered.sort((a,b)=>a.title.localeCompare(b.title));
 }
 
-search.addEventListener("input",()=>{
-  shown=20;render();
-});
-category.addEventListener("change",()=>{
-  shown=20;render();
-});
-sort.addEventListener("change",()=>{
-  shown=20;render();
-});
-more.addEventListener("click",()=>{
-  shown+=20;render();
-});
+list.replaceChildren();
+count.textContent=`Showing ${Math.min(shown,filtered.length)} of ${filtered.length} matching documents`;
+
+for(const d of filtered.slice(0,shown)){
+const article=document.createElement("article");
+article.className="doc";
+
+const number=document.createElement("span");
+number.className="number";
+number.textContent=d.id.toUpperCase();
+
+const info=document.createElement("div");
+const title=document.createElement("h3");
+title.textContent=d.title;
+const meta=document.createElement("small");
+meta.textContent=`${d.date} | ${d.type} | Compiled page ${d.page}`;
+info.append(title,meta);
+
+const actions=document.createElement("div");
+actions.className="actions";
+
+const pdf=document.createElement("a");
+pdf.className="pdf";
+pdf.href=`filings/${d.id}.pdf`;
+pdf.target="_blank";
+pdf.rel="noopener noreferrer";
+pdf.textContent="View PDF ↗";
+pdf.setAttribute("aria-label",`View PDF for ${d.id}: ${d.title}`);
+
+actions.append(pdf);
+article.append(number,info,actions);
+list.append(article);
+}
+
+if(!filtered.length){
+const empty=document.createElement("p");
+empty.textContent="No matching documents found.";
+list.append(empty);
+}
+
+more.hidden=shown>=filtered.length;
+}
+
+search.addEventListener("input",()=>{shown=20;render()});
+category.addEventListener("change",()=>{shown=20;render()});
+sort.addEventListener("change",()=>{shown=20;render()});
+more.addEventListener("click",()=>{shown+=20;render()});
 
 render();
 </script>
