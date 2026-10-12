@@ -8,58 +8,74 @@
 <title>JOHN C D DOE | Complete Court Record</title>
 <style>
 :root{
-  --ink:#111A22;
-  --ink-soft:#273640;
-  --limestone:#F1ECE2;
+  --ink:#07141D;
+  --ink-soft:#102733;
+  --limestone:#F2EBDD;
   --paper:#FFFCF7;
-  --oxblood:#711F2B;
-  --oxblood-dark:#4E121B;
-  --brass:#B28A49;
-  --brass-light:#D8BA7A;
-  --line:#D8CCB9;
-  --muted:#667078;
+  --oxblood:#661F27;
+  --oxblood-dark:#431219;
+  --brass:#B68A3A;
+  --brass-light:#D3B064;
+  --line:#D4C8B5;
+  --muted:#5D6770;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--limestone);color:#252C32;font-family:Arial,Helvetica,sans-serif;line-height:1.6}
-header{
+body{
+  margin:0;color:#25292D;font-family:Arial,Helvetica,sans-serif;line-height:1.6;
   background:
-    linear-gradient(90deg,rgba(12,19,25,.97) 0%,rgba(18,28,36,.91) 52%,rgba(78,18,27,.76) 100%),
+    radial-gradient(circle at 12% 8%,rgba(182,138,58,.09),transparent 28%),
+    radial-gradient(circle at 88% 34%,rgba(102,31,39,.055),transparent 30%),
+    var(--limestone)
+}
+header{
+  position:relative;isolation:isolate;overflow:hidden;
+  background:
+    linear-gradient(108deg,rgba(7,20,29,.985) 0%,rgba(16,39,51,.94) 54%,rgba(102,31,39,.79) 100%),
     url('hero-court-archive.png.png') center/cover;
   color:var(--paper);text-align:center;padding:72px 20px 68px;
-  border-bottom:6px solid var(--brass);box-shadow:0 10px 30px rgba(17,26,34,.2)
+  border-bottom:6px solid var(--brass);box-shadow:0 14px 38px rgba(7,20,29,.26)
 }
-header h1{font-family:Georgia,serif;font-size:clamp(38px,6vw,66px);margin:10px 0;color:var(--paper);letter-spacing:-.02em;text-shadow:0 3px 15px rgba(0,0,0,.35)}
-header p{max-width:850px;margin:15px auto;color:#EEE9DF}
+header::before{
+  content:"\2696";position:absolute;z-index:-1;left:50%;top:48%;transform:translate(-50%,-50%);
+  font:420px Georgia,serif;color:var(--paper);opacity:.038;line-height:1;pointer-events:none
+}
+header::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(120deg,transparent 0 48%,rgba(211,176,100,.08) 49%,transparent 50% 100%)
+}
+header h1{font-family:Georgia,serif;font-size:clamp(38px,6vw,66px);margin:10px 0;color:var(--paper);letter-spacing:-.02em;text-shadow:0 3px 18px rgba(0,0,0,.45)}
+header p{max-width:850px;margin:15px auto;color:#F2ECE2}
 .case-versus{font:italic 32px Georgia,serif;color:var(--brass-light);margin:4px auto!important}
 .case-defendants{font:clamp(19px,2.6vw,28px) Georgia,serif;line-height:1.4;font-weight:bold;max-width:900px;margin:8px auto 22px!important;color:var(--paper)}
 .kicker{color:var(--brass-light);font-size:13px;letter-spacing:3.5px;text-transform:uppercase;font-weight:bold}
-nav{background:rgba(255,252,247,.97);border-bottom:1px solid var(--line);padding:15px;text-align:center;position:sticky;top:0;z-index:2;box-shadow:0 4px 16px rgba(17,26,34,.08);backdrop-filter:blur(8px)}
+nav{background:rgba(255,252,247,.965);border-bottom:1px solid var(--line);padding:15px;text-align:center;position:sticky;top:0;z-index:2;box-shadow:0 5px 18px rgba(7,20,29,.09);backdrop-filter:blur(9px)}
 nav a{margin:0 12px;color:var(--ink);text-decoration:none;font-weight:bold;font-size:14px;transition:color .2s ease}
 nav a:hover,nav a:focus-visible{color:var(--oxblood)}
 main{max-width:1150px;margin:auto;padding:20px}
-section{background:var(--paper);padding:clamp(20px,4vw,42px);margin:24px 0;border:1px solid var(--line);box-shadow:0 12px 30px rgba(17,26,34,.06)}
-h2{font-family:Georgia,serif;font-size:30px;margin-top:0;color:var(--ink);border-bottom:2px solid var(--brass);padding-bottom:11px}
-.button{display:inline-block;background:var(--brass);color:var(--ink);padding:12px 20px;border:1px solid var(--brass-light);border-radius:3px;text-decoration:none;font-weight:bold;margin:7px;box-shadow:0 4px 12px rgba(0,0,0,.14);transition:background .2s ease,transform .2s ease}
-.button:hover,.button:focus-visible{background:var(--brass-light);transform:translateY(-1px)}
+section{background:rgba(255,252,247,.985);padding:clamp(20px,4vw,42px);margin:24px 0;border:1px solid var(--line);box-shadow:0 16px 36px rgba(7,20,29,.075)}
+h2{font-family:Georgia,serif;font-size:30px;margin-top:0;color:var(--ink);border-bottom:1px solid var(--brass);padding-bottom:12px;position:relative}
+h2::after{content:"";position:absolute;left:0;bottom:-2px;width:92px;height:3px;background:var(--oxblood)}
+.button{display:inline-block;background:linear-gradient(180deg,var(--brass-light),var(--brass));color:var(--ink);padding:12px 20px;border:1px solid #E1C480;border-radius:3px;text-decoration:none;font-weight:bold;margin:7px;box-shadow:inset 0 1px rgba(255,255,255,.35),0 5px 15px rgba(0,0,0,.18);transition:filter .2s ease,transform .2s ease,box-shadow .2s ease}
+.button:hover,.button:focus-visible{filter:brightness(1.07);transform:translateY(-2px);box-shadow:inset 0 1px rgba(255,255,255,.4),0 8px 20px rgba(0,0,0,.2)}
 .button.dark{background:var(--oxblood);color:white;border-color:#8D3743}
 .button.dark:hover,.button.dark:focus-visible{background:var(--oxblood-dark)}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;text-align:center}
-.stats div{background:#F6F0E6;padding:22px;border:1px solid var(--line);border-top:3px solid var(--brass)}
+.stats div{background:#F7F1E7;padding:22px;border:1px solid var(--line);border-top:3px solid var(--brass);box-shadow:0 5px 14px rgba(7,20,29,.045)}
 .stats strong{display:block;font-size:35px;font-family:Georgia,serif;color:var(--oxblood)}
 .controls{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:25px 0}
 input,select{padding:13px;border:1px solid #BEB29E;border-radius:3px;width:100%;font-size:15px;background:#FFFEFA;color:var(--ink)}
 input:focus,select:focus{outline:2px solid var(--oxblood);outline-offset:1px;border-color:var(--oxblood)}
-.doc{display:grid;grid-template-columns:65px 1fr auto;gap:18px;align-items:center;padding:20px 8px;border-top:1px solid var(--line);transition:background .2s ease}
-.doc:hover{background:#FAF5EC}
+.doc{display:grid;grid-template-columns:65px 1fr auto;gap:18px;align-items:center;margin:8px 0;padding:18px 16px;background:#FFFEFA;border:1px solid #E2D8C8;border-left:3px solid #C7A867;box-shadow:0 3px 10px rgba(7,20,29,.035);transition:background .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.doc:hover{background:#FFF9EF;border-left-color:var(--oxblood);transform:translateY(-1px);box-shadow:0 7px 18px rgba(7,20,29,.08)}
 .doc h3{font-size:16px;line-height:1.45;margin:0 0 8px;overflow-wrap:anywhere;color:var(--ink)}
 .doc small{color:var(--muted)}
 .number{color:var(--oxblood);font-weight:bold;font-family:Georgia,serif}
 .actions{display:flex;flex-direction:column;gap:8px}
 .actions a{font-size:13px;font-weight:bold;white-space:nowrap}
-.actions .pdf{background:var(--ink-soft);color:white;padding:10px 14px;text-decoration:none;border-radius:3px;border-left:4px solid var(--brass);transition:background .2s ease}
+.actions .pdf{background:linear-gradient(180deg,#173340,var(--ink));color:white;padding:10px 14px;text-decoration:none;border-radius:3px;border-left:4px solid var(--brass);box-shadow:0 3px 9px rgba(7,20,29,.16);transition:background .2s ease,transform .2s ease}
 .actions .pdf:hover,.actions .pdf:focus-visible{background:var(--oxblood)}
-.note{background:#F7EEDD;border-left:4px solid var(--oxblood);padding:18px;margin-top:20px}
+.note{background:#F7EEDD;border:1px solid #E3D4BC;border-left:4px solid var(--oxblood);padding:18px;margin-top:20px}
 footer{background:var(--ink);color:white;text-align:center;padding:35px 20px;margin-top:35px;border-top:5px solid var(--brass)}
 footer a{color:var(--brass-light)}
 #more{background:var(--oxblood);color:white;border:1px solid #8D3743;padding:13px 25px;cursor:pointer;margin-top:20px;border-radius:3px;font-weight:bold}
