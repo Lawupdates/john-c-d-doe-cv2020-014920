@@ -11,11 +11,11 @@
 <meta property="og:title" content="JOHN C D DOE v. BIG BROTHERS BIG SISTERS OF AMERICA and BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA | CV2020-014920">
 <meta property="og:description" content="An independent archive of public filings in a Maricopa County civil case involving childhood sexual abuse claims.">
 <meta property="og:url" content="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/">
-<meta property="og:image" content="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/hero-court-archive.png.png">
+<meta property="og:image" content="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/hero-court-archive.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="JOHN C D DOE v. Big Brothers Big Sisters | CV2020-014920">
 <meta name="twitter:description" content="Independent Arizona public court-record archive with 110 individually readable filings.">
-<meta name="twitter:image" content="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/hero-court-archive.png.png">
+<meta name="twitter:image" content="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/hero-court-archive.jpg">
 <title>JOHN C D DOE v. Big Brothers Big Sisters | Arizona CV2020-014920</title>
 <style>
 :root{
@@ -44,25 +44,31 @@ body{
     var(--limestone)
 }
 header{
-  position:relative;isolation:isolate;overflow:hidden;
+  position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;min-height:510px;
   background:
-    linear-gradient(108deg,rgba(9,27,36,.86) 0%,rgba(24,63,77,.78) 54%,rgba(116,43,53,.66) 100%),
-    url('hero-court-archive.png.png') center/cover;
-  color:var(--paper);text-align:center;padding:72px 20px 68px;
-  border-bottom:6px solid var(--brass);box-shadow:0 14px 38px rgba(7,20,29,.26)
+    linear-gradient(90deg,rgba(6,20,29,.96) 0%,rgba(10,31,41,.88) 34%,rgba(14,35,44,.49) 66%,rgba(8,24,32,.27) 100%),
+    linear-gradient(0deg,rgba(7,18,25,.35),transparent 60%),
+    url('hero-court-archive.jpg') center/cover;
+  color:var(--paper);text-align:left;padding:clamp(48px,7vw,88px) 24px 82px;
+  border-bottom:7px solid var(--brass);box-shadow:0 18px 48px rgba(7,20,29,.32)
+}
 }
 header::before{
-  content:"\2696";position:absolute;z-index:-1;left:50%;top:48%;transform:translate(-50%,-50%);
-  font:420px Georgia,serif;color:var(--paper);opacity:.038;line-height:1;pointer-events:none
+  content:"\\2696";position:absolute;z-index:0;right:5%;top:50%;transform:translateY(-50%);
+  font:clamp(240px,32vw,470px) Georgia,serif;color:var(--paper);opacity:.035;line-height:1;pointer-events:none
+}
 }
 header::after{
   content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
   background:linear-gradient(120deg,transparent 0 48%,rgba(211,176,100,.08) 49%,transparent 50% 100%)
 }
-header p{max-width:850px;margin:15px auto;color:#F2ECE2}
-.case-caption{font-family:Georgia,serif;font-size:clamp(22px,3.8vw,44px);font-weight:bold;line-height:1.2;max-width:1120px;margin:20px auto 24px;color:var(--paper);letter-spacing:-.02em;text-shadow:0 3px 18px rgba(0,0,0,.45)}
+header p{max-width:760px;margin:12px 0;color:#F2ECE2;text-align:left}
+.hero-inner{position:relative;z-index:1;width:min(1160px,100%);margin:0 auto}
+.case-caption{font-family:Georgia,serif;font-size:clamp(24px,4.2vw,52px);font-weight:bold;line-height:1.08;max-width:900px;margin:22px 0 24px;color:var(--paper);letter-spacing:-.025em;text-shadow:0 3px 20px rgba(0,0,0,.5)}
 .case-caption span{display:block}
-.kicker{color:var(--brass-light);font-size:13px;letter-spacing:3.5px;text-transform:uppercase;font-weight:bold}
+.case-caption span:nth-child(2),.case-caption span:nth-child(4){color:var(--brass-light);font-size:.58em;letter-spacing:.09em;font-style:italic;margin:4px 0}
+.kicker{color:var(--brass-light);font-size:12px;letter-spacing:3.8px;text-transform:uppercase;font-weight:bold}
+.hero-image-note{position:absolute;z-index:1;right:18px;bottom:12px;margin:0;padding:6px 11px;background:rgba(7,20,29,.72);border-left:2px solid var(--brass);color:#fff;font-size:11px;letter-spacing:.04em;backdrop-filter:blur(8px)}
 nav{background:#FFFFFF;border-bottom:1px solid var(--line);padding:15px;text-align:center;position:sticky;top:0;z-index:2;box-shadow:0 5px 18px rgba(7,20,29,.09);backdrop-filter:blur(9px)}
 nav a{margin:0 12px;color:var(--ink);text-decoration:none;font-weight:bold;font-size:14px;transition:color .2s ease}
 nav a:hover,nav a:focus-visible{color:#2C7B83}
@@ -114,7 +120,9 @@ footer a{color:var(--brass-light)}
 @media(max-width:560px){.resource-grid{grid-template-columns:1fr}}
 
 @media(max-width:700px){
-  header{padding:55px 18px 50px}
+  header{min-height:620px;padding:48px 20px 82px;background-position:58% center}
+  .case-caption{font-size:clamp(22px,6vw,34px);max-width:100%;line-height:1.08}
+  .hero-image-note{left:16px;right:16px;bottom:10px;width:max-content;max-width:calc(100% - 32px);font-size:10px}
   .controls{grid-template-columns:1fr}
   .doc{grid-template-columns:45px 1fr}
   .actions{grid-column:2}
@@ -131,6 +139,7 @@ footer a{color:var(--brass-light)}
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header>
+<div class="hero-inner">
 <div class="kicker">Independent Arizona Court Record Archive</div>
 <h1 class="case-caption">
 <span>JOHN C D DOE</span>
@@ -140,7 +149,9 @@ footer a{color:var(--brass-light)}
 <span>BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA</span>
 </h1>
 <p>Maricopa County Superior Court | Case No. CV2020-014920</p>
-<a class="button" href="#filings">Explore 110 Court Documents</a>
+<a class="button" href="#filings">Explore 110 Court Documents <span aria-hidden="true">↗</span></a>
+</div>
+<p class="hero-image-note">Illustrative image only · not the actual courthouse</p>
 </header>
 
 <nav aria-label="Primary navigation">
