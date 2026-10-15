@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Independent Arizona court-record archive for JOHN C D DOE v. Big Brothers Big Sisters, a Maricopa County civil case involving childhood sexual abuse claims. Browse 110 filings in CV2020-014920.">
+<meta name="description" content="Independent Arizona court-record archive for JOHN C D DOE v. Big Brothers Big Sisters, a Maricopa County civil case involving childhood sexual abuse claims. Browse 111 filings in CV2020-014920.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/">
 <meta property="og:type" content="website">
@@ -14,7 +14,7 @@
 <meta property="og:image" content="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/hero-court-archive.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="JOHN C D DOE v. Big Brothers Big Sisters | CV2020-014920">
-<meta name="twitter:description" content="Independent Arizona public court-record archive with 110 individually readable filings.">
+<meta name="twitter:description" content="Independent Arizona public court-record archive with 111 individually readable filings.">
 <meta name="twitter:image" content="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/hero-court-archive.jpg">
 <title>JOHN C D DOE v. Big Brothers Big Sisters | Arizona CV2020-014920</title>
 <style>
@@ -147,7 +147,7 @@ footer a{color:var(--brass-light)}
 <span>BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA</span>
 </h1>
 <p>Maricopa County Superior Court | Case No. CV2020-014920</p>
-<a class="button" href="#filings">Explore 110 Court Documents <span aria-hidden="true">↗</span></a>
+<a class="button" href="#filings">Explore 111 Court Documents <span aria-hidden="true">↗</span></a>
 </div>
 <p class="hero-image-note">Illustrative image only · not the actual courthouse</p>
 </header>
@@ -166,15 +166,15 @@ footer a{color:var(--brass-light)}
 <p>This independent archive organizes court documents relating to JOHN C D DOE v. Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona.</p>
 <p>The archive is intended to make court filings easier to locate, search, and read. It is not an official court website.</p>
 <div class="stats" aria-label="Archive summary">
-<div><strong>110</strong>Indexed filings</div>
+<div><strong>111</strong>Indexed filings</div>
 <div><strong>2020–2026</strong>Filing years</div>
-<div><strong>Oct. 5, 2026</strong>Latest filing listed</div>
+<div><strong>Oct. 13, 2026</strong>Latest filing listed</div>
 </div>
 </section>
 
 <section id="arizona-case">
 <h2>Arizona Sexual Abuse Case Records</h2>
-<p>This independent public-record archive covers <strong>JOHN C D DOE v. Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona</strong>, a civil case in the Superior Court of Arizona in Maricopa County (Case No. CV2020-014920). The case involves claims of childhood sexual abuse. The archive provides access to 110 court filings and related case information.</p>
+<p>This independent public-record archive covers <strong>JOHN C D DOE v. Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona</strong>, a civil case in the Superior Court of Arizona in Maricopa County (Case No. CV2020-014920). The case involves claims of childhood sexual abuse. The archive provides access to 111 court filings and related case information.</p>
 <p>If you searched for “sex abuse Arizona,” this page identifies one specific Arizona case and links to its public court record. It is not a statewide directory or an official court website. Allegations are claims; consult the filed orders and official docket for what the court has decided.</p>
 <p><a href="arizona-sex-abuse-case.html">Read the Arizona case guide and official-record links</a> · <a href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920" target="_blank" rel="noopener">Check the Maricopa County court docket</a></p>
 </section>
@@ -185,7 +185,7 @@ footer a{color:var(--brass-light)}
 
 <div class="controls">
 <label class="sr-only" for="search">Search the court filings</label>
-<input id="search" type="search" placeholder="Search all 110 court filings...">
+<input id="search" type="search" placeholder="Search all 111 court filings...">
 <label class="sr-only" for="category">Filter by document type</label>
 <select id="category">
 <option value="">All Document Types</option>
@@ -211,7 +211,7 @@ footer a{color:var(--brass-light)}
 <button id="more" type="button">Load More Documents</button>
 
 <div class="note">
-<strong>Title and date notes:</strong> Titles follow the visible filing heading where available. A few exhibit entries use the section heading visible in the PDF when the parent filing title is not shown on that page. Dates are transcribed from a PDF filing header or court stamp when legible; entries marked “Date not verified” do not show a reliable filing date in the available copy. Check each PDF for the complete record. All 110 court filings are available as individual PDFs.
+<strong>Title and date notes:</strong> Titles follow the visible filing heading where available. A few exhibit entries use the section heading visible in the PDF when the parent filing title is not shown on that page. Dates are transcribed from a PDF filing header or court stamp when legible; entries marked “Date not verified” do not show a reliable filing date in the available copy. Check each PDF for the complete record. All 111 court filings are available as individual PDFs.
 </div>
 </section>
 
@@ -389,6 +389,7 @@ a107|NOTICE OF FILING APPLICATION FOR COMMISSION TO ISSUE SUBPOENA FOR PRODUCTIO
 a108|NOTICE OF SETTLEMENT|9/17/2026|1328|Notice
 a109|CASE ON DISMISSAL CALENDAR|09/22/2026|1331|Order
 a110|JOHN C D DOE’S LIMITED MOTION TO CORRECT THE RECORD, VACATE SETTLEMENT-BASED INACTIVE STATUS, RESTORE CASE TO ACTIVE CALENDAR, AND REINSTATE PRETRIAL/TRIAL-SETTING CONFERENCE|10/5/2026|1332|Motion
+a111|DEFENDANTS’ RESPONSE IN OPPOSITION TO JOHN C D DOE’S LIMITED MOTION AND MOTION TO STRIKE PURSUANT TO ARIZ. R. CIV. P. 7.1(F) — FILING ID 22988135|10/13/2026|0|Response
 `;
 
 const docs=raw.trim().split("\n").map((line,i)=>{
@@ -439,7 +440,7 @@ const info=document.createElement("div");
 const title=document.createElement("h3");
 title.textContent=d.title;
 const meta=document.createElement("small");
-meta.textContent=`${d.date} | ${d.type} | Starts at compiled-record page ${d.page}`;
+meta.textContent=d.id==='a111'?`${d.date} | ${d.type} | 13 pages | Filing ID 22988135`:`${d.date} | ${d.type} | Starts at compiled-record page ${d.page}`;
 info.append(title,meta);
 
 const actions=document.createElement("div");
@@ -447,7 +448,7 @@ actions.className="actions";
 
 const pdf=document.createElement("a");
 pdf.className="pdf";
-pdf.href=`filings/${d.id}.pdf`;
+pdf.href=d.id==='a111'?'a111.pdf':`filings/${d.id}.pdf`;
 pdf.textContent="Open full PDF (all pages) ↗";
 pdf.target="_blank";
 pdf.rel="noopener noreferrer";
