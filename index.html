@@ -199,14 +199,20 @@ footer a{color:var(--brass-light)}
 </select>
 <label class="sr-only" for="sort">Sort court filings</label>
 <select id="sort">
+<option value="recent" selected>Newest First</option>
 <option value="index">Document Number</option>
-<option value="recent">Newest First</option>
 <option value="oldest">Oldest First</option>
 <option value="title">Alphabetical Title</option>
 </select>
 </div>
 
 <p id="count" role="status" aria-live="polite" aria-atomic="true"></p>
+<section class="note" aria-label="Latest court filing" style="margin:1.25rem 0;padding:1.25rem;border:2px solid #ad8c54;border-radius:12px">
+<strong>NEW — A111 · OCTOBER 13, 2026</strong>
+<h3>DEFENDANTS’ RESPONSE IN OPPOSITION TO JOHN C D DOE’S LIMITED MOTION AND MOTION TO STRIKE</h3>
+<p>Response and motion to strike · Filing ID 22988135 · 13 pages. This is a filing by defendants, not a court ruling.</p>
+<p><a href="a111.pdf" target="_blank" rel="noopener noreferrer"><strong>Open A111 — Full PDF (13 pages) ↗</strong></a></p>
+</section>
 <div id="documents"></div>
 <button id="more" type="button">Load More Documents</button>
 
