@@ -197,13 +197,7 @@ footer a{color:var(--brass-light)}
 <option>Exhibit</option>
 <option>Other</option>
 </select>
-<label class="sr-only" for="sort">Sort court filings</label>
-<select id="sort">
-<option value="index" selected>Document Number (A1–A111)</option>
-<option value="recent">Newest First</option>
-<option value="oldest">Oldest First</option>
-<option value="title">Alphabetical Title</option>
-</select>
+<input type="hidden" id="sort" value="number-desc">
 </div>
 
 <p id="count" role="status" aria-live="polite" aria-atomic="true"></p>
@@ -423,13 +417,8 @@ const text=[d.id,d.title,d.date,d.type,d.page].join(" ").toLowerCase();
 return text.includes(q)&&(!category.value||d.type===category.value);
 });
 
-if(sort.value==="recent"){
-filtered.sort((a,b)=>(b.timestamp??-Infinity)-(a.timestamp??-Infinity)||a.index-b.index);
-}else if(sort.value==="oldest"){
-filtered.sort((a,b)=>(a.timestamp??Infinity)-(b.timestamp??Infinity)||a.index-b.index);
-}else if(sort.value==="title"){
-filtered.sort((a,b)=>a.title.localeCompare(b.title));
-}
+// Always sort by filing number, newest filing first: A111, A110, A109 ... A1.
+filtered.sort((a,b)=>Number(b.id.slice(1))-Number(a.id.slice(1)));
 
 list.replaceChildren();
 count.textContent=`Showing ${Math.min(shown,filtered.length)} of ${filtered.length} matching documents`;
@@ -472,7 +461,7 @@ empty.textContent="No matching documents found.";
 list.append(empty);
 }
 
-more.hidden=shown>=filtered.length;
+more.hidden=true;
 }
 
 search.addEventListener("input",()=>{shown=docs.length;render()});
