@@ -199,8 +199,8 @@ footer a{color:var(--brass-light)}
 </select>
 <label class="sr-only" for="sort">Sort court filings</label>
 <select id="sort">
-<option value="recent" selected>Newest First</option>
-<option value="index">Document Number</option>
+<option value="index" selected>Document Number (A1–A111)</option>
+<option value="recent">Newest First</option>
 <option value="oldest">Oldest First</option>
 <option value="title">Alphabetical Title</option>
 </select>
@@ -414,7 +414,7 @@ const sort=document.getElementById("sort");
 const list=document.getElementById("documents");
 const count=document.getElementById("count");
 const more=document.getElementById("more");
-let shown=20;
+let shown=docs.length;
 
 function render(){
 const q=search.value.trim().toLowerCase();
@@ -475,9 +475,9 @@ list.append(empty);
 more.hidden=shown>=filtered.length;
 }
 
-search.addEventListener("input",()=>{shown=20;render()});
-category.addEventListener("change",()=>{shown=20;render()});
-sort.addEventListener("change",()=>{shown=20;render()});
+search.addEventListener("input",()=>{shown=docs.length;render()});
+category.addEventListener("change",()=>{shown=docs.length;render()});
+sort.addEventListener("change",()=>{shown=docs.length;render()});
 more.addEventListener("click",()=>{shown+=20;render()});
 
 render();
