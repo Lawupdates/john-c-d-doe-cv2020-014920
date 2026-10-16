@@ -19,16 +19,16 @@
 <title>JOHN C D DOE v. Big Brothers Big Sisters | Arizona CV2020-014920</title>
 <style>
 :root{
-  --ink:#102B38;
-  --ink-soft:#1D4956;
-  --limestone:#FBFAF5;
-  --paper:#FFFFFF;
-  --oxblood:#7E303A;
-  --oxblood-dark:#571A24;
-  --brass:#D0A447;
-  --brass-light:#F2D776;
-  --line:#D9DEE0;
-  --muted:#5D6770;
+  --ink:#0B1D2A;
+  --ink-soft:#153A49;
+  --limestone:#F4EFE4;
+  --paper:#FFFCF5;
+  --oxblood:#74243A;
+  --oxblood-dark:#431322;
+  --brass:#C69A3A;
+  --brass-light:#E9C86F;
+  --line:#D6C9B4;
+  --muted:#525E66;
 }
 *{box-sizing:border-box}
 .skip-link{position:absolute;left:16px;top:-70px;z-index:10;padding:11px 16px;background:var(--brass-light);color:var(--ink);font-weight:bold;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.22)}
@@ -39,8 +39,8 @@ html{scroll-behavior:smooth}
 body{
   margin:0;color:#25292D;font-family:Arial,Helvetica,sans-serif;line-height:1.6;
   background:
-    radial-gradient(circle at 12% 8%,rgba(208,164,71,.17),transparent 28%),
-    radial-gradient(circle at 88% 34%,rgba(55,129,140,.10),transparent 30%),
+    radial-gradient(circle at 12% 8%,rgba(198,154,58,.22),transparent 28%),
+    radial-gradient(circle at 88% 34%,rgba(116,36,58,.11),transparent 30%),
     var(--limestone)
 }
 header{
@@ -67,7 +67,7 @@ header p{max-width:760px;margin:12px 0;color:#F2ECE2;text-align:left}
 .case-caption span:nth-child(2),.case-caption span:nth-child(4){color:var(--brass-light);font-size:.58em;letter-spacing:.09em;font-style:italic;margin:4px 0}
 .kicker{color:var(--brass-light);font-size:12px;letter-spacing:3.8px;text-transform:uppercase;font-weight:bold}
 .hero-image-note{position:absolute;z-index:1;right:18px;bottom:12px;margin:0;padding:6px 11px;background:rgba(7,20,29,.72);border-left:2px solid var(--brass);color:#fff;font-size:11px;letter-spacing:.04em;backdrop-filter:blur(8px)}
-nav{background:#FFFFFF;border-bottom:1px solid var(--line);padding:15px;text-align:center;position:sticky;top:0;z-index:2;box-shadow:0 5px 18px rgba(7,20,29,.09);backdrop-filter:blur(9px)}
+nav{background:rgba(255,252,245,.97);border-bottom:1px solid var(--line);padding:15px;text-align:center;position:sticky;top:0;z-index:2;box-shadow:0 5px 18px rgba(7,20,29,.09);backdrop-filter:blur(9px)}
 nav a{margin:0 12px;color:var(--ink);text-decoration:none;font-weight:bold;font-size:14px;transition:color .2s ease}
 nav a:hover,nav a:focus-visible{color:#2C7B83}
 main{max-width:1150px;margin:auto;padding:20px}
@@ -85,9 +85,9 @@ main a:not(.button):hover,main a:not(.button):focus-visible{color:#247883}
 .button.dark{background:var(--ink-soft);color:white;border-color:#34707A}
 .button.dark:hover,.button.dark:focus-visible{background:var(--oxblood)}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;text-align:center}
-.stats div{background:#EDF7F5;padding:22px;border:1px solid var(--line);border-top:3px solid var(--brass);box-shadow:0 5px 14px rgba(7,20,29,.045)}
+.stats div{background:linear-gradient(145deg,#FBF6EA,#E7D9BD);padding:22px;border:1px solid var(--line);border-top:3px solid var(--brass);box-shadow:0 5px 14px rgba(7,20,29,.045)}
 .stats strong{display:block;font-size:35px;font-family:Georgia,serif;color:var(--oxblood)}
-.controls{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:25px 0}
+.controls{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:12px;margin:25px 0}
 input,select{padding:13px;border:1px solid #BEB29E;border-radius:3px;width:100%;font-size:15px;background:#FFFFFF;color:var(--ink)}
 input:focus,select:focus{outline:2px solid var(--ink-soft);outline-offset:1px;border-color:var(--ink-soft)}
 .doc{display:grid;grid-template-columns:65px 1fr auto;gap:18px;align-items:center;margin:8px 0;padding:18px 16px;background:#FFFFFF;border:1px solid #E2D8C8;border-left:3px solid #D0A447;box-shadow:0 3px 10px rgba(7,20,29,.035);transition:background .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease}
@@ -111,12 +111,23 @@ footer a{color:var(--brass-light)}
 .resource-card h3{font:21px Georgia,serif;color:var(--ink);margin:8px 0}
 .resource-card p{font-size:14px;color:#40474d;margin:0 0 13px}
 .resource-card a{display:block;margin:8px 0;color:var(--oxblood);font-weight:bold;text-decoration-thickness:1px;text-underline-offset:3px}.resource-card a:hover{color:#247883}
-.resource-label{display:block;color:#247883;font-size:11px;letter-spacing:1.7px;text-transform:uppercase;font-weight:bold}
+.resource-label{display:block;color:var(--oxblood);font-size:11px;letter-spacing:1.7px;text-transform:uppercase;font-weight:bold}
 .support-card{border-top-color:var(--oxblood)}
 .source-note{font-size:13px;color:var(--muted);margin-top:18px}
+.status-panel{margin:24px 0;padding:clamp(22px,4vw,36px);background:linear-gradient(135deg,#FFF9EB 0%,#E9DDC7 100%);border:1px solid #C69A3A;border-left:7px solid var(--oxblood);box-shadow:0 14px 34px rgba(11,29,42,.12)}
+.status-panel h2{margin:12px 0 10px}
+.status-topline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--oxblood);font-size:12px;font-weight:bold;letter-spacing:1.2px;text-transform:uppercase}
+.status-links{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:16px 0}
+.status-links .button{margin:0}
+.timeline-shortcut{padding:13px 16px;background:linear-gradient(90deg,#F2E5C7,#FBF8F0);border-left:4px solid var(--brass)}
+input,select{border-color:#A99572}
+.doc{background:var(--paper);border-color:#D7C8AE}
+.doc:hover{background:#FFF6DF}
+@media(max-width:700px){.status-topline{display:grid;gap:4px}.status-links{align-items:flex-start;flex-direction:column}}
 @media(max-width:850px){.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.resource-grid{grid-template-columns:1fr}}
 
+@media(max-width:960px){.controls{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){
   header{min-height:620px;padding:48px 20px 82px;background-position:58% center}
   .case-caption{font-size:clamp(22px,6vw,34px);max-width:100%;line-height:1.08}
@@ -172,6 +183,14 @@ footer a{color:var(--brass-light)}
 </div>
 </section>
 
+<section class="status-panel" aria-labelledby="archive-status-title">
+<div class="status-topline"><span>ARCHIVE SNAPSHOT</span><span>Coverage through October 13, 2026</span></div>
+<h2 id="archive-status-title">Latest archived filing: A111</h2>
+<p><strong>October 13, 2026:</strong> Defendants filed a response and motion to strike (Filing ID 22988135, 13 pages). This is a party filing, not a court ruling.</p>
+<div class="status-links"><a class="button dark" href="a111.pdf" target="_blank" rel="noopener noreferrer">Read A111 · full PDF ↗</a><a href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920" target="_blank" rel="noopener">Verify current status on the official docket ↗</a></div>
+<p class="source-note">The archive lists documents through this date. The court docket may contain later entries.</p>
+</section>
+
 <section id="arizona-case">
 <h2>Arizona Sexual Abuse Case Records</h2>
 <p>This independent public-record archive covers <strong>JOHN C D DOE v. Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona</strong>, a civil case in the Superior Court of Arizona in Maricopa County (Case No. CV2020-014920). The case involves claims of childhood sexual abuse. The archive provides access to 111 court filings and related case information.</p>
@@ -185,10 +204,10 @@ footer a{color:var(--brass-light)}
 
 <div class="controls">
 <label class="sr-only" for="search">Search the court filings</label>
-<input id="search" type="search" placeholder="Search all 111 court filings...">
+<input id="search" type="search" placeholder="Search all 111 filings by title, number, or date...">
 <label class="sr-only" for="category">Filter by document type</label>
 <select id="category">
-<option value="">All Document Types</option>
+<option value="">All document types</option>
 <option>Motion</option>
 <option>Order</option>
 <option>Notice</option>
@@ -197,16 +216,21 @@ footer a{color:var(--brass-light)}
 <option>Exhibit</option>
 <option>Other</option>
 </select>
+<label class="sr-only" for="year">Filter by filing year</label>
+<select id="year">
+<option value="">All filing years</option>
+<option value="2026">2026</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+</select>
 <input type="hidden" id="sort" value="number-desc">
 </div>
 
 <p id="count" role="status" aria-live="polite" aria-atomic="true"></p>
-<section class="note" aria-label="Latest court filing" style="margin:1.25rem 0;padding:1.25rem;border:2px solid #ad8c54;border-radius:12px">
-<strong>NEW — A111 · OCTOBER 13, 2026</strong>
-<h3>DEFENDANTS’ RESPONSE IN OPPOSITION TO JOHN C D DOE’S LIMITED MOTION AND MOTION TO STRIKE</h3>
-<p>Response and motion to strike · Filing ID 22988135 · 13 pages. This is a filing by defendants, not a court ruling.</p>
-<p><a href="a111.pdf" target="_blank" rel="noopener noreferrer"><strong>Open A111 — Full PDF (13 pages) ↗</strong></a></p>
-</section>
 <div id="documents"></div>
 <button id="more" type="button">Load More Documents</button>
 
@@ -218,6 +242,7 @@ footer a{color:var(--brass-light)}
 <section id="timeline">
 <h2>Case Timeline</h2>
 <p class="source-note">This is a brief guide to events reflected in the archived filings. Check the official docket for authoritative entries and current case status.</p>
+<p class="timeline-shortcut"><a href="#filings">Browse the 2020–2026 filing archive ↗</a></p>
 <p><strong>2020:</strong> Civil case filed in Maricopa County Superior Court.</p>
 <p><strong>2021:</strong> Amended complaint and motion-to-dismiss briefing.</p>
 <p><strong>2022–2024:</strong> Answers, notices, scheduling proceedings, and additional filings.</p>
@@ -404,6 +429,7 @@ timestamp:valid?new Date(date).getTime():null
 
 const search=document.getElementById("search");
 const category=document.getElementById("category");
+const year=document.getElementById("year");
 const sort=document.getElementById("sort");
 const list=document.getElementById("documents");
 const count=document.getElementById("count");
@@ -414,7 +440,7 @@ function render(){
 const q=search.value.trim().toLowerCase();
 let filtered=docs.filter(d=>{
 const text=[d.id,d.title,d.date,d.type,d.page].join(" ").toLowerCase();
-return text.includes(q)&&(!category.value||d.type===category.value);
+return text.includes(q)&&(!category.value||d.type===category.value)&&(!year.value||d.date.endsWith(year.value));
 });
 
 // Always sort by filing number, newest filing first: A111, A110, A109 ... A1.
@@ -466,6 +492,7 @@ more.hidden=true;
 
 search.addEventListener("input",()=>{shown=docs.length;render()});
 category.addEventListener("change",()=>{shown=docs.length;render()});
+year.addEventListener("change",()=>{shown=docs.length;render()});
 sort.addEventListener("change",()=>{shown=docs.length;render()});
 more.addEventListener("click",()=>{shown+=20;render()});
 
