@@ -1,0 +1,35 @@
+/* Editorial redesign · October 2026 · additive and reversible */
+:root{--ink:#091a2b;--ink-soft:#16344d;--limestone:#f0ece3;--paper:#fffdf8;--oxblood:#85364b;--oxblood-dark:#5e2134;--brass:#b88a38;--brass-light:#f0d58d;--line:#d9cfbf;--muted:#52606d}
+html{scroll-padding-top:90px}
+body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:#f1eee7;color:#253242;line-height:1.7}
+header{min-height:570px;background-image:linear-gradient(90deg,rgba(4,16,31,.97) 0%,rgba(8,27,45,.93) 45%,rgba(9,26,44,.53) 100%),url('hero-court-archive.jpg');border-bottom:5px solid #c7a05a}
+.hero-inner{max-width:1160px}
+.kicker{color:#f0d58d;letter-spacing:.24em}
+.case-caption{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4.5vw,4.4rem);letter-spacing:-.035em;line-height:1.12;max-width:1000px;text-wrap:balance}
+header p{font-size:clamp(1rem,1.4vw,1.16rem);max-width:780px}
+nav{background:rgba(9,26,43,.97);border-bottom:1px solid rgba(240,213,141,.35);box-shadow:0 12px 30px rgba(8,23,38,.15);padding:16px}
+nav a{color:#fff7e8;font-size:13px;letter-spacing:.025em}
+nav a:hover,nav a:focus-visible{color:#f0d58d}
+main{max-width:1200px;padding:clamp(14px,2.5vw,30px)}
+section{border-radius:8px;background:#fffdf9;border:1px solid #ddd4c6;box-shadow:0 12px 36px rgba(12,34,54,.065);margin:24px 0;padding:clamp(22px,4vw,46px)}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.65rem,2.6vw,2.35rem);line-height:1.2;letter-spacing:-.025em;border-bottom:1px solid #d7c7a9;padding-bottom:18px}
+h3{line-height:1.3}
+.button{border-radius:5px;background:#dfb967;color:#10263a;border:1px solid #e8ce94;box-shadow:0 5px 15px rgba(9,26,43,.12)}
+.button.dark{background:#142f49;border-color:#142f49}
+.status-panel{border-radius:7px;background:linear-gradient(135deg,#fff9eb,#f3e8d2);border-left:6px solid #85364b}
+.stats{gap:18px}
+.stats div{border-radius:6px;background:#f6f0e4;border-top:4px solid #c49a52;padding:26px 14px}
+.stats strong{font-size:clamp(2rem,3vw,2.75rem);color:#713247}
+.resource-grid{gap:18px}
+.resource-card{border-radius:7px;padding:24px;box-shadow:0 8px 24px rgba(9,26,43,.065)}
+.controls{gap:12px}
+input,select{border-radius:5px;min-height:48px}
+.doc{border-radius:6px;margin:10px 0;padding:20px 18px;gap:20px;border-left:4px solid #c49a52;box-shadow:0 3px 15px rgba(9,26,43,.045)}
+.doc:hover{background:#fffaf0;box-shadow:0 10px 24px rgba(9,26,43,.10)}
+.doc h3{font-size:16px}
+.actions .pdf{border-radius:5px;background:#14364f}
+.note{border-radius:5px}
+footer{background:#091a2b}
+@media(max-width:850px){header{min-height:490px;padding:60px 22px 65px}nav{position:relative}nav a{display:inline-block;margin:6px 9px}.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.controls{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){header{min-height:420px;padding:42px 20px 62px}.case-caption{font-size:clamp(1.8rem,8vw,2.8rem)}section{padding:22px 17px}.resource-grid,.controls,.stats{grid-template-columns:1fr}.doc{grid-template-columns:1fr;gap:8px}.actions{flex-direction:row;flex-wrap:wrap}.hero-image-note{font-size:9px;max-width:70%}nav{padding:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
