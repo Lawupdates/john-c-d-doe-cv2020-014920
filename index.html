@@ -254,25 +254,27 @@ body.vault-locked{overflow:hidden}
 }
 
 
-/* Keep both caption halves visible above the centered opening plaque. */
-.vault-welcome{width:min(500px,68%);padding:13px 18px}
+/* Center the full case caption as the visual anchor on the vault plaque. */
+.vault-welcome{width:min(700px,84%);padding:clamp(16px,2.4vw,25px) clamp(14px,3vw,30px)}
 .vault-mark{font-size:10px}
-.vault-invite-title{font-size:clamp(22px,2.8vw,29px);margin:6px auto 2px}
-.vault-welcome #vault-description{font-size:11px;margin:4px auto}
-.vault-enter{margin-top:8px;padding:10px 18px;font-size:13px}
-.vault-audio-note{font-size:10px!important;margin:4px auto 0!important}
-.vault-skip{margin:5px auto 0}
-.vault-door-caption{top:11%}
-.vault-door-caption.defendants{top:6%;gap:5px}
-.vault-door-caption.defendants strong{font-size:clamp(9px,1.05vw,12px);line-height:1.2}
-.vault-door-caption.defendants i{font-size:13px}
+.vault-case-caption{max-width:620px;margin:12px auto;font-size:clamp(16px,2vw,23px);line-height:1.17;letter-spacing:.005em}
+.vault-case-caption .vault-party{font-size:inherit;line-height:1.2;letter-spacing:.035em;margin:4px 0}
+.vault-case-caption .vault-versus{font-size:.72em;margin:3px 0}
+.vault-case-caption .vault-and{font-size:.66em;margin:3px 0}
+.vault-welcome #vault-description{font-size:11px;margin:5px auto;text-align:center}
+.vault-thanks{font:italic 16px Georgia,"Times New Roman",serif!important;color:#e8cf91!important;letter-spacing:.04em!important;text-transform:none!important;margin:8px auto!important}
+.vault-enter{margin-top:8px;padding:11px 20px;font-size:13px}
+.vault-audio-note{font-size:10px!important;margin:5px auto 0!important}
+.vault-skip{margin:6px auto 0}
+.vault-handle{transition:transform 1.15s cubic-bezier(.16,.7,.1,1)}
+#vault-cover.opening .vault-handle{transform:rotate(1080deg)}
 @media(max-width:600px){
- .vault-welcome{width:76%;padding:12px 10px}
- .vault-mark{font-size:9px}
- .vault-invite-title{font-size:clamp(20px,6vw,26px)}
- .vault-door-caption{top:18%}
- .vault-door-caption.defendants{top:5%;gap:5px}
- .vault-door-caption.defendants strong{font-size:clamp(8px,2.2vw,11px)}
+ .vault-welcome{width:88%;padding:14px 12px}
+ .vault-mark{font-size:9px;letter-spacing:.12em}
+ .vault-case-caption{font-size:clamp(13px,3.4vw,18px);margin:9px auto;line-height:1.15}
+ .vault-case-caption .vault-party{margin:3px 0}
+ .vault-thanks{font-size:14px!important;margin:6px auto!important}
+ .vault-enter{padding:10px 12px;font-size:12px}
 }
 </style>
 <link rel="stylesheet" href="editorial-redesign.css?v=20261020b">
@@ -283,25 +285,27 @@ body.vault-locked{overflow:hidden}
   <div class="vault-stage">
     <div class="vault-welcome">
       <div class="vault-mark">Superior Court of Arizona · Maricopa County</div>
-      <h1 id="vault-title" class="vault-invite-title">Court Record Archive</h1>
-      <p id="vault-description">Case No. CV2020-014920 <span aria-hidden="true">·</span> Independent public archive</p>
-      <button class="vault-enter" id="vault-open" type="button">Turn the Handle &amp; Open <span aria-hidden="true">↗</span></button>
-      <p class="vault-audio-note">Vault sound plays when opened</p>
+      <h1 id="vault-title" class="vault-case-caption">
+        <span class="vault-party">JOHN C D DOE</span>
+        <span class="vault-versus">v.</span>
+        <span class="vault-party">BIG BROTHERS BIG SISTERS OF AMERICA</span>
+        <span class="vault-and">and</span>
+        <span class="vault-party">BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA</span>
+      </h1>
+      <p id="vault-description">Case No. CV2020-014920 <span aria-hidden="true">·</span> Independent Public Court Record Archive</p>
+      <p class="vault-thanks">Thank you for visiting</p>
+      <button class="vault-enter" id="vault-open" type="button">Spin the Handle &amp; Open the Vault <span aria-hidden="true">↗</span></button>
+      <p class="vault-audio-note">Turn up your volume for the vault sound</p>
       <button class="vault-skip" id="vault-skip" type="button">Enter without animation or sound</button>
     </div>
     <div class="vault-opening-flash" aria-hidden="true"></div>
     <div class="vault-doors" aria-hidden="true">
-      <div class="vault-door left">
-        <span class="vault-bolts"></span><span class="vault-hinge"></span>
-        <span class="vault-door-caption"><strong>JOHN C D DOE</strong><em>PLAINTIFF</em></span>
-      </div>
+      <div class="vault-door left"><span class="vault-bolts"></span><span class="vault-hinge"></span></div>
       <div class="vault-door right">
         <span class="vault-bolts"></span><span class="vault-hinge"></span>
-        <span class="vault-door-caption defendants"><strong>BIG BROTHERS BIG SISTERS<br>OF AMERICA</strong><i>v.</i><strong>BIG BROTHERS BIG SISTERS<br>OF CENTRAL ARIZONA</strong><em>DEFENDANTS</em></span>
         <span class="vault-handle"><span class="handle-hub"></span></span>
       </div>
     </div>
-    <span class="sr-only">JOHN C D DOE v. BIG BROTHERS BIG SISTERS OF AMERICA and BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA.</span>
   </div>
 </div>
 
@@ -700,28 +704,30 @@ render();
       const ctx=audioContext,now=ctx.currentTime;
       const master=ctx.createGain();
       master.gain.setValueAtTime(.0001,now);
-      master.gain.exponentialRampToValueAtTime(.22,now+.035);
-      master.gain.exponentialRampToValueAtTime(.0001,now+2.65);
-      master.connect(ctx.destination);
+      master.gain.exponentialRampToValueAtTime(.5,now+.045);
+      master.gain.exponentialRampToValueAtTime(.0001,now+3.1);
+      const limiter=ctx.createDynamicsCompressor();
+      limiter.threshold.setValueAtTime(-12,now);limiter.knee.setValueAtTime(10,now);limiter.ratio.setValueAtTime(5,now);limiter.attack.setValueAtTime(.003,now);limiter.release.setValueAtTime(.25,now);
+      master.connect(limiter);limiter.connect(ctx.destination);
       const osc=ctx.createOscillator(),tone=ctx.createGain();
       osc.type='triangle';
       osc.frequency.setValueAtTime(92,now);
       osc.frequency.exponentialRampToValueAtTime(38,now+1.6);
-      tone.gain.setValueAtTime(.45,now);
+      tone.gain.setValueAtTime(.75,now);
       tone.gain.exponentialRampToValueAtTime(.001,now+1.7);
       osc.connect(tone);tone.connect(master);osc.start(now);osc.stop(now+1.75);
       const clank=ctx.createOscillator(),clankGain=ctx.createGain();
       clank.type='sine';clank.frequency.setValueAtTime(620,now+.28);
       clank.frequency.exponentialRampToValueAtTime(150,now+.72);
-      clankGain.gain.setValueAtTime(.001,now);clankGain.gain.setValueAtTime(.5,now+.28);
+      clankGain.gain.setValueAtTime(.001,now);clankGain.gain.setValueAtTime(.8,now+.28);
       clankGain.gain.exponentialRampToValueAtTime(.001,now+1.05);
       clank.connect(clankGain);clankGain.connect(master);clank.start(now+.28);clank.stop(now+1.1);
-      const length=Math.floor(ctx.sampleRate*2.35),buffer=ctx.createBuffer(1,length,ctx.sampleRate),data=buffer.getChannelData(0);
+      const length=Math.floor(ctx.sampleRate*2.8),buffer=ctx.createBuffer(1,length,ctx.sampleRate),data=buffer.getChannelData(0);
       for(let i=0;i<length;i++)data[i]=(Math.random()*2-1)*(1-i/length);
       const noise=ctx.createBufferSource(),filter=ctx.createBiquadFilter(),noiseGain=ctx.createGain();
       noise.buffer=buffer;filter.type='lowpass';filter.frequency.setValueAtTime(420,now);filter.frequency.linearRampToValueAtTime(120,now+2.25);
-      noiseGain.gain.setValueAtTime(.001,now);noiseGain.gain.linearRampToValueAtTime(.17,now+.45);noiseGain.gain.exponentialRampToValueAtTime(.001,now+2.35);
-      noise.connect(filter);filter.connect(noiseGain);noiseGain.connect(master);noise.start(now);noise.stop(now+2.4);
+      noiseGain.gain.setValueAtTime(.001,now);noiseGain.gain.linearRampToValueAtTime(.28,now+.45);noiseGain.gain.exponentialRampToValueAtTime(.001,now+2.8);
+      noise.connect(filter);filter.connect(noiseGain);noiseGain.connect(master);noise.start(now);noise.stop(now+2.85);
     }catch(error){/* Sound is an enhancement; the doors still open if audio is unavailable. */}
   };
   const enter=(withEffects=false)=>{
