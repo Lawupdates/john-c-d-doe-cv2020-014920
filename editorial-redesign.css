@@ -146,3 +146,17 @@ h2::after{
   nav a::after{transition:none}
   .media-grid article{transition:none}
 }
+
+
+/* Keep the courthouse hero as one full-bleed image layer. */
+header{
+  background-image:url('hero-court-archive.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+header::after{
+  background:
+    linear-gradient(100deg,rgba(4,16,31,.96) 0%,rgba(8,27,45,.88) 45%,rgba(9,37,49,.43) 100%),
+    linear-gradient(115deg,transparent 0 46%,rgba(60,178,170,.12) 49%,transparent 52% 100%);
+}
