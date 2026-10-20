@@ -613,6 +613,7 @@ more.addEventListener("click",()=>{shown+=20;render()});
 render();
 </script>
 
+<script>
 /* Accessible welcome-cover reveal; archive remains in the document for indexing. */
 (()=> {
   const cover=document.getElementById('vault-cover');
@@ -643,6 +644,7 @@ render();
   openButton.focus({preventScroll:true});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!cover.hidden)enter()});
 })();
+</script>
 
 </body>
 </html>
