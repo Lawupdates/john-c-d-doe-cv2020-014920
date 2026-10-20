@@ -619,9 +619,15 @@ render();
   if(!cover)return;
   const openButton=document.getElementById('vault-open');
   const skipButton=document.getElementById('vault-skip');
-  const enter=()=>{
+  const enter=(skipAnimation=false)=>{
     if(cover.classList.contains('opening'))return;
     document.body.classList.remove('vault-locked');
+    if(skipAnimation||window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      cover.hidden=true;
+      cover.setAttribute('aria-hidden','true');
+      cover.setAttribute('inert','');
+      return;
+    }
     cover.classList.add('opening');
     window.setTimeout(()=>{
       cover.classList.add('opened');
@@ -632,8 +638,8 @@ render();
   };
   cover.hidden=false;
   document.body.classList.add('vault-locked');
-  openButton.addEventListener('click',enter);
-  skipButton.addEventListener('click',enter);
+  openButton.addEventListener('click',()=>enter(false));
+  skipButton.addEventListener('click',()=>enter(true));
   openButton.focus({preventScroll:true});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!cover.hidden)enter()});
 })();
