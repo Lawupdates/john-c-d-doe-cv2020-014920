@@ -254,6 +254,9 @@ body.vault-locked{overflow:hidden}
 }
 
 
+/* Named host greeting and handle spin during the spoken welcome. */
+.vault-speaker{font:700 9px Arial,sans-serif!important;letter-spacing:.2em!important;text-transform:uppercase!important;color:#d8c58f!important;margin:8px auto 0!important}
+#vault-cover.preparing .vault-handle{transform:rotate(1080deg)}
 /* Center the full case caption as the visual anchor on the vault plaque. */
 .vault-welcome{width:min(700px,84%);padding:clamp(16px,2.4vw,25px) clamp(14px,3vw,30px)}
 .vault-mark{font-size:10px}
@@ -293,7 +296,8 @@ body.vault-locked{overflow:hidden}
         <span class="vault-party">BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA</span>
       </h1>
       <p id="vault-description">Case No. CV2020-014920 <span aria-hidden="true">·</span> Independent Public Court Record Archive</p>
-      <p class="vault-thanks">Thank you for visiting</p>
+      <p class="vault-speaker">Alex · Archive Host</p>
+      <p class="vault-thanks">Thank you for visiting.</p>
       <button class="vault-enter" id="vault-open" type="button">Spin the Handle &amp; Open the Vault <span aria-hidden="true">↗</span></button>
       <p class="vault-audio-note">Turn up your volume for the vault sound</p>
       <button class="vault-skip" id="vault-skip" type="button">Enter without animation or sound</button>
@@ -695,6 +699,22 @@ render();
   const openButton=document.getElementById('vault-open');
   const skipButton=document.getElementById('vault-skip');
   let audioContext;
+  const sayWelcome=()=>{
+    if(!('speechSynthesis' in window))return;
+    try{
+      window.speechSynthesis.cancel();
+      const line=new SpeechSynthesisUtterance('Thank you for visiting.');
+      const voices=window.speechSynthesis.getVoices();
+      const english=voices.filter(voice=>/^en(-|$)/i.test(voice.lang));
+      const preferred=english.find(voice=>/samantha|ava|victoria|karen|serena|zira|jenny|aria|susan|female/i.test(voice.name));
+      line.voice=preferred||english[0]||null;
+      line.lang=preferred?.lang||'en-US';
+      line.pitch=1.08;
+      line.rate=.96;
+      line.volume=1;
+      window.speechSynthesis.speak(line);
+    }catch(error){/* Greeting speech is optional when unavailable in the browser. */}
+  };
   const playVaultSound=()=>{
     try{
       const AudioCtx=window.AudioContext||window.webkitAudioContext;
@@ -739,14 +759,18 @@ render();
       cover.setAttribute('inert','');
       return;
     }
-    playVaultSound();
-    cover.classList.add('opening');
+    sayWelcome();
+    cover.classList.add('preparing');
     window.setTimeout(()=>{
-      cover.classList.add('opened');
-      cover.setAttribute('aria-hidden','true');
-      cover.setAttribute('inert','');
-    },1650);
-    window.setTimeout(()=>{cover.hidden=true},2250);
+      playVaultSound();
+      cover.classList.add('opening');
+      window.setTimeout(()=>{
+        cover.classList.add('opened');
+        cover.setAttribute('aria-hidden','true');
+        cover.setAttribute('inert','');
+      },1650);
+      window.setTimeout(()=>{cover.hidden=true},2250);
+    },1450);
   };
   cover.hidden=false;
   document.body.classList.add('vault-locked');
