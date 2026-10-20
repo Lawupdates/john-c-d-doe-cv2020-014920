@@ -168,10 +168,15 @@ input,select{border-color:#A99572}
 #vault-cover::before{content:"";position:absolute;inset:14px;border:1px solid rgba(233,200,111,.42);pointer-events:none}
 #vault-cover::after{content:"";position:absolute;inset:22px;border:1px solid rgba(255,255,255,.08);pointer-events:none}
 .vault-stage{position:relative;width:min(880px,100%);height:min(610px,calc(100svh - 44px));min-height:440px;display:grid;place-items:center}
-.vault-welcome{position:relative;z-index:5;text-align:center;width:min(570px,86%);padding:28px 22px;transition:opacity .25s ease}
-.vault-mark{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#f0d688;font-weight:bold}
-.vault-welcome h1{font:clamp(28px,5vw,52px)/1.04 Georgia,serif;margin:15px auto;color:#fffaf0;text-shadow:0 2px 18px #000}
-.vault-welcome p{margin:12px auto;color:#e9e2d4;max-width:490px}
+.vault-welcome{position:relative;z-index:5;text-align:center;width:min(820px,94%);padding:clamp(18px,3vw,30px) clamp(14px,3vw,32px);background:linear-gradient(145deg,rgba(5,17,25,.94),rgba(13,30,38,.91));border:1px solid #c7a65d;box-shadow:inset 0 0 0 5px rgba(199,166,93,.14),inset 0 0 0 7px rgba(255,255,255,.06),0 14px 40px rgba(0,0,0,.48);backdrop-filter:blur(6px);transition:opacity .25s ease}
+.vault-welcome::before{content:"";position:absolute;inset:8px;border:1px solid rgba(226,197,125,.38);pointer-events:none}
+.vault-mark{position:relative;font-size:clamp(9px,1.4vw,12px);letter-spacing:.18em;text-transform:uppercase;color:#e8cf91;font-weight:bold}
+.vault-case-caption{position:relative;font-family:Georgia,"Times New Roman",serif;text-transform:uppercase;margin:13px auto 12px;color:#fffaf0;text-shadow:0 2px 12px #000}
+.vault-case-caption span{display:block}
+.vault-case-caption .vault-party{font-size:clamp(13px,2.15vw,19px);line-height:1.25;letter-spacing:.045em;font-weight:bold;margin:2px 0}
+.vault-case-caption .vault-versus{font-size:15px;line-height:1.15;color:#e8cf91;font-style:italic;font-weight:normal;margin:3px 0}
+.vault-case-caption .vault-and{font-size:12px;line-height:1.2;color:#c8d1d3;letter-spacing:.1em;font-weight:normal;margin:3px 0}
+.vault-welcome p{position:relative;margin:10px auto;color:#e5dfd2;max-width:650px;font-size:clamp(11px,1.5vw,14px);letter-spacing:.07em;text-transform:uppercase}
 .vault-enter{display:inline-flex;align-items:center;gap:12px;margin-top:18px;padding:14px 24px;border:1px solid #f1d681;border-radius:2px;background:linear-gradient(#f3d889,#c5983c);color:#101d24;font-weight:bold;font-size:15px;letter-spacing:.04em;box-shadow:0 8px 26px #0008;cursor:pointer}
 .vault-enter:hover,.vault-enter:focus-visible{filter:brightness(1.08);transform:translateY(-2px)}
 .vault-enter:focus-visible{outline:3px solid white;outline-offset:4px}
@@ -220,9 +225,15 @@ body.vault-locked{overflow:hidden}
 <div id="vault-cover" hidden role="dialog" aria-modal="true" aria-labelledby="vault-title" aria-describedby="vault-description">
   <div class="vault-stage">
     <div class="vault-welcome">
-      <div class="vault-mark">Independent Arizona Court Record Archive</div>
-      <h1 id="vault-title">JOHN C D DOE<br><span style="font-size:.65em;color:#f0d688">Case Record Archive</span></h1>
-      <p id="vault-description">Maricopa County Superior Court · CV2020-014920</p>
+      <div class="vault-mark">Superior Court of Arizona · Maricopa County</div>
+      <h1 id="vault-title" class="vault-case-caption">
+        <span class="vault-party">JOHN C D DOE</span>
+        <span class="vault-versus">v.</span>
+        <span class="vault-party">BIG BROTHERS BIG SISTERS OF AMERICA</span>
+        <span class="vault-and">and</span>
+        <span class="vault-party">BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA</span>
+      </h1>
+      <p id="vault-description">Case No. CV2020-014920 <span aria-hidden="true">·</span> Independent Public Court Record Archive</p>
       <button class="vault-enter" id="vault-open" type="button">Open the Archive <span aria-hidden="true">↗</span></button>
       <button class="vault-skip" id="vault-skip" type="button">Enter without the animation</button>
     </div>
