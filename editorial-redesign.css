@@ -55,3 +55,94 @@ footer{background:#091a2b}
 #timeline>p:not(.source-note):not(.timeline-shortcut):last-child{padding-bottom:5px}
 #latest{scroll-margin-top:100px}
 @media(max-width:800px){.editorial-intro{grid-template-columns:1fr}.media-grid{grid-template-columns:1fr}}
+
+
+/* Vibrant archive refinements 2026-10-20 */
+:root{
+  --signal-teal:#168b8c;
+  --signal-teal-dark:#0c5f68;
+  --signal-teal-light:#d9efec;
+  --brass-bright:#e4b956;
+}
+body{
+  background:
+    radial-gradient(circle at 92% 11%,rgba(22,139,140,.11),transparent 25%),
+    radial-gradient(circle at 4% 48%,rgba(228,185,86,.12),transparent 27%),
+    #f1eee7;
+}
+header{
+  background-image:
+    linear-gradient(100deg,rgba(4,16,31,.96) 0%,rgba(8,27,45,.88) 45%,rgba(9,37,49,.43) 100%),
+    url('hero-court-archive.jpg');
+  background-repeat:no-repeat;
+  background-position:center,center;
+  background-size:cover,cover;
+  border-bottom-color:var(--signal-teal);
+}
+header::after{
+  background:linear-gradient(115deg,transparent 0 46%,rgba(60,178,170,.12) 49%,transparent 52% 100%);
+}
+.hero-image-note{
+  border-left:3px solid var(--signal-teal);
+  background:rgba(5,24,37,.84);
+}
+nav{
+  border-bottom:3px solid var(--signal-teal);
+}
+nav a{
+  position:relative;
+  padding:7px 0;
+}
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:100%;
+  bottom:0;
+  height:2px;
+  background:var(--brass-bright);
+  transition:right .2s ease;
+}
+nav a:hover::after,nav a:focus-visible::after{right:0}
+#latest{
+  background:linear-gradient(120deg,#fffdf8 0%,#f4f8f2 58%,#e5f3f0 100%);
+  border:1px solid #c7ded9;
+  border-left:7px solid var(--signal-teal);
+  box-shadow:0 16px 38px rgba(9,44,57,.12);
+}
+#latest .status-topline{color:var(--signal-teal-dark)}
+#latest h2{color:#103c4a}
+h2::after{
+  background:linear-gradient(90deg,var(--signal-teal) 0 68%,var(--brass-bright) 68% 100%);
+}
+.button:not(.dark){
+  background:linear-gradient(135deg,#f4d47c,#d7a842);
+  border-color:#f1d991;
+}
+.button:not(.dark):hover,.button:not(.dark):focus-visible{
+  background:linear-gradient(135deg,#f7df98,#e6b957);
+}
+.button.dark{
+  background:linear-gradient(135deg,#176773,#0b3349);
+  border-color:#287e82;
+}
+.button.dark:hover,.button.dark:focus-visible{
+  background:linear-gradient(135deg,#218a8b,#14566c);
+}
+.doc{border-left-color:#c9953d}
+.doc:hover{border-left-color:var(--signal-teal);background:#f1faf8}
+.resource-card{border-top-color:#d0a64b}
+.resource-card:hover{border-top-color:var(--signal-teal)}
+.media-section{border-top-color:var(--signal-teal)}
+.media-grid article{
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.media-grid article:hover{
+  transform:translateY(-3px);
+  border-color:#a9d4cd;
+  box-shadow:0 12px 26px rgba(9,44,57,.10);
+}
+@media(prefers-reduced-motion:reduce){
+  nav a::after{transition:none}
+  .media-grid article{transition:none}
+}
