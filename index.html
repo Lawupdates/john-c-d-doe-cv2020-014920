@@ -155,10 +155,85 @@ input,select{border-color:#A99572}
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important}
 }
+
+/* Animated vault welcome cover */
+#vault-cover[hidden]{display:none!important}
+#vault-cover{
+  --vault-gold:#d7b35b;position:fixed;inset:0;z-index:1000;overflow:hidden;
+  display:grid;place-items:center;background:
+    radial-gradient(ellipse at 50% 48%,rgba(198,154,58,.18),transparent 34%),
+    linear-gradient(145deg,#08131b,#132b36 52%,#061018);
+  color:#fffdf6;perspective:1500px;padding:22px
+}
+#vault-cover::before{content:"";position:absolute;inset:14px;border:1px solid rgba(233,200,111,.42);pointer-events:none}
+#vault-cover::after{content:"";position:absolute;inset:22px;border:1px solid rgba(255,255,255,.08);pointer-events:none}
+.vault-stage{position:relative;width:min(880px,100%);height:min(610px,calc(100svh - 44px));min-height:440px;display:grid;place-items:center}
+.vault-welcome{position:relative;z-index:2;text-align:center;width:min(570px,86%);padding:28px 22px}
+.vault-mark{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#f0d688;font-weight:bold}
+.vault-welcome h1{font:clamp(28px,5vw,52px)/1.04 Georgia,serif;margin:15px auto;color:#fffaf0;text-shadow:0 2px 18px #000}
+.vault-welcome p{margin:12px auto;color:#e9e2d4;max-width:490px}
+.vault-enter{display:inline-flex;align-items:center;gap:12px;margin-top:18px;padding:14px 24px;border:1px solid #f1d681;border-radius:2px;background:linear-gradient(#f3d889,#c5983c);color:#101d24;font-weight:bold;font-size:15px;letter-spacing:.04em;box-shadow:0 8px 26px #0008;cursor:pointer}
+.vault-enter:hover,.vault-enter:focus-visible{filter:brightness(1.08);transform:translateY(-2px)}
+.vault-enter:focus-visible{outline:3px solid white;outline-offset:4px}
+.vault-skip{display:block;margin:15px auto 0;padding:6px;border:0;background:transparent;color:#eee8dc;text-decoration:underline;text-underline-offset:4px;cursor:pointer;font:14px Arial,sans-serif}
+.vault-doors{position:absolute;inset:0;z-index:3;display:grid;grid-template-columns:1fr 1fr;pointer-events:none;transform-style:preserve-3d}
+.vault-door{position:relative;overflow:hidden;border:2px solid #a77930;box-shadow:inset 0 0 0 7px #172831,inset 0 0 0 9px #d0a54c, inset 0 0 36px #000b,0 18px 50px #0008;background:
+  repeating-linear-gradient(90deg,transparent 0 24%,rgba(255,255,255,.035) 25%,transparent 26% 49%),
+  linear-gradient(135deg,#758187 0%,#35464d 13%,#182b34 42%,#52636a 60%,#20343c 84%,#101f26 100%);
+  transition:transform 1.35s cubic-bezier(.7,.04,.18,1),filter 1.35s ease;backface-visibility:hidden}
+.vault-door.left{transform-origin:left center;margin:16px 0 16px 16px;border-radius:4px 0 0 4px}
+.vault-door.right{transform-origin:right center;margin:16px 16px 16px 0;border-radius:0 4px 4px 0}
+.vault-door::before{content:"";position:absolute;inset:22px;border:1px solid rgba(232,196,106,.6);box-shadow:inset 0 0 0 5px rgba(4,15,20,.18),0 0 0 1px #182a31}
+.vault-door::after{content:"";position:absolute;inset:38px;border:1px solid rgba(255,255,255,.15);background:linear-gradient(135deg,rgba(255,255,255,.08),transparent 35%,rgba(0,0,0,.12))}
+.vault-bolts{position:absolute;inset:27px;z-index:1;display:flex;justify-content:space-between;pointer-events:none}
+.vault-bolts::before,.vault-bolts::after{content:"";width:13px;height:13px;margin-top:0;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff2c5 0 12%,#b98b3d 32%,#283840 68%);box-shadow:0 calc(min(610px,100svh - 44px) - 76px) 0 #b98b3d}
+.vault-door.right .vault-bolts{transform:scaleX(-1)}
+.vault-hinge{position:absolute;z-index:2;top:15%;bottom:15%;width:12px;border:1px solid #d7b45f;background:linear-gradient(90deg,#12232b,#b48b42,#293b42);box-shadow:0 0 9px #0009}
+.vault-door.left .vault-hinge{left:9px}.vault-door.right .vault-hinge{right:9px}
+.vault-wheel{position:absolute;z-index:4;left:50%;top:50%;width:clamp(76px,11vw,118px);aspect-ratio:1;transform:translate(-50%,-50%);border:7px double #e5c36e;border-radius:50%;background:radial-gradient(circle,#263b43 0 19%,#c29a4d 20% 24%,#31434a 25% 55%,#8a6935 57% 63%,#182a31 65%);box-shadow:0 0 0 5px #0b1d25,0 0 25px #000b}
+.vault-wheel::before,.vault-wheel::after{content:"";position:absolute;left:50%;top:9%;width:5px;height:82%;border-radius:5px;background:linear-gradient(90deg,#61491f,#f1d17b,#80602d);transform:translateX(-50%)}
+.vault-wheel::after{transform:translateX(-50%) rotate(90deg)}
+.vault-opening-flash{position:absolute;z-index:1;inset:0;background:radial-gradient(ellipse at center,#fff4c7 0,rgba(215,179,91,.25) 16%,transparent 42%);opacity:0;transition:opacity .8s ease .4s;pointer-events:none}
+#vault-cover.opening .vault-door.left{transform:rotateY(-108deg);filter:brightness(.65)}
+#vault-cover.opening .vault-door.right{transform:rotateY(108deg);filter:brightness(.65)}
+#vault-cover.opening .vault-opening-flash{opacity:.72}
+#vault-cover.opened{opacity:0;visibility:hidden;transition:opacity .45s ease .9s,visibility 0s linear 1.35s}
+body.vault-locked{overflow:hidden}
+@media(max-width:600px){
+ .vault-stage{min-height:390px;height:calc(100svh - 44px)}
+ .vault-door.left{margin:10px 0 10px 10px}.vault-door.right{margin:10px 10px 10px 0}
+ .vault-door::before{inset:15px}.vault-door::after{inset:27px}
+ .vault-welcome{width:88%;padding:20px 14px}
+ .vault-welcome h1{font-size:clamp(27px,8vw,40px)}
+}
+@media(prefers-reduced-motion:reduce){
+ #vault-cover.opening .vault-door.left,#vault-cover.opening .vault-door.right{transform:none;opacity:0}
+ #vault-cover.opened{transition:none}
+}
+
 </style>
 <link rel="stylesheet" href="editorial-redesign.css?v=20261020b">
 </head>
 <body>
+
+<div id="vault-cover" hidden role="dialog" aria-modal="true" aria-labelledby="vault-title" aria-describedby="vault-description">
+  <div class="vault-stage">
+    <div class="vault-welcome">
+      <div class="vault-mark">Independent Arizona Court Record Archive</div>
+      <h1 id="vault-title">JOHN C D DOE<br><span style="font-size:.65em;color:#f0d688">Case Record Archive</span></h1>
+      <p id="vault-description">Maricopa County Superior Court · CV2020-014920</p>
+      <button class="vault-enter" id="vault-open" type="button">Open the Archive <span aria-hidden="true">↗</span></button>
+      <button class="vault-skip" id="vault-skip" type="button">Enter without the animation</button>
+    </div>
+    <div class="vault-opening-flash" aria-hidden="true"></div>
+    <div class="vault-wheel" aria-hidden="true"></div>
+    <div class="vault-doors" aria-hidden="true">
+      <div class="vault-door left"><span class="vault-bolts"></span><span class="vault-hinge"></span></div>
+      <div class="vault-door right"><span class="vault-bolts"></span><span class="vault-hinge"></span></div>
+    </div>
+  </div>
+</div>
+
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header>
 <div class="hero-inner">
@@ -536,5 +611,31 @@ more.addEventListener("click",()=>{shown+=20;render()});
 
 render();
 </script>
+
+/* Accessible welcome-cover reveal; archive remains in the document for indexing. */
+(()=> {
+  const cover=document.getElementById('vault-cover');
+  if(!cover)return;
+  const openButton=document.getElementById('vault-open');
+  const skipButton=document.getElementById('vault-skip');
+  const enter=()=>{
+    if(cover.classList.contains('opening'))return;
+    document.body.classList.remove('vault-locked');
+    cover.classList.add('opening');
+    window.setTimeout(()=>{
+      cover.classList.add('opened');
+      cover.setAttribute('aria-hidden','true');
+      cover.setAttribute('inert','');
+    },1350);
+    window.setTimeout(()=>{cover.hidden=true},1800);
+  };
+  cover.hidden=false;
+  document.body.classList.add('vault-locked');
+  openButton.addEventListener('click',enter);
+  skipButton.addEventListener('click',enter);
+  openButton.focus({preventScroll:true});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!cover.hidden)enter()});
+})();
+
 </body>
 </html>
