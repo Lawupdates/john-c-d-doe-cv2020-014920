@@ -217,6 +217,14 @@ footer .latest-button{display:inline-block;padding:10px 16px;background:#e9c86f;
 }
 </script>
 <style id="archive-read-aloud-style">.archive-read-button{display:inline-flex;align-items:center;justify-content:center;margin:6px 5px 6px 0;padding:9px 12px;border:1px solid #7d663c;border-radius:5px;background:#fffaf0;color:#142c39;font:600 14px Arial,sans-serif;cursor:pointer}.archive-read-button:focus-visible{outline:3px solid #c69a3a;outline-offset:2px}.archive-read-button:hover{background:#f1e4c6}#archiveSpeechPanel{position:fixed;z-index:9999;bottom:15px;right:15px;max-width:min(440px,calc(100vw - 30px));padding:16px;background:#0b1d2a;color:#fff;border:2px solid #c69a3a;border-radius:10px;box-shadow:0 8px 30px #0006;font:14px/1.5 Arial,sans-serif}#archiveSpeechPanel[hidden]{display:none}#archiveSpeechPanel button{margin:5px 5px 0 0;padding:8px 12px;border-radius:5px;border:1px solid #c69a3a;background:#f9f3e5;color:#0b1d2a;cursor:pointer}#archiveSpeechPanel button:disabled{opacity:.5;cursor:not-allowed}#archiveSpeechVoice{display:block;margin:6px 0;max-width:100%;padding:7px;color:#0b1d2a;background:#fff;border-radius:4px}#archiveSpeechPanel p{margin:6px 0}#archiveSpeechPanel strong{color:#f1d58b}</style>
+<style id="page-scroll-controls-style">
+#pageScrollControls{position:fixed;right:12px;top:50%;transform:translateY(-50%);z-index:60;display:grid;gap:8px;width:68px}
+#pageScrollControls button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:62px;padding:8px 4px;border:1px solid #c69a3a;border-radius:8px;background:#0b1d2a;color:#fff;font:700 12px Arial,Helvetica,sans-serif;box-shadow:0 5px 18px #07141d45;cursor:pointer}
+#pageScrollControls button span:first-child{font-size:22px;line-height:1;color:#e9c86f}
+#pageScrollControls button:hover,#pageScrollControls button:focus-visible{background:#74243a;transform:translateX(-2px)}
+#pageScrollControls button:focus-visible{outline:3px solid #e9c86f;outline-offset:2px}
+@media(max-width:700px){#pageScrollControls{right:6px;width:54px;gap:6px}#pageScrollControls button{min-height:54px;padding:6px 2px;font-size:11px}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -257,6 +265,7 @@ footer .latest-button{display:inline-block;padding:10px 16px;background:#e9c86f;
 <button type="button" class="button dark" id="navQuickActions" aria-haspopup="dialog">Quick actions · Ctrl/⌘ K</button>
 </nav>
 <div id="archiveProgress" aria-hidden="true"></div>
+<aside id="pageScrollControls" aria-label="Page scroll controls"><button type="button" id="pageScrollUp" aria-label="Scroll up one screen"><span aria-hidden="true">↑</span><span>Up</span></button><button type="button" id="pageScrollDown" aria-label="Scroll down one screen"><span aria-hidden="true">↓</span><span>More</span></button></aside>
 <div id="archiveDock" aria-label="Archive tools"><button type="button" class="dock-main" id="openArchiveTools" aria-haspopup="dialog">Quick actions <kbd>Ctrl/⌘ K</kbd></button><button type="button" id="copyCitation">Copy citation</button><button type="button" id="toggleArchiveTheme" aria-pressed="false">Night view</button><button type="button" id="decreaseText" aria-label="Decrease text size">A−</button><button type="button" id="increaseText" aria-label="Increase text size">A+</button><button type="button" id="goTop" aria-label="Back to top">↑ Top</button></div><div id="archiveNotice" role="status" aria-live="polite"></div>
 <dialog id="archiveToolsDialog" aria-labelledby="archiveToolsTitle"><div class="archive-dialog-head"><div><h2 id="archiveToolsTitle">Archive Quick Actions</h2><p>Jump to a section or search the filing index.</p></div><button type="button" class="archive-close" data-close-dialog aria-label="Close">×</button></div><input class="archive-command-search" id="archiveCommandSearch" type="search" placeholder="Search sections and actions…"><div class="archive-action-list" id="archiveActionList"><button type="button" data-go="#latest">Latest filing<small>Current archive status</small></button><button type="button" data-go="#filings">Search court filings<small>Filter the 112 indexed PDFs</small></button><button type="button" data-go="#timeline">Case timeline<small>Explore archived event periods</small></button><button type="button" data-go="#media">Journalist resources<small>Case identification and verification</small></button><button type="button" data-go="#sources">Official sources<small>Verify information with the courts</small></button><button type="button" data-copy-citation>Copy case citation<small>Full caption and case number</small></button></div></dialog>
 <dialog id="archiveReaderDialog" aria-labelledby="archiveReaderTitle"><div class="archive-dialog-head"><div><h2 id="archiveReaderTitle">Document preview</h2><p id="archiveReaderMeta">Independent archive PDF · verify against the official docket.</p></div><button type="button" class="archive-close" data-close-dialog aria-label="Close">×</button></div><iframe id="archiveReaderFrame" class="archive-reader-frame" title="Court filing PDF preview"></iframe><div class="archive-reader-footer"><span>PDF preview depends on your browser.</span><a id="archiveReaderOpen" target="_blank" rel="noopener noreferrer">Open full PDF in a new tab ↗</a></div></dialog>
@@ -742,6 +751,9 @@ document.addEventListener("click",e=>{const button=e.target.closest(".archive-re
 function enhance(){document.querySelectorAll("#documents .doc").forEach(doc=>{if(doc.querySelector(".archive-read-button"))return;const pdf=doc.querySelector("a.pdf");if(!pdf)return;const b=document.createElement("button");b.type="button";b.className="archive-read-button";b.textContent="🔊 Read document aloud";b.setAttribute("data-pdf",pdf.getAttribute("href"));b.setAttribute("data-title",doc.querySelector("h3")?.textContent||"Court filing");pdf.insertAdjacentElement("afterend",b)})}
 new MutationObserver(enhance).observe(document.getElementById("documents")||document.body,{childList:true,subtree:true});enhance();
 })();
+</script>
+<script id="page-scroll-controls-script">
+(()=>{const up=document.getElementById("pageScrollUp"),down=document.getElementById("pageScrollDown");if(!up||!down)return;const reduced=window.matchMedia("(prefers-reduced-motion: reduce)");const move=direction=>window.scrollBy({top:direction*Math.max(window.innerHeight*.78,360),behavior:reduced.matches?"auto":"smooth"});up.addEventListener("click",()=>move(-1));down.addEventListener("click",()=>move(1))})();
 </script>
 </body>
 </html>
