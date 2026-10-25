@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>JOHN C D DOE Case Record Archive Updates</title>
+  <subtitle>Newly archived public filings in JOHN C D DOE v. Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona, CV2020-014920.</subtitle>
+  <id>https://lawupdates.github.io/john-c-d-doe-cv2020-014920/</id>
+  <link href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/" />
+  <link rel="self" type="application/atom+xml" href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/feed.xml" />
+  <updated>2026-10-14T12:00:00-07:00</updated>
+  <author><name>JOHN C D DOE Case Record Archive</name></author>
+  <entry>
+    <title>A112 — JOHN C D DOE’S RESPONSE TO MOTION TO STRIKE AND SANCTIONS REQUEST — FILING ID 22998618</title>
+    <id>https://lawupdates.github.io/john-c-d-doe-cv2020-014920/filing-a112.html</id>
+    <link href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/filing-a112.html" />
+    <updated>2026-10-14T12:00:00-07:00</updated>
+    <summary>Response archived as A112. Verify the document and current status against the official docket.</summary>
+  </entry>
+  <entry>
+    <title>A111 — DEFENDANTS’ RESPONSE IN OPPOSITION TO JOHN C D DOE’S LIMITED MOTION AND MOTION TO STRIKE PURSUANT TO ARIZ. R. CIV. P. 7.1(F) — FILING ID 22988135</title>
+    <id>https://lawupdates.github.io/john-c-d-doe-cv2020-014920/filing-a111.html</id>
+    <link href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/filing-a111.html" />
+    <updated>2026-10-13T12:00:00-07:00</updated>
+    <summary>Response archived as A111. Verify the document and current status against the official docket.</summary>
+  </entry>
+  <entry>
+    <title>A110 — JOHN C D DOE’S LIMITED MOTION TO CORRECT THE RECORD, VACATE SETTLEMENT-BASED INACTIVE STATUS, RESTORE CASE TO ACTIVE CALENDAR, AND REINSTATE PRETRIAL/TRIAL-SETTING CONFERENCE</title>
+    <id>https://lawupdates.github.io/john-c-d-doe-cv2020-014920/filing-a110.html</id>
+    <link href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/filing-a110.html" />
+    <updated>2026-10-05T12:00:00-07:00</updated>
+    <summary>Motion archived as A110. Verify the document and current status against the official docket.</summary>
+  </entry>
+  <entry>
+    <title>A109 — CASE ON DISMISSAL CALENDAR</title>
+    <id>https://lawupdates.github.io/john-c-d-doe-cv2020-014920/filing-a109.html</id>
+    <link href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/filing-a109.html" />
+    <updated>2026-09-22T12:00:00-07:00</updated>
+    <summary>Order archived as A109. Verify the document and current status against the official docket.</summary>
+  </entry>
+  <entry>
+    <title>A108 — NOTICE OF SETTLEMENT</title>
+    <id>https://lawupdates.github.io/john-c-d-doe-cv2020-014920/filing-a108.html</id>
+    <link href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/filing-a108.html" />
+    <updated>2026-09-17T12:00:00-07:00</updated>
+    <summary>Notice archived as A108. Verify the document and current status against the official docket.</summary>
+  </entry>
+</feed>

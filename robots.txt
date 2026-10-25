@@ -3,3 +3,4 @@ Allow: /
 
 Sitemap: https://lawupdates.github.io/john-c-d-doe-cv2020-014920/sitemap.xml
 Sitemap: https://lawupdates.github.io/john-c-d-doe-cv2020-014920/sitemap.txt
+Sitemap: https://lawupdates.github.io/john-c-d-doe-cv2020-014920/court-filings-sitemap.xml
