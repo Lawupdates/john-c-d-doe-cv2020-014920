@@ -15,7 +15,7 @@ const escapeHtml = (value) => value
 const filings = match[1].trim().split("\n").map((line) => {
   const [id, title, date, page, type] = line.split("|");
   const number = Number(id.slice(1));
-  const pdfPath = number >= 111 ? `${id}.pdf` : `filings/${id}.pdf`;
+  const pdfPath = number >= 113 ? `filing-${id}.html` : number >= 111 ? `${id}.pdf` : `filings/${id}.pdf`;
   const verifiedDate = /^\d{1,2}\/\d{1,2}\/\d{4}$/.test(date);
   const isoDate = verifiedDate
     ? new Date(`${date} 12:00:00`).toISOString().slice(0, 10)
@@ -36,8 +36,8 @@ const html = `<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>112 Court Filings | JOHN C D DOE v. Big Brothers Big Sisters | CV2020-014920</title>
-  <meta name="description" content="Static index of 112 public court filing PDFs in JOHN C D DOE v. Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona, CV2020-014920.">
+  <title>Court Filing Archive | JOHN C D DOE v. Big Brothers Big Sisters | CV2020-014920</title>
+  <meta name="description" content="Static index of archived public court filings in JOHN C D DOE v. Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona, CV2020-014920.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="${base}court-filings-index.html">
   <link rel="alternate" type="application/atom+xml" title="Case archive updates" href="${base}feed.xml">
@@ -62,7 +62,7 @@ const html = `<!doctype html>
 <body>
   <header><div><a href="./">← Main case archive</a><h1>Complete Court Filing Index</h1><p>JOHN C D DOE v. Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona · CV2020-014920</p></div></header>
   <main>
-    <section class="notice" aria-labelledby="index-note"><h2 id="index-note">112 archived public filings</h2><p>This permanent HTML index gives readers and search engines a direct link to every archived PDF. Filing titles and verified dates follow the available copies. Allegations in party filings are not court findings. Check the official docket for the authoritative record and any later filings.</p><p><a href="case-timeline.html">Case timeline</a> · <a href="court-records.html">Court records guide</a> · <a href="media-research-guide.html">Media and research guide</a> · <a href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920">Official Maricopa County docket</a></p></section>
+    <section class="notice" aria-labelledby="index-note"><h2 id="index-note">Archived public filings</h2><p>This permanent HTML index gives readers and search engines a direct link to every archived PDF. Filing titles and verified dates follow the available copies. Allegations in party filings are not court findings. Check the official docket for the authoritative record and any later filings.</p><p><a href="case-timeline.html">Case timeline</a> · <a href="court-records.html">Court records guide</a> · <a href="media-research-guide.html">Media and research guide</a> · <a href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920">Official Maricopa County docket</a></p></section>
     <div class="table-wrap"><table>
       <caption>Archived filing PDFs, newest filing number first</caption>
       <thead><tr><th scope="col">Filing</th><th scope="col">Document title</th><th scope="col">Date</th><th scope="col">Type</th></tr></thead>
