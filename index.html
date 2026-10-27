@@ -810,7 +810,7 @@ const search=document.getElementById('search'),category=document.getElementById(
 if(!search||!category||!year||!sort)return;
 const fields=[['filing',search],['type',category],['year',year],['sort',sort]],params=new URLSearchParams(location.search);
 for(const [key,el] of fields){const value=params.get(key);if(value!==null&&(el===search||Array.from(el.options).some(o=>o.value===value))){el.value=value;el.dispatchEvent(new Event(el===search?'input':'change',{bubbles:true}))}}
-document.getElementById('clearFilingFilters').addEventListener('click',()=>{search.value='';category.value='';year.value='';sort.value='number-desc';for(const [,el] of fields)el.dispatchEvent(new Event(el===search?'input':'change',{bubbles:true}));status.textContent='Search and filters cleared.';search.focus()});
+document.getElementById('clearFilingFilters').addEventListener('click',()=>{search.value='';category.value='';year.value='';sort.value='number-desc';for(const [,el] of fields)el.dispatchEvent(new Event(el===search?'input':'change',{bubbles:true}));const u=new URL(location.href);for(const [key] of fields)u.searchParams.delete(key);history.replaceState(null,'',u);status.textContent='Search and filters cleared.';search.focus()});
 document.getElementById('shareFilingFilters').addEventListener('click',async()=>{const u=new URL(location.href);for(const [key,el] of fields){if(el.value&&(key!=='sort'||el.value!=='number-desc'))u.searchParams.set(key,el.value);else u.searchParams.delete(key)}u.hash='filings';try{await navigator.clipboard.writeText(u.href);status.textContent='Search link copied.'}catch{status.textContent='Copy this link: '+u.href}});
 })();
 </script>
