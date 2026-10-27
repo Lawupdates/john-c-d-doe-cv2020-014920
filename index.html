@@ -382,6 +382,7 @@ Your browser does not support HTML video. <a href="https://resource2.heygen.ai/a
 <label class="sr-only" for="sort">Sort court filings</label><select id="sort" aria-label="Sort court filings"><option value="number-desc">Newest filing number first</option><option value="number-asc">Oldest filing number first</option><option value="date-desc">Newest verified date first</option><option value="date-asc">Oldest verified date first</option><option value="title-asc">Title A to Z</option></select>
 </div>
 
+<div class="filing-search-actions"><button type="button" id="clearFilingFilters">Clear search and filters</button> <button type="button" id="shareFilingFilters">Copy this search link</button> <span id="filingShareStatus" role="status"></span></div>
 <p id="count" role="status" aria-live="polite" aria-atomic="true"></p>
 <section aria-labelledby="audio-access-title" style="max-width:1100px;margin:20px auto;padding:18px 24px;border:1px solid #b89a5a;border-radius:8px;background:#faf6eb;color:#152b3a"><h2 id="audio-access-title" style="margin:0 0 8px">Listen to court documents</h2><p style="margin:0">Each filing in the searchable archive has a <strong>🔊 Read document aloud</strong> button. Choose a filing, then use Pause, Resume, or Stop. Choose from your device’s available voices; a natural-sounding woman’s voice is preferred when offered. Click Start reading after the text loads. Scanned PDFs without selectable text may need OCR. <a href="#filings">Browse filings and listen →</a></p></section>
 <div id="documents"></div>
@@ -802,6 +803,16 @@ new MutationObserver(enhance).observe(document.getElementById("documents")||docu
 </script>
 <script id="page-scroll-controls-script">
 (()=>{const up=document.getElementById("pageScrollUp"),down=document.getElementById("pageScrollDown");if(!up||!down)return;const reduced=window.matchMedia("(prefers-reduced-motion: reduce)");const move=direction=>window.scrollBy({top:direction*Math.max(window.innerHeight*.78,360),behavior:reduced.matches?"auto":"smooth"});up.addEventListener("click",()=>move(-1));down.addEventListener("click",()=>move(1))})();
+</script>
+<script>
+(()=>{'use strict';
+const search=document.getElementById('search'),category=document.getElementById('category'),year=document.getElementById('year'),sort=document.getElementById('sort'),status=document.getElementById('filingShareStatus');
+if(!search||!category||!year||!sort)return;
+const fields=[['filing',search],['type',category],['year',year],['sort',sort]],params=new URLSearchParams(location.search);
+for(const [key,el] of fields){const value=params.get(key);if(value!==null&&(el===search||Array.from(el.options).some(o=>o.value===value))){el.value=value;el.dispatchEvent(new Event(el===search?'input':'change',{bubbles:true}))}}
+document.getElementById('clearFilingFilters').addEventListener('click',()=>{search.value='';category.value='';year.value='';sort.value='number-desc';for(const [,el] of fields)el.dispatchEvent(new Event(el===search?'input':'change',{bubbles:true}));status.textContent='Search and filters cleared.';search.focus()});
+document.getElementById('shareFilingFilters').addEventListener('click',async()=>{const u=new URL(location.href);for(const [key,el] of fields){if(el.value&&(key!=='sort'||el.value!=='number-desc'))u.searchParams.set(key,el.value);else u.searchParams.delete(key)}u.hash='filings';try{await navigator.clipboard.writeText(u.href);status.textContent='Search link copied.'}catch{status.textContent='Copy this link: '+u.href}});
+})();
 </script>
 </body>
 </html>
