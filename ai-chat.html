@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Free AI Chat | JOHN C D DOE Court Record Archive</title><meta name="description" content="Free browser AI chat for general questions and plain-language explanations. Independent from ChatGPT and not legal advice."><meta name="robots" content="index,follow"><link rel="canonical" href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/ai-chat.html"><meta property="og:type" content="website"><meta property="og:title" content="Free AI Chat | Public Court Record Archive"><meta property="og:description" content="Ask questions in English or Spanish using a free AI model on your device."><meta property="og:url" content="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/ai-chat.html">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Free AI Chat | JOHN C D DOE Court Record Archive</title><meta name="description" content="Ask questions in English or Spanish using an online AI assistant with a free usage allowance, or an optional private on-device AI. Not legal advice."><meta name="robots" content="index,follow"><link rel="canonical" href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/ai-chat.html"><meta property="og:type" content="website"><meta property="og:title" content="Free AI Chat | Public Court Record Archive"><meta property="og:description" content="Ask questions in English or Spanish using a free AI model on your device."><meta property="og:url" content="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/ai-chat.html">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f4f0e7;color:#162e3b;font:18px/1.6 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}a{color:#80334e;text-underline-offset:3px}
 a:focus-visible,button:focus-visible,textarea:focus-visible{outline:3px solid #9c601e;outline-offset:3px}header,footer{background:#142d3b;color:#ffedd4;padding:18px 22px}header a,footer a{color:#ffe0a3}header nav{display:flex;gap:20px;flex-wrap:wrap;max-width:960px;margin:auto}main{max-width:960px;margin:auto;padding:28px 20px 55px}h1{font:700 clamp(1.8rem,4vw,2.6rem)/1.25 Georgia,serif;margin:0 0 15px}h2{font-size:1.25rem;margin:0 0 8px}.lede{max-width:75ch}.notice{background:#fff8e9;padding:17px 19px;border-left:5px solid #b18c3c;margin:20px 0;border-radius:5px}.chat{background:white;border:1px solid #aec0c8;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px #0001}.chat-head{background:#f7f5ef;padding:19px;border-bottom:1px solid #c0cbd0}.chat-head p{margin:6px 0 12px;font-size:1rem}.actions{display:flex;gap:10px;flex-wrap:wrap}button{background:#183f54;border:2px solid #183f54;color:#fff;padding:9px 17px;min-height:46px;font:700 1rem system-ui,Arial,sans-serif;border-radius:6px;cursor:pointer}button.secondary{color:#173d50;background:#fff}button:hover:not(:disabled){filter:brightness(1.2)}button:disabled{opacity:.5;cursor:not-allowed}#status{font-size:1rem;font-weight:700;margin:12px 0 0}progress{width:100%;height:12px}progress[hidden]{display:none}
@@ -6,24 +6,71 @@ a:focus-visible,button:focus-visible,textarea:focus-visible{outline:3px solid #9
 </style></head>
 <body><header><nav aria-label="Site navigation"><a href="./">← Court record archive</a><a href="resumen-del-caso.html" lang="es">Español</a><a href="court-filings-index.html">Court filings</a></nav></header>
 <main><h1>Free AI Chat <span lang="es">/ Chat de IA gratis</span></h1>
-<p class="lede">Ask general questions and get plain-language explanations in English or Spanish. This optional AI uses a small open model running locally on your device. <strong>It is not ChatGPT, and it is not affiliated with OpenAI or the courts.</strong></p>
-<p class="notice"><strong>No account or paid API key required.</strong> Click <strong>Start free AI</strong> to download the model (hundreds of MB). A modern WebGPU-compatible browser and suitable device are required. The chat is processed locally after download; this page does not send your questions to a site chat server. Some devices will not work.</p>
-<section class="chat" aria-label="AI chat"><div class="chat-head"><h2>General-purpose AI assistant</h2><p>This assistant does not read the live docket or the archive documents. Responses can be incorrect and are not legal advice. Do not enter private or confidential information.</p>
-<div class="actions"><button type="button" id="start">Start free AI</button><button type="button" id="reset" class="secondary">New conversation</button></div>
-<p id="status" role="status" aria-live="polite">AI not loaded. Select Start free AI to begin.</p><progress id="progress" max="100" value="0" aria-label="AI download progress" hidden></progress></div>
+<p class="lede">Ask questions in English or Spanish, and get plain-language explanations. Choose the online AI for a quicker start, or the optional private, on-device AI if your browser supports it. <strong>This is not ChatGPT or an official court service.</strong></p>
+<p class="notice"><strong>Online AI:</strong> Type a question and click <strong>Send message</strong> below. The online service is provided by Puter and may ask you to sign in. Puter provides a free monthly usage allowance; exceeding it may require payment through Puter. Your questions are sent to Puter and its model provider, not stored by this website. <strong>Private on-device AI:</strong> Click the optional button to download a model and run questions on a compatible computer without sending them to an AI provider.</p>
+<section class="chat" aria-label="AI chat"><div class="chat-head"><h2>General-purpose AI assistant</h2><p>This assistant does not have live access to the court docket or this archive’s documents. Answers can be wrong and are not legal advice. Do not share private or confidential information.</p>
+<div class="actions"><button type="button" id="start" class="secondary">Use private on-device AI (optional)</button><button type="button" id="reset" class="secondary">New conversation</button></div>
+<p id="status" role="status" aria-live="polite">Ready for online questions. Puter sign-in may be required.</p><progress id="progress" max="100" value="0" aria-label="AI download progress" hidden></progress></div>
 <div id="conversation" role="log" aria-label="Chat messages" aria-live="polite" tabindex="0"><div class="msg ai"><strong>AI assistant</strong><p>Welcome! You can ask me a general question in English or Spanish.</p></div></div>
-<form id="form"><label for="question">Your message / <span lang="es">Tu pregunta</span></label><textarea id="question" required disabled maxlength="2000" placeholder="What does a court order mean? / ¿Qué significa una orden judicial?"></textarea>
-<div class="sendrow"><small>Verify case details against original court documents. Do not enter passwords or sensitive data.</small><button type="submit" id="send" disabled>Send message</button></div></form></section>
-<div class="details"><p><strong>How it works:</strong> The open-source <a href="https://github.com/mlc-ai/web-llm" target="_blank" rel="noopener noreferrer">WebLLM</a> library downloads an open model to your browser, which may cache model files. This page does not save your conversations.</p><p>If local AI does not work on your device, <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a> is available separately (its own plan rules apply), or you can <a href="court-filings-index.html">read the actual case filings</a>.</p></div></main><footer><a href="./">Back to the independent case archive</a></footer>
+<form id="form"><label for="question">Your message / <span lang="es">Tu pregunta</span></label><textarea id="question" required maxlength="2000" placeholder="What does a court order mean? / ¿Qué significa una orden judicial?"></textarea>
+<div class="sendrow"><small>Verify case details against original court documents. Online messages go to Puter and its AI provider. Do not enter passwords or sensitive data.</small><button type="submit" id="send">Send message</button></div></form></section>
+<div class="details"><p><strong>How it works:</strong> Online questions use <a href="https://puter.com/" target="_blank" rel="noopener noreferrer">Puter</a> (a separate AI account and quota may be needed). The optional private mode uses <a href="https://github.com/mlc-ai/web-llm" target="_blank" rel="noopener noreferrer">open-source WebLLM</a>, which may download and cache hundreds of megabytes. This website does not save conversation histories.</p><p>If neither option works on your device, <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a> is available separately (its own plan rules apply), or you can <a href="court-filings-index.html">read the actual case filings</a>.</p></div></main><footer><a href="./">Back to the independent case archive</a></footer>
+<script src="https://js.puter.com/v2/"></script>
 <script type="module">
 const modelId="Qwen2.5-0.5B-Instruct-q4f32_1-MLC";
-const $=id=>document.getElementById(id);const start=$("start"),reset=$("reset"),send=$("send"),input=$("question"),status=$("status"),progress=$("progress"),log=$("conversation");
-const system={role:"system",content:"You are a helpful general-purpose assistant. Reply in the user's language and use plain language. You cannot access the internet, live court dockets, this website's files, or any uploaded documents; never claim otherwise. Never invent legal citations or case facts. You are not a lawyer. Protect user privacy."};
+const $=id=>document.getElementById(id);
+const start=$("start"),reset=$("reset"),send=$("send"),input=$("question"),status=$("status"),progress=$("progress"),log=$("conversation");
+const system={role:"system",content:"You are a helpful general-purpose assistant for visitors to an independent public court-record archive. Respond in the user's language and explain terminology clearly. You do not have live access to court dockets, this site's PDF files, or personal case records. Never invent citations. You are not a lawyer; explain general information, not individualized legal advice."};
 let messages=[system],engine=null,busy=false;
-function note(value){status.textContent=value}
-function controls(){start.disabled=busy||!!engine;send.disabled=busy||!engine;input.disabled=busy||!engine}
-function bubble(who,content){const item=document.createElement("div");item.className="msg "+who;const title=document.createElement("strong");title.textContent=who==="user"?"You":"AI assistant";const body=document.createElement("p");body.textContent=content;item.append(title,body);log.append(item);log.scrollTop=log.scrollHeight;return body}
-reset.addEventListener("click",()=>{if(busy)return;messages=[system];log.replaceChildren();bubble("ai","New conversation started. How can I help?");input.value="";if(engine)input.focus()});
-start.addEventListener("click",async()=>{if(busy||engine)return;if(!navigator.gpu){note("WebGPU is not supported. Try an updated Chrome or Edge browser on a compatible device.");return}busy=true;controls();progress.hidden=false;progress.value=0;note("Preparing local AI...");try{const webllm=await import("https://esm.run/@mlc-ai/web-llm@0.2.89");if(!webllm.prebuiltAppConfig.model_list.some(m=>m.model_id===modelId))throw Error("This model is not available in the loaded version.");engine=await webllm.CreateMLCEngine(modelId,{initProgressCallback:p=>{if(Number.isFinite(p.progress))progress.value=Math.max(0,Math.min(100,p.progress*100));note("Loading model: "+(p.text||"Please keep this tab open"))}});progress.hidden=true;note("AI ready. Ask your question.");input.focus()}catch(err){engine=null;progress.hidden=true;note("AI unavailable on this device: "+(err?.message||"Loading failed"))}finally{busy=false;controls()}});
-$("form").addEventListener("submit",async event=>{event.preventDefault();if(!engine||busy)return;const q=input.value.trim();if(!q)return;input.value="";bubble("user",q);messages.push({role:"user",content:q});busy=true;controls();note("Generating answer...");const response=bubble("ai","Thinking...");try{const answer=await engine.chat.completions.create({messages,max_tokens:550,temperature:0.7});const text=String(answer.choices?.[0]?.message?.content||"I could not generate a response.");response.textContent=text;messages.push({role:"assistant",content:text});if(messages.length>15)messages=[system,...messages.slice(-14)];note("AI ready.")}catch(err){messages.pop();response.textContent="Sorry, an error occurred. Please try again.";note("Error: "+(err?.message||"Unknown error"))}finally{busy=false;controls();input.focus()}});
+const onlineReady="Ready for online questions. Puter may ask you to sign in; a free monthly allowance applies.";
+function note(v){status.textContent=v;}
+function controls(){send.disabled=busy;input.disabled=busy;start.disabled=busy||Boolean(engine);reset.disabled=busy;}
+function bubble(who,content){const item=document.createElement("div");item.className="msg "+who;const title=document.createElement("strong");title.textContent=who==="user"?"You":"AI assistant";const body=document.createElement("p");body.textContent=content;item.append(title,body);log.append(item);log.scrollTop=log.scrollHeight;return body;}
+function getResponseText(result){if(typeof result==="string")return result;const v=result?.message?.content??result?.text??result?.content;if(typeof v==="string")return v;if(Array.isArray(v))return v.map(p=>p?.text||"").join("");return "";}
+reset.addEventListener("click",()=>{if(busy)return;messages=[system];log.replaceChildren();bubble("ai","New conversation started. Ask your question below.");input.value="";note(engine?"Private AI ready.":onlineReady);input.focus()});
+start.addEventListener("click",async()=>{
+ if(busy||engine)return;
+ if(!navigator.gpu){note("Private AI is not supported in this browser. The online chat below is still available. Type your question and select Send message.");input.focus();return;}
+ busy=true;controls();progress.hidden=false;progress.value=0;note("Checking your graphics processor...");
+ try{
+  const adapter=await navigator.gpu.requestAdapter();
+  if(!adapter)throw Error("No compatible graphics adapter is available");
+  note("Downloading private AI model. You can use online chat instead if this fails.");
+  const webllm=await import("https://esm.run/@mlc-ai/web-llm@0.2.89");
+  if(!webllm.prebuiltAppConfig.model_list.some(m=>m.model_id===modelId))throw Error("The on-device model was not found");
+  engine=await webllm.CreateMLCEngine(modelId,{initProgressCallback:p=>{if(Number.isFinite(p.progress))progress.value=Math.max(0,Math.min(100,p.progress*100));note("Loading private AI: "+(p.text||"Downloading model files"))}});
+  note("Private AI ready. Messages are processed on this device.");progress.hidden=true;
+ }catch(err){engine=null;progress.hidden=true;note("Private AI did not load: "+(err?.message||"Unknown error")+". You can still use the online chat below.");}
+ finally{busy=false;controls();input.focus();}
+});
+$("form").addEventListener("submit",async event=>{
+ event.preventDefault();if(busy)return;
+ const question=input.value.trim();if(!question)return;
+ busy=true;controls();
+ bubble("user",question);
+ const answerBubble=bubble("ai",engine?"Private AI is answering...":"Connecting to Puter online AI. A sign-in window may appear...");
+ messages.push({role:"user",content:question});
+ note(engine?"Generating answer on this device...":"Getting an online AI answer...");
+ try{
+  let answer;
+  if(engine){
+   const result=await engine.chat.completions.create({messages,max_tokens:600,temperature:0.6});
+   answer=getResponseText(result.choices?.[0]||{});
+  }else{
+   if(!window.puter?.ai?.chat)throw Error("The online AI connection is blocked or unavailable. Check internet access, then reload.");
+   const result=await window.puter.ai.chat(messages,{model:"gpt-5.4-nano",normalize:true});
+   answer=getResponseText(result);
+  }
+  if(!answer)throw Error("The service returned no readable answer");
+  answerBubble.textContent=answer;
+  messages.push({role:"assistant",content:answer});
+  if(messages.length>15)messages=[system,...messages.slice(-14)];
+  input.value="";
+  note(engine?"Private AI ready.":onlineReady);
+ }catch(err){
+  messages.pop();
+  answerBubble.textContent="I couldn't answer that yet. Your question is still in the box below; please try again. "+(err?.message||"Service error");
+  note("Unable to answer. You can retry or open ChatGPT directly using the link below.");
+ }finally{busy=false;controls();input.focus();}
+});
 </script></body></html>
