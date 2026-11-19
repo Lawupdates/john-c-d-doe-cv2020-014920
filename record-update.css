@@ -9,19 +9,19 @@
 }
 .record-hero .case-caption {
   font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-  font-size: 20px;
+  font-size: 10px;
   line-height: 1.3;
   letter-spacing: 0.015em;
-  -webkit-text-stroke: 0.65px #181109;
+  -webkit-text-stroke: 0.35px #181109;
   paint-order: stroke fill;
   text-shadow: 0 2px 18px #02040a;
 }
 @media (max-width: 600px) {
   .record-hero .case-caption {
-    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-width: 0.3px;
   }
 }
-.record-hero .kicker { color: #ffe5af; }
+.record-hero .kicker { color: #ffe5af; font-size: 6px; }
 .record-hero .button { margin: 5px; }
 #october-29-ruling {
   background: #111a29 !important;
