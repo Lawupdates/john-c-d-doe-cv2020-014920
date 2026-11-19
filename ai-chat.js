@@ -9,7 +9,7 @@ function setBusy(value){busy=value;send.disabled=value;input.disabled=value;rese
 function bubble(who,content){const el=document.createElement("div");el.className="msg "+(who==="user"?"user":"ai");const label=document.createElement("strong");label.textContent=who==="user"?"You":"AI assistant";const p=document.createElement("p");p.textContent=content;el.append(label,p);messagesBox.append(el);messagesBox.scrollTop=messagesBox.scrollHeight;return p;}
 function directAnswer(question){
  const s=question.trim().toLowerCase();
- if(/^(what(?:'s| is)? (?:the )?(?:today'?s? )?(?:date|day|time)|current date|today'?s? date|que fecha es hoy|qué fecha es hoy|que hora es|qué hora es|fecha de hoy)[?!.\s]*$/.test(s)){
+ if(/^(what(?:'s| is)? (?:the )?(?:today'?s? )?(?:date|day|time)|what (?:time|day|date) is it|current date|today'?s? date|que fecha es hoy|qué fecha es hoy|que hora es|qué hora es|fecha de hoy)[?!.\s]*$/.test(s)){
   const isSpanish=/^(que|qué|fecha)/.test(s);
   const wantTime=/time|hora/.test(s);
   const locale=isSpanish?"es-US":(navigator.language||"en-US");
