@@ -208,6 +208,17 @@ footer .latest-button{display:inline-block;padding:10px 16px;background:#e9c86f;
 .site-language-button{display:inline-block;background:#f4d889;color:#132c3c!important;border:2px solid #fff1bb;border-radius:6px;padding:10px 16px;font-size:1rem;font-weight:800;line-height:1.3;text-decoration:none;box-shadow:0 3px 9px #0004}
 .site-language-button:hover,.site-language-button:focus-visible{background:#fff0b1;color:#132c3c!important;text-decoration:underline;outline:3px solid #fff;outline-offset:2px}
 @media(max-width:600px){.site-language-bar{justify-content:center;padding:8px 12px}.site-language-button{display:block;width:100%;max-width:380px;text-align:center;font-size:1rem}}
+
+/* Accessible, legible court activity timeline */
+.readable-case-updates{max-width:900px;margin:24px 0 30px}
+.readable-case-updates h3{font-size:clamp(1.4rem,2.5vw,1.75rem);line-height:1.3;margin:0 0 18px;color:#132c3c}
+.readable-case-update{background:#fff;color:#152d3a;border:1px solid #a9bac4;border-left:6px solid #274d62;border-radius:8px;padding:20px 24px;margin:0 0 18px;box-shadow:0 3px 12px #142b3a15}
+.readable-case-update h4{font-family:Arial,Helvetica,sans-serif;font-size:clamp(1.15rem,2.3vw,1.4rem);line-height:1.35;color:#142d3d;margin:0 0 12px}
+.readable-case-update p{font-size:clamp(1.05rem,1.4vw,1.18rem);line-height:1.75;color:#152d3a;max-width:76ch;margin:0 0 12px}
+.readable-case-update .readable-update-links{display:flex;flex-wrap:wrap;gap:12px 24px;margin:18px 0 0;padding:0;background:transparent;border:0}
+.readable-case-update .readable-update-links a{font-size:1rem;line-height:1.5;color:#793044;text-decoration:underline;text-underline-offset:3px;font-weight:700}
+.readable-case-update .readable-update-links a:focus-visible{outline:3px solid #986523;outline-offset:3px}
+@media(max-width:640px){.readable-case-update{padding:18px 16px}.readable-case-update .readable-update-links{flex-direction:column;gap:12px}}
 </style>
 <link rel="stylesheet" href="editorial-redesign.css?v=20261020b">
 <script type="application/ld+json">
@@ -297,9 +308,19 @@ footer .latest-button{display:inline-block;padding:10px 16px;background:#e9c86f;
 <section id="october-22-filings" aria-labelledby="oct22-heading" style="margin:24px auto;max-width:1050px;padding:22px;background:#fff6d9;border:3px solid #b88422;border-radius:8px;color:#142c3c"><h2 id="oct22-heading" style="margin:0 0 12px">NEW COURT FILINGS — OCTOBER 22, 2026</h2><p><strong>A113 — Defendants' Reply</strong> · REL — REPLY — PART 1 OF 1 · Filing ID 23046642<br><a href="a113.pdf">Open A113 — full court-stamped PDF →</a></p><p><strong>A114 — Motion to Continue on Inactive Calendar</strong> · MCC — Mot/Cont On Inactive Calendar — PART 1 OF 1 · Filing ID 23050810<br><a href="a114.pdf">Open A114 — full court-stamped PDF →</a></p><p style="font-size:.9rem">A113 and A114 are available as full court-stamped PDFs. These submissions are not court rulings.</p><p><a href="court-filings-index.html">View the court docket filing index →</a></p></section>
 <section id="latest" class="status-panel" aria-labelledby="archive-status-title">
 <div class="status-topline"><span>ARCHIVE SNAPSHOT</span><span>Archive through October 29, 2026</span></div>
-<h2 id="archive-status-title">Latest archived filing: October 29, 2026</h2><p><a href="a115.pdf">Open A115 — full court-stamped PDF</a></p><div style="border:2px solid #c69a3a;background:#fff8e5;color:#173144;padding:18px 20px;margin:16px 0"><strong>October 22, 2026 — separate docket entries in court order</strong><p><a href="a113.pdf">A113 — REL — REPLY — Filing ID 23046642</a>: Defendants’ Reply in Support of Motion to Strike.</p><p><a href="a114.pdf">A114 — MCC — Mot/Cont On Inactive Calendar — Filing ID 23050810</a>: Trustee’s motion to continue.</p><p>These are filings, not court rulings. <a href="court-docket.html">See docket labels and exact order</a>.</p></div>
-<div class="notice status"><strong>November 4, 2026:</strong> The official docket lists an order continuing the case on the inactive/dismissal calendar. Check the <a href="court-docket.html">docket listing</a> for the entry and follow its official court link for the current calendar.</div>
-<p><strong>October 22, 2026:</strong> Separate defense reply (REL, ID 23046642) and trustee inactive-calendar motion (MCC, ID 23050810). No court ruling is established by these filings.</p>
+<h2 id="archive-status-title">Latest archived filing: October 29, 2026</h2><p><a href="a115.pdf">Open A115 — full court-stamped PDF</a></p><div class="readable-case-updates" aria-labelledby="recent-case-activity">
+<h3 id="recent-case-activity">Recent court activity</h3>
+<article class="readable-case-update">
+<h4><time datetime="2026-11-04">November 4, 2026</time> — Calendar order</h4>
+<p>The official docket lists an order continuing the case on the inactive/dismissal calendar. The order is not included as a PDF in this archive. Check the official docket for the current schedule.</p>
+<p class="readable-update-links"><a href="court-docket.html">View the archived docket listing</a><a href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920" target="_blank" rel="noopener noreferrer">Check the official court docket</a></p>
+</article>
+<article class="readable-case-update">
+<h4><time datetime="2026-10-22">October 22, 2026</time> — Two separate filings</h4>
+<p>The defendants filed a reply (REL, filing ID 23046642). The trustee filed a motion about the inactive calendar (MCC, filing ID 23050810). These filings are not court rulings.</p>
+<p class="readable-update-links"><a href="a113.pdf">Read defendants’ reply (A113)</a><a href="a114.pdf">Read trustee’s motion (A114)</a></p>
+</article>
+</div>
 <div class="status-links"><a class="button dark" href="court-docket.html">Exact docket order ↗</a><a href="a113.pdf">A113 — defense reply ↗</a><a href="a114.pdf">A114 — trustee motion ↗</a><a class="button dark" href="a112.pdf" target="_blank" rel="noopener noreferrer">Read A112 · full PDF ↗</a><button type="button" class="archive-read-button" data-pdf="a112.pdf" data-title="A112 — John C D Doe response to motion to strike (October 14, 2026)">🔊 Listen to A112</button><a href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920" target="_blank" rel="noopener">Verify current status on the official docket ↗</a><a href="https://www.facebook.com/profile.php?id=61595727032916" target="_blank" rel="noopener noreferrer">Facebook archive page ↗</a></div>
 <p class="source-note">A113 through A115 are hosted as full court-stamped PDFs. The court docket may contain later entries.</p>
 </section>
