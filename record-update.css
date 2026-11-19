@@ -1,0 +1,27 @@
+.record-hero {
+  min-height: min(72vh, 720px);
+  display: grid;
+  place-items: center;
+  background-image: linear-gradient(110deg, #080d16ed, #10182794 68%, #090e16cf), image-set(url("hero-court-archive.jpg") 1x, url("hero-court-archive.png.png") 2x);
+  background-size: cover;
+  background-position: center;
+  border-bottom: 4px solid #d6a966;
+}
+.record-hero .case-caption { text-shadow: 0 2px 28px #02040a; }
+.record-hero .kicker { color: #ffe5af; }
+.record-hero .button { margin: 5px; }
+#october-29-ruling {
+  background: #111a29 !important;
+  border: 1px solid #735333 !important;
+  border-left: 6px solid #e5ad63 !important;
+  color: #faf5ec !important;
+}
+#october-29-ruling a { color: #ffdaa0; }
+#october-29-ruling h2 { color: #fff7e5; font-size: clamp(1.7rem, 4vw, 2.8rem); }
+.record-updates { max-width: 1050px; margin: 24px auto; padding: 24px; border: 1px solid #c6b89f; border-radius: 8px; }
+.record-updates-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.record-updates ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 14px; list-style: none; padding: 0; }
+.record-updates li { border-top: 2px solid #9b7543; padding-top: 14px; }
+.record-updates li a { font-weight: 700; }
+a:focus-visible, button:focus-visible { outline: 3px solid #d49742; outline-offset: 4px; }
+@media (max-width: 680px) { .record-hero { min-height: 0; } }

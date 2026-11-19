@@ -231,10 +231,12 @@ footer .latest-button{display:inline-block;padding:10px 16px;background:#e9c86f;
 #pageScrollControls button:focus-visible{outline:3px solid #e9c86f;outline-offset:2px}
 @media(max-width:700px){#pageScrollControls{right:6px;width:54px;gap:6px}#pageScrollControls button{min-height:54px;padding:6px 2px;font-size:11px}}
 </style>
+<link rel="stylesheet" href="record-update.css">
+<script src="archive-updates.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<header>
+<header class="record-hero">
 <div class="hero-inner">
 <div class="kicker">Independent Arizona Court Record Archive</div>
 <h1 class="case-caption">
@@ -245,8 +247,8 @@ footer .latest-button{display:inline-block;padding:10px 16px;background:#e9c86f;
 <span>BIG BROTHERS BIG SISTERS OF CENTRAL ARIZONA</span>
 </h1>
 <p>Maricopa County Superior Court | Case No. CV2020-014920</p>
-<a class="button" href="#filings">Explore Court Documents <span aria-hidden="true">↗</span></a>
-<a class="button dark" href="survivors-seeking-justice-video.html">Click here to view the video <span aria-hidden="true">▶</span></a>
+<a class="button" href="a115.pdf">Read the October 29 ruling <span aria-hidden="true">↗</span></a>
+<a class="button dark" href="survivors-seeking-justice-video.html">Watch the case overview <span aria-hidden="true">▶</span></a>
 </div>
 <p class="hero-image-note">Illustrative image only · not the actual courthouse</p>
 </header>
@@ -277,19 +279,19 @@ footer .latest-button{display:inline-block;padding:10px 16px;background:#e9c86f;
 <div id="archiveProgress" aria-hidden="true"></div>
 <aside id="pageScrollControls" aria-label="Page scroll controls"><button type="button" id="pageScrollUp" aria-label="Scroll up one screen"><span aria-hidden="true">↑</span><span>Up</span></button><button type="button" id="pageScrollDown" aria-label="Scroll down one screen"><span aria-hidden="true">↓</span><span>More</span></button></aside>
 <div id="archiveDock" aria-label="Archive tools"><button type="button" class="dock-main" id="openArchiveTools" aria-haspopup="dialog">Quick actions <kbd>Ctrl/⌘ K</kbd></button><button type="button" id="copyCitation">Copy citation</button><button type="button" id="toggleArchiveTheme" aria-pressed="false">Night view</button><button type="button" id="decreaseText" aria-label="Decrease text size">A−</button><button type="button" id="increaseText" aria-label="Increase text size">A+</button><button type="button" id="goTop" aria-label="Back to top">↑ Top</button></div><div id="archiveNotice" role="status" aria-live="polite"></div>
-<dialog id="archiveToolsDialog" aria-labelledby="archiveToolsTitle"><div class="archive-dialog-head"><div><h2 id="archiveToolsTitle">Archive Quick Actions</h2><p>Jump to a section or search the filing index.</p></div><button type="button" class="archive-close" data-close-dialog aria-label="Close">×</button></div><input class="archive-command-search" id="archiveCommandSearch" type="search" placeholder="Search sections and actions…"><div class="archive-action-list" id="archiveActionList"><button type="button" data-go="#latest">Latest filing<small>Current archive status</small></button><button type="button" data-go="#filings">Search court filings<small>Filter the 114 indexed entries</small></button><button type="button" data-go="#timeline">Case timeline<small>Explore archived event periods</small></button><button type="button" data-go="#media">Journalist resources<small>Case identification and verification</small></button><button type="button" data-go="#sources">Official sources<small>Verify information with the courts</small></button><button type="button" data-copy-citation>Copy case citation<small>Full caption and case number</small></button></div></dialog>
+<dialog id="archiveToolsDialog" aria-labelledby="archiveToolsTitle"><div class="archive-dialog-head"><div><h2 id="archiveToolsTitle">Archive Quick Actions</h2><p>Jump to a section or search the filing index.</p></div><button type="button" class="archive-close" data-close-dialog aria-label="Close">×</button></div><input class="archive-command-search" id="archiveCommandSearch" type="search" placeholder="Search sections and actions…"><div class="archive-action-list" id="archiveActionList"><button type="button" data-go="#latest">Latest filing<small>Current archive status</small></button><button type="button" data-go="#filings">Search court filings<small>Filter the 115 indexed entries</small></button><button type="button" data-go="#timeline">Case timeline<small>Explore archived event periods</small></button><button type="button" data-go="#media">Journalist resources<small>Case identification and verification</small></button><button type="button" data-go="#sources">Official sources<small>Verify information with the courts</small></button><button type="button" data-copy-citation>Copy case citation<small>Full caption and case number</small></button></div></dialog>
 <dialog id="archiveReaderDialog" aria-labelledby="archiveReaderTitle"><div class="archive-dialog-head"><div><h2 id="archiveReaderTitle">Document preview</h2><p id="archiveReaderMeta">Independent archive PDF · verify against the official docket.</p></div><button type="button" class="archive-close" data-close-dialog aria-label="Close">×</button></div><iframe id="archiveReaderFrame" class="archive-reader-frame" title="Court filing PDF preview"></iframe><div class="archive-reader-footer"><span>PDF preview depends on your browser.</span><a id="archiveReaderOpen" target="_blank" rel="noopener noreferrer">Open full PDF in a new tab ↗</a></div></dialog>
 
 <main id="main-content">
-<section id="october-29-ruling" aria-labelledby="oct29-ruling-heading" style="margin:24px auto;max-width:1050px;padding:22px;background:#fffaf0;border:3px solid #b88422;border-radius:8px;color:#142c3c"><h2 id="oct29-ruling-heading">NEW COURT RULING — A115 · OCTOBER 27, 2026</h2><p><strong>Judge Christopher Whitten’s Minute Entry, electronically filed October 29, 2026.</strong> The court granted defendants’ motion to strike and independently denied Doe’s October 5 motion for lack of standing. The court <strong>denied defendants’ requests for attorney fees and sanctions</strong>. The order does not expressly approve the reported settlement.</p><p><a href="filing-a115.html"><strong>Read A115 — court order and faithful text transcription →</strong></a></p><p style="font-size:.9rem">Independent archive number A115. The original court-issued PDF is not yet hosted here; the linked page reproduces its substantive text.</p></section>
+<section id="october-29-ruling" aria-labelledby="oct29-ruling-heading" style="margin:24px auto;max-width:1050px;padding:22px;background:#fffaf0;border:3px solid #b88422;border-radius:8px;color:#142c3c"><h2 id="oct29-ruling-heading">The court struck Doe’s motion</h2><p><strong>Judge Christopher Whitten’s Minute Entry, electronically filed October 29, 2026.</strong> The court granted defendants’ motion to strike and independently denied Doe’s October 5 motion for lack of standing. The court <strong>denied defendants’ requests for attorney fees and sanctions</strong>. The order does not expressly approve the reported settlement.</p><p><a href="filing-a115.html"><strong>Read A115 — court order and faithful text transcription →</strong></a></p><p style="font-size:.9rem">Independent archive number A115. <a href="a115.pdf">Open A115 — full court-stamped PDF</a>.</p></section>
 <section id="october-22-filings" aria-labelledby="oct22-heading" style="margin:24px auto;max-width:1050px;padding:22px;background:#fff6d9;border:3px solid #b88422;border-radius:8px;color:#142c3c"><h2 id="oct22-heading" style="margin:0 0 12px">NEW COURT FILINGS — OCTOBER 22, 2026</h2><p><strong>A113 — Defendants' Reply</strong> · REL — REPLY — PART 1 OF 1 · Filing ID 23046642<br><a href="a113.pdf">Open A113 — full court-stamped PDF →</a></p><p><strong>A114 — Motion to Continue on Inactive Calendar</strong> · MCC — Mot/Cont On Inactive Calendar — PART 1 OF 1 · Filing ID 23050810<br><a href="a114.pdf">Open A114 — full court-stamped PDF →</a></p><p style="font-size:.9rem">A113 and A114 are available as full court-stamped PDFs. These submissions are not court rulings.</p><p><a href="court-filings-index.html">View the court docket filing index →</a></p></section>
 <section id="latest" class="status-panel" aria-labelledby="archive-status-title">
-<div class="status-topline"><span>ARCHIVE SNAPSHOT</span><span>Docket excerpt through October 22, 2026</span></div>
-<h2 id="archive-status-title">Latest docket filings: October 22, 2026</h2><div style="border:2px solid #c69a3a;background:#fff8e5;color:#173144;padding:18px 20px;margin:16px 0"><strong>October 22, 2026 — separate docket entries in court order</strong><p><a href="a113.pdf">A113 — REL — REPLY — Filing ID 23046642</a>: Defendants’ Reply in Support of Motion to Strike.</p><p><a href="a114.pdf">A114 — MCC — Mot/Cont On Inactive Calendar — Filing ID 23050810</a>: Trustee’s motion to continue.</p><p>These are filings, not court rulings. <a href="court-docket.html">See docket labels and exact order</a>.</p></div>
-<div class="notice status"><strong>Ongoing court activity:</strong> The official docket checked October 23, 2026 lists later filings about inactive-calendar status and a pretrial conference scheduled for November 20, 2026 at 10:00 a.m. The case is active in the sense that court activity continues; the docket also reflects an inactive-calendar dispute. <a href="big-brothers-big-sisters-lawsuit-status.html">Read the dated status update and verify the current calendar ↗</a></div>
+<div class="status-topline"><span>ARCHIVE SNAPSHOT</span><span>Archive through October 29, 2026</span></div>
+<h2 id="archive-status-title">Latest archived filing: October 29, 2026</h2><p><a href="a115.pdf">Open A115 — full court-stamped PDF</a></p><div style="border:2px solid #c69a3a;background:#fff8e5;color:#173144;padding:18px 20px;margin:16px 0"><strong>October 22, 2026 — separate docket entries in court order</strong><p><a href="a113.pdf">A113 — REL — REPLY — Filing ID 23046642</a>: Defendants’ Reply in Support of Motion to Strike.</p><p><a href="a114.pdf">A114 — MCC — Mot/Cont On Inactive Calendar — Filing ID 23050810</a>: Trustee’s motion to continue.</p><p>These are filings, not court rulings. <a href="court-docket.html">See docket labels and exact order</a>.</p></div>
+<div class="notice status"><strong>November 4, 2026:</strong> The official docket lists an order continuing the case on the inactive/dismissal calendar. Check the <a href="court-docket.html">docket listing</a> for the entry and follow its official court link for the current calendar.</div>
 <p><strong>October 22, 2026:</strong> Separate defense reply (REL, ID 23046642) and trustee inactive-calendar motion (MCC, ID 23050810). No court ruling is established by these filings.</p>
 <div class="status-links"><a class="button dark" href="court-docket.html">Exact docket order ↗</a><a href="a113.pdf">A113 — defense reply ↗</a><a href="a114.pdf">A114 — trustee motion ↗</a><a class="button dark" href="a112.pdf" target="_blank" rel="noopener noreferrer">Read A112 · full PDF ↗</a><button type="button" class="archive-read-button" data-pdf="a112.pdf" data-title="A112 — John C D Doe response to motion to strike (October 14, 2026)">🔊 Listen to A112</button><a href="https://www.superiorcourt.maricopa.gov/docket/CivilCourtCases/caseInfo.asp?caseNumber=CV2020-014920" target="_blank" rel="noopener">Verify current status on the official docket ↗</a><a href="https://www.facebook.com/profile.php?id=61595727032916" target="_blank" rel="noopener noreferrer">Facebook archive page ↗</a></div>
-<p class="source-note">The docket index includes October 22 entries; A113 and A114 are hosted as full court-stamped PDFs. The court docket may contain later entries.</p>
+<p class="source-note">A113 through A115 are hosted as full court-stamped PDFs. The court docket may contain later entries.</p>
 </section>
 <div class="editorial-intro" aria-label="Case archive quick access">
 <div><span class="eyebrow">THE PUBLIC RECORD</span><h2>Follow the documents.<br>Examine the case.</h2><p>A navigable archive of court filings concerning a civil childhood sexual abuse case involving the named defendant organizations. Explore the record and verify developments against the official court docket.</p></div>
@@ -316,6 +318,10 @@ Your browser does not support HTML video. <a href="https://resource2.heygen.ai/a
 </article>
 </div>
 </section>
+<section class="record-updates" aria-labelledby="record-updates-heading">
+<div class="record-updates-heading"><h2 id="record-updates-heading">Case updates</h2><a href="feed.xml">Subscribe via Atom</a></div>
+<ul id="archive-updates"><li><a href="filing-a115.html">A115 — Judge Whitten’s minute entry</a><p>Filed October 29, 2026.</p></li><li><a href="filing-a113.html">A113 — Defendants’ reply</a><p>Filed October 22, 2026.</p></li><li><a href="filing-a114.html">A114 — Motion to continue</a><p>Filed October 22, 2026.</p></li></ul>
+</section>
 <section id="survivor-news-source" aria-labelledby="survivor-news-source-heading" style="max-width:1100px;margin:24px auto;padding:25px;border:3px solid #188aa4;border-radius:12px;background:linear-gradient(120deg,#e9f7ff,#fff7e7);box-shadow:0 12px 32px rgba(14,59,97,.12)">
 <span style="display:inline-block;padding:5px 11px;border-radius:30px;background:#1555a3;color:white;font:700 12px system-ui;letter-spacing:.06em">INDEPENDENT NATIONAL RESEARCH SOURCE</span>
 <h2 id="survivor-news-source-heading" style="color:#123c80;margin:14px 0 8px">Sexual Abuse Survivors News</h2>
@@ -328,9 +334,9 @@ Your browser does not support HTML video. <a href="https://resource2.heygen.ai/a
 <p>This independent archive organizes court documents relating to JOHN C D DOE v. Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona.</p>
 <p>The archive is intended to make court filings easier to locate, search, and read. It is not an official court website.</p>
 <div class="stats" aria-label="Archive summary">
-<div><strong>114</strong>Indexed entries</div>
+<div><strong>115</strong>Indexed entries</div>
 <div><strong>2020–2026</strong>Filing years</div>
-<div><strong>Oct. 22, 2026</strong>Latest docket entry listed</div>
+<div><strong>Oct. 29, 2026</strong>Latest archived document</div>
 </div>
 <p class="organization-search-context"><strong>Organization name reference:</strong> The official local organization uses the name Big Brothers Big Sisters of Central Arizona and the abbreviation BBBSAZ; older case and search references may use BBBSCAZ. Its official website describes Phoenix-area youth mentoring, including one-to-one and site-based programs. <a href="https://bbbsaz.org/" target="_blank" rel="noopener noreferrer">Visit the official Big Brothers Big Sisters of Central Arizona website</a>. This independent archive is not affiliated with that organization and documents this separate court case.</p>
 </section>
@@ -360,7 +366,7 @@ Your browser does not support HTML video. <a href="https://resource2.heygen.ai/a
 
 <div class="controls">
 <label class="sr-only" for="search">Search the court filings</label>
-<input id="search" type="search" placeholder="Search all 114 entries by title, number, or date...">
+<input id="search" type="search" placeholder="Search all 115 entries by title, number, or date...">
 <label class="sr-only" for="category">Filter by document type</label>
 <select id="category">
 <option value="">All document types</option>
@@ -401,7 +407,7 @@ Your browser does not support HTML video. <a href="https://resource2.heygen.ai/a
 <h2>Case Timeline</h2>
 <p class="source-note">A short guide to events represented in the archive. The labels distinguish party-submitted filings from court-issued orders; they do not summarize every docket entry. Check the official docket for the authoritative record and current case status.</p>
 <div class="archive-verification">
-<strong>Archive review: October 19, 2026 · Docket entries through October 22, 2026</strong>
+<strong>Archive coverage through October 29, 2026</strong>
 <p>Method: this independent archive indexes publicly available filing PDFs, records document titles and dates when verified, and links readers to the official docket. It may not include every entry or later update. Use the court docket to confirm current status and any newer filings.</p>
 </div>
 <p class="timeline-shortcut"><a href="#filings">Browse the 2020–2026 filing archive ↗</a></p>
@@ -495,7 +501,7 @@ Your browser does not support HTML video. <a href="https://resource2.heygen.ai/a
 <h3>Where can I read Big Brothers Big Sisters court filings?</h3>
 <p>Use the <a href="court-filings-index.html">permanent searchable filing index</a> and <a href="court-records.html">court-records guide</a> to read individual archived PDFs. For authoritative docket information, check the <a href="https://www.superiorcourt.maricopa.gov/">Maricopa County Superior Court</a>.</p>
 <h3>What is the latest status of the Arizona case?</h3>
-<p>The archive records filings through October 22, 2026, including contested inactive-calendar matters. A party filing is not a court ruling. See the <a href="big-brothers-big-sisters-lawsuit-status.html">dated case-status guide</a> and verify any later developments on the official docket.</p>
+<p>The archive records filings through October 29, 2026, including contested inactive-calendar matters. A party filing is not a court ruling. See the <a href="big-brothers-big-sisters-lawsuit-status.html">dated case-status guide</a> and verify any later developments on the official docket.</p>
 <h3>How do I research Big Brothers Big Sisters sexual abuse cases?</h3>
 <p>Start with the <a href="big-brothers-big-sisters-sex-abuse-cases.html">public cases and decisions research page</a>. Cases can involve different allegations, jurisdictions, parties, and outcomes. Read each decision independently rather than assuming another case establishes facts in this lawsuit.</p>
 <p><strong>For journalists and researchers:</strong> the <a href="media-research-guide.html">media research guide</a> provides case identifiers and source links; the <a href="case-timeline.html">case timeline</a> helps navigate the record chronologically.</p>
@@ -506,7 +512,7 @@ Your browser does not support HTML video. <a href="https://resource2.heygen.ai/a
 <footer>
 <strong>JOHN C D DOE | CV2020-014920</strong>
 <p>Independent public court-record archive. Not affiliated with the court or any party's legal counsel.</p>
-<p><a class="latest-button" href="court-filings-index.html">View October 22 docket — A113 and A114</a></p><p><a href="./">Main page</a> · <a href="site-map.html">Site map</a> · <a href="https://www.facebook.com/profile.php?id=61595727032916" target="_blank" rel="noopener noreferrer">Facebook archive page</a> · <a href="https://submitpr.org" target="_blank" rel="noopener noreferrer">Press Release by SubmitPR Free</a></p><section id="share-case-archive" aria-labelledby="share-case-title" style="max-width:1100px;margin:24px auto;padding:20px;border:1px solid #b79a60;border-radius:8px;background:#faf6ed;color:#142b3a"><h2 id="share-case-title">Share this public court record archive</h2><p>Help journalists and researchers locate the original filings in JOHN C D DOE v. Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona, CV2020-014920. This is an independent archive, not an official court website.</p><p><button id="shareArchiveNative" type="button" style="padding:11px 16px;margin:4px;border-radius:5px;border:1px solid #8a6c35;background:#102d40;color:white;cursor:pointer">Share case archive</button><button id="copyArchiveLink" type="button" style="padding:11px 16px;margin:4px;border-radius:5px;border:1px solid #8a6c35;background:white;color:#102d40;cursor:pointer">Copy website link</button><a style="display:inline-block;margin:4px;padding:10px" href="media-research-guide.html">Media and research guide →</a></p><p id="archiveShareFeedback" role="status" aria-live="polite"></p></section><script id="archive-share-script">(()=>{const url="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/";const msg=document.getElementById("archiveShareFeedback");document.getElementById("copyArchiveLink")?.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(url);msg.textContent="Website link copied."}catch{msg.textContent="Copy this link: "+url}});document.getElementById("shareArchiveNative")?.addEventListener("click",async()=>{if(navigator.share){try{await navigator.share({title:"JOHN C D DOE v Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona — Public Court Records",text:"Independent public court filing archive for Arizona case CV2020-014920.",url})}catch(e){if(e.name!=="AbortError")msg.textContent="Unable to open sharing. Use Copy website link."}}else{try{await navigator.clipboard.writeText(url);msg.textContent="Sharing is unavailable in this browser. Website link copied."}catch{msg.textContent="Copy this link: "+url}}})})();</script>
+<p><a class="latest-button" href="court-filings-index.html">View the filing index — A113 through A115</a></p><p><a href="./">Main page</a> · <a href="site-map.html">Site map</a> · <a href="https://www.facebook.com/profile.php?id=61595727032916" target="_blank" rel="noopener noreferrer">Facebook archive page</a> · <a href="https://submitpr.org" target="_blank" rel="noopener noreferrer">Press Release by SubmitPR Free</a></p><section id="share-case-archive" aria-labelledby="share-case-title" style="max-width:1100px;margin:24px auto;padding:20px;border:1px solid #b79a60;border-radius:8px;background:#faf6ed;color:#142b3a"><h2 id="share-case-title">Share this public court record archive</h2><p>Help journalists and researchers locate the original filings in JOHN C D DOE v. Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona, CV2020-014920. This is an independent archive, not an official court website.</p><p><button id="shareArchiveNative" type="button" style="padding:11px 16px;margin:4px;border-radius:5px;border:1px solid #8a6c35;background:#102d40;color:white;cursor:pointer">Share case archive</button><button id="copyArchiveLink" type="button" style="padding:11px 16px;margin:4px;border-radius:5px;border:1px solid #8a6c35;background:white;color:#102d40;cursor:pointer">Copy website link</button><a style="display:inline-block;margin:4px;padding:10px" href="media-research-guide.html">Media and research guide →</a></p><p id="archiveShareFeedback" role="status" aria-live="polite"></p></section><script id="archive-share-script">(()=>{const url="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/";const msg=document.getElementById("archiveShareFeedback");document.getElementById("copyArchiveLink")?.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(url);msg.textContent="Website link copied."}catch{msg.textContent="Copy this link: "+url}});document.getElementById("shareArchiveNative")?.addEventListener("click",async()=>{if(navigator.share){try{await navigator.share({title:"JOHN C D DOE v Big Brothers Big Sisters of America and Big Brothers Big Sisters of Central Arizona — Public Court Records",text:"Independent public court filing archive for Arizona case CV2020-014920.",url})}catch(e){if(e.name!=="AbortError")msg.textContent="Unable to open sharing. Use Copy website link."}}else{try{await navigator.clipboard.writeText(url);msg.textContent="Sharing is unavailable in this browser. Website link copied."}catch{msg.textContent="Copy this link: "+url}}})})();</script>
 </footer>
 
 
@@ -626,6 +632,7 @@ a111|10/13/2026 - RES - Response - PART 1 OF 1 - ID 22988135|10/13/2026|0|Respon
 a112|10/14/2026 - RES - Response - PART 1 OF 1 - ID 22998618|10/14/2026|0|Response
 a113|10/22/2026 - REL - REPLY - PART 1 OF 1 - ID 23046642|10/22/2026|0|Reply
 a114|10/22/2026 - MCC - Mot/Cont On Inactive Calendar - PART 1 OF 1 - ID 23050810|10/22/2026|0|Motion
+a115|MINUTE ENTRY — Judge Christopher Whitten ruling on motion to strike (dated October 27, 2026)|10/29/2026|0|Order
 `;
 
 const docs=raw.trim().split("\n").map((line,i)=>{
@@ -655,7 +662,7 @@ return text.includes(q)&&(!category.value||d.type===category.value)&&(!year.valu
 });
 
 const mode=sort.value;
-if(mode==="number-desc")filtered.sort((a,b)=>((a.id==="a113")?0:(a.id==="a114")?1:1000-Number(a.id.slice(1)))-((b.id==="a113")?0:(b.id==="a114")?1:1000-Number(b.id.slice(1))));
+if(mode==="number-desc")filtered.sort((a,b)=>Number(b.id.slice(1))-Number(a.id.slice(1)));
 else if(mode==="number-asc")filtered.sort((a,b)=>Number(a.id.slice(1))-Number(b.id.slice(1)));
 else if(mode==="date-desc")filtered.sort((a,b)=>(b.timestamp||0)-(a.timestamp||0)||(a.id==="a113"?-1:b.id==="a113"?1:Number(b.id.slice(1))-Number(a.id.slice(1))));
 else if(mode==="date-asc")filtered.sort((a,b)=>(a.timestamp||Infinity)-(b.timestamp||Infinity)||Number(a.id.slice(1))-Number(b.id.slice(1)));
@@ -677,7 +684,7 @@ const info=document.createElement("div");
 const title=document.createElement("h3");
 title.textContent=d.title;
 const meta=document.createElement("small");
-meta.textContent=d.id==='a113'?`${d.date} | ${d.type} | 5 pages | Court-stamped | Filing ID 23046642`:d.id==='a114'?`${d.date} | ${d.type} | 2 pages | Court-stamped | Filing ID 23050810`:d.id==='a112'?`${d.date} | ${d.type} | 3 pages | Filing ID 22998618`:d.id==='a111'?`${d.date} | ${d.type} | 13 pages | Filing ID 22988135`:`${d.date} | ${d.type} | Starts at compiled-record page ${d.page}`;
+meta.textContent=d.id==='a115'?`${d.date} | ${d.type} | 2 pages | Court-stamped`:d.id==='a113'?`${d.date} | ${d.type} | 5 pages | Court-stamped | Filing ID 23046642`:d.id==='a114'?`${d.date} | ${d.type} | 2 pages | Court-stamped | Filing ID 23050810`:d.id==='a112'?`${d.date} | ${d.type} | 3 pages | Filing ID 22998618`:d.id==='a111'?`${d.date} | ${d.type} | 13 pages | Filing ID 22988135`:`${d.date} | ${d.type} | Starts at compiled-record page ${d.page}`;
 info.append(title,meta);
 
 const actions=document.createElement("div");
@@ -685,7 +692,7 @@ actions.className="actions";
 
 const pdf=document.createElement("a");
 pdf.className="pdf";
-pdf.href=d.id==='a113'?'a113.pdf':d.id==='a114'?'a114.pdf':d.id==='a112'?'a112.pdf':d.id==='a111'?'a111.pdf':`filings/${d.id}.pdf`;
+pdf.href=d.id==='a115'?'a115.pdf':d.id==='a113'?'a113.pdf':d.id==='a114'?'a114.pdf':d.id==='a112'?'a112.pdf':d.id==='a111'?'a111.pdf':`filings/${d.id}.pdf`;
 
 pdf.textContent="Open full PDF (all pages) ↗";
 pdf.target="_blank";
