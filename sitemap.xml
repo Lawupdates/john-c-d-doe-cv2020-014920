@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lawupdates.github.io/john-c-d-doe-cv2020-014920/</loc>
   </url>
@@ -399,8 +399,14 @@
   <url>
     <loc>https://lawupdates.github.io/john-c-d-doe-cv2020-014920/big-brothers-big-sisters-lawsuit-court-records-guide.html</loc>
   </url>
-  <url><loc>https://lawupdates.github.io/john-c-d-doe-cv2020-014920/case-brief.html</loc></url>
+  <url><loc>https://lawupdates.github.io/john-c-d-doe-cv2020-014920/case-brief.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/case-brief.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/resumen-del-caso.html" />
+  </url>
   <url><loc>https://lawupdates.github.io/john-c-d-doe-cv2020-014920/what-the-court-record-shows.html</loc></url>
   <url><loc>https://lawupdates.github.io/john-c-d-doe-cv2020-014920/citations-and-corrections.html</loc></url>
-  <url><loc>https://lawupdates.github.io/john-c-d-doe-cv2020-014920/resumen-del-caso.html</loc></url>
+  <url><loc>https://lawupdates.github.io/john-c-d-doe-cv2020-014920/resumen-del-caso.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/case-brief.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lawupdates.github.io/john-c-d-doe-cv2020-014920/resumen-del-caso.html" />
+  </url>
 </urlset>
