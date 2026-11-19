@@ -1,0 +1,25 @@
+name: Apply sitewide accessibility and counting
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/install-site-tools.py
+      - .github/workflows/install-site-tools.yml
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update every archive HTML page
+        run: python3 scripts/install-site-tools.py
+      - name: Commit new page scripts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html'
+          if ! git diff --cached --quiet; then
+            git commit -m "Install pageview and accessibility scripts on remaining pages"
+            git push
+          fi
