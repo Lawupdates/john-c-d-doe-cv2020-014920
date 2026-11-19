@@ -2,7 +2,7 @@
   min-height: min(72vh, 720px);
   display: grid;
   place-items: center;
-  background-image: linear-gradient(110deg, #0e0e0ff5, #242426bc 68%, #101011e8), image-set(url("hero-court-archive.jpg") 1x, url("hero-court-archive.png.png") 2x);
+  background-image: linear-gradient(110deg, #242426ed, #3b3b3db0 68%, #272729df), image-set(url("hero-court-archive.jpg") 1x, url("hero-court-archive.png.png") 2x);
   background-size: cover;
   background-position: center;
   border-bottom: 5px solid #bb8942;
@@ -10,7 +10,7 @@
 }
 .record-hero .case-caption {
   font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-  font-size: calc(21px + 1pt);
+  font-size: 25px;
   line-height: 1.3;
   letter-spacing: 0.015em;
   -webkit-text-stroke: 0.75px #181109;
@@ -22,10 +22,15 @@
     -webkit-text-stroke-width: 0.6px;
   }
 }
-.record-hero .kicker { color: #ffe5af; font-size: 6px; }
+.record-hero .kicker {
+  color: #ffe5af;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  line-height: 1.45;
+}
 .record-hero .button { margin: 5px; }
 #october-29-ruling {
-  background: #171719 !important;
+  background: #29292c !important;
   border: 1px solid #735333 !important;
   border-left: 6px solid #e5ad63 !important;
   color: #faf5ec !important;
@@ -45,7 +50,7 @@ body {
   background: #efebe2;
 }
 body > nav, body > footer {
-  background: #141416;
+  background: #272729;
   border-color: #a5773c;
 }
 .record-hero .case-caption {
@@ -73,7 +78,7 @@ body > nav, body > footer {
   background: #38312a;
 }
 .editorial-intro {
-  background: #19191b;
+  background: #2a2a2c;
   border-top-color: #ca9c59;
 }
 .editorial-intro .editorial-actions a {
