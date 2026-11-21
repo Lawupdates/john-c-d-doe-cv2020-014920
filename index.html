@@ -265,6 +265,52 @@ footer .latest-button{display:inline-block;padding:10px 16px;background:#e9c86f;
 <link rel="stylesheet" href="record-update.css?v=21px">
 <script src="archive-updates.js" defer></script>
 <script src="site-tools.js" defer></script>
+<style id="archive-editorial-motion">
+
+/* Feature the archive’s main action and latest filing using its existing palette. */
+html:not(.jcd-high-contrast) .record-hero {
+  border-bottom-width: 4px;
+  background-image:
+    radial-gradient(ellipse at 50% 46%, #071722eb 0%, #0a202bda 33%, #0a202b78 69%, #07172245 100%),
+    linear-gradient(0deg, #071722a6, transparent 60%),
+    url('hero-court-archive.jpg');
+}
+html:not(.jcd-high-contrast) .record-hero a[href="case-brief.html"] {
+  border-radius: 6px;
+  box-shadow: inset 0 1px #fff7d1, 0 0 0 1px #cc9a43, 0 8px 24px #0006;
+}
+html:not(.jcd-high-contrast) #latest {
+  background: linear-gradient(105deg, #fffcf4, #f7edda);
+  border-top: 3px solid var(--brass);
+}
+html:not(.jcd-high-contrast) nav[aria-label="Primary navigation"] a:hover,
+html:not(.jcd-high-contrast) nav[aria-label="Primary navigation"] a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--brass);
+  text-underline-offset: .32em;
+  text-decoration-thickness: 2px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.jcd-reduced-motion) .record-hero .hero-inner {
+    animation: archive-hero-arrival 470ms ease-out both;
+  }
+  @supports (animation-timeline: view()) {
+    html:not(.jcd-reduced-motion) :is(#latest, .stats, .resource-card) {
+      animation: archive-section-arrival linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 28%;
+    }
+  }
+}
+@keyframes archive-hero-arrival {
+  from { opacity: .87; translate: 0 9px; }
+  to { opacity: 1; translate: 0 0; }
+}
+@keyframes archive-section-arrival {
+  from { opacity: .95; }
+  to { opacity: 1; }
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
