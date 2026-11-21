@@ -45,6 +45,54 @@ html.jcd-high-contrast a:not(.button){color:#003c82!important;text-decoration:un
 html.jcd-high-contrast button,html.jcd-high-contrast .button{background:#101010!important;color:#fff!important;border-color:#101010!important}
 html.jcd-reduced-motion *,html.jcd-reduced-motion *::before,html.jcd-reduced-motion *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
 @media(prefers-reduced-motion:reduce){#jcd-accessibility *,#jcd-owner-panel *{animation:none!important;transition:none!important}}
+
+/* Responsive feedback for archive navigation and controls. */
+:where(.button,.latest-button,.site-language-button,#archiveDock button,.filing-search-actions button) {
+  transition: translate 170ms ease-out, box-shadow 170ms ease-out, background-color 170ms ease-out;
+}
+:where(.resource-card) {
+  transition: translate 200ms ease-out, box-shadow 200ms ease-out;
+}
+:not(.jcd-high-contrast) :where(.button,.latest-button,.site-language-button,#archiveDock button,.filing-search-actions button):focus-visible {
+  outline: 2px solid #a47524;
+  outline-offset: 3px;
+}
+:not(.jcd-high-contrast) :where(.resource-card):focus-within {
+  box-shadow: inset 3px 0 #b88b37, 0 6px 18px #102b4018;
+}
+@media (hover: hover) and (pointer: fine) {
+  html:not(.jcd-high-contrast) :where(.button,.latest-button,.site-language-button,#archiveDock button,.filing-search-actions button):hover {
+    box-shadow: 0 0 0 2px #cb9b48, 0 6px 14px #102b4030;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @media (hover: hover) and (pointer: fine) {
+    html:not(.jcd-reduced-motion) :where(.button,.latest-button,.site-language-button,#archiveDock button,.filing-search-actions button):hover {
+      translate: 0 -2px;
+    }
+    html:not(.jcd-reduced-motion,.jcd-high-contrast) .resource-card:hover {
+      translate: 0 -3px;
+      box-shadow: inset 3px 0 #b88b37, 0 8px 20px #102b4022;
+    }
+  }
+  html:not(.jcd-reduced-motion) :where(.button,.latest-button,.site-language-button,#archiveDock button,.filing-search-actions button):active {
+    translate: 0 1px;
+  }
+  html:not(.jcd-reduced-motion) :where(#archiveToolsDialog,#archiveReaderDialog)[open],
+  html:not(.jcd-reduced-motion) :where(#jcd-accessibility-panel,#jcd-owner-panel):not([hidden]) {
+    animation: jcd-panel-enter 190ms ease-out both;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :where(.button,.latest-button,.site-language-button,#archiveDock button,.filing-search-actions button,.resource-card) {
+    transition: none;
+  }
+}
+@keyframes jcd-panel-enter {
+  from { opacity: .55; translate: 0 5px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
 @media(max-width:600px){#jcd-accessibility{bottom:6px;left:6px}#jcd-accessibility-panel{max-height:60vh}#jcd-owner-panel{top:110px}#jcd-owner-stats-button{margin:5px 0}}
 `;
     document.head.appendChild(sheet);
