@@ -329,6 +329,26 @@ html:not(.jcd-high-contrast) nav[aria-label="Primary navigation"] a:focus-visibl
   to { opacity: 1; }
 }
 </style>
+<style id="archive-formal-design">
+html:not(.jcd-high-contrast) .record-hero {
+  background-image: linear-gradient(90deg,#06131fef,#0c2033c9 56%,#0c203379),url('hero-court-archive.jpg');
+  border-bottom: 5px solid #ad8750;
+}
+.record-hero .case-caption {font-size:clamp(2.25rem,5.2vw,4.25rem);line-height:1.03;letter-spacing:-.035em}
+html:not(.jcd-high-contrast) .record-hero .case-name {color:#f8eddc}
+.record-hero .case-name {font-size:clamp(1.15rem,2.8vw,2.05rem);line-height:1.24;letter-spacing:0}
+html:not(.jcd-high-contrast) nav[aria-label="Primary navigation"] {background:#10243a;border-bottom:3px solid #ad8750}
+html:not(.jcd-high-contrast) nav[aria-label="Primary navigation"] a {color:#fff8ea}
+html:not(.jcd-high-contrast) nav[aria-label="Primary navigation"] a:is(:hover,:focus-visible) {color:#ffe2a6}
+html:not(.jcd-high-contrast) :is(#october-29-ruling,#latest) {background:#fffdf8;border:1px solid #ad8750;border-left:6px solid #7a2d39}
+html:not(.jcd-high-contrast) .doc {border-color:#b9aa94;border-left-color:#ad8750}
+.doc h3 {font-size:clamp(1rem,1.25vw,1.13rem)}
+@media (max-width:600px) {
+  .record-hero .case-caption {font-size:clamp(2rem,9vw,3rem)}
+  .record-hero .case-name {font-size:clamp(1.05rem,4.6vw,1.45rem)}
+  .record-hero .button {min-height:44px}
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
