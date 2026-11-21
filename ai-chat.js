@@ -1,6 +1,6 @@
 "use strict";
 const $ = id => document.getElementById(id);
-const form=$("chat-form"), input=$("question"), send=$("send"), googleButton=$("google-ai"), reset=$("reset"), progress=$("progress"), status=$("status"), messagesBox=$("conversation");
+const form=$("form"), input=$("question"), send=$("send"), googleButton=$("google-ai"), reset=$("reset"), progress=$("progress"), status=$("status"), messagesBox=$("conversation");
 const modelName="HuggingFaceTB/SmolLM2-135M-Instruct";
 const aiGuidance="You are a friendly general-purpose assistant for a public court-record archive. Answer everyday questions normally. Reply in the language of the user if supported. You have no direct access to the live internet or the full court PDFs. Do not claim to have researched the docket or count lawsuits without a verified dataset. Do not invent citations. Explain legal terms generally without personalized legal advice.";
 let googleSession=null, cpuGenerator=null, conversation=[{role:"system",content:aiGuidance}], busy=false, mode="auto";
@@ -8,7 +8,7 @@ function updateStatus(s){status.textContent=s;}
 function setBusy(value){busy=value;send.disabled=value;input.disabled=value;reset.disabled=value;googleButton.disabled=value||!("LanguageModel" in window);}
 function bubble(who,content){const el=document.createElement("div");el.className="msg "+(who==="user"?"user":"ai");const label=document.createElement("strong");label.textContent=who==="user"?"You":"AI assistant";const p=document.createElement("p");p.textContent=content;el.append(label,p);messagesBox.append(el);messagesBox.scrollTop=messagesBox.scrollHeight;return p;}
 function directAnswer(question){
- const s=question.trim().toLowerCase();
+ const s=question.trim().toLowerCase().replace(/\b(?:casae|casaes|caes)\b/g,"cases");
  if(/^(what(?:'s| is)? (?:the )?(?:today'?s? )?(?:date|day|time)|what (?:time|day|date) is it|current date|today'?s? date|que fecha es hoy|qué fecha es hoy|que hora es|qué hora es|fecha de hoy)[?!.\s]*$/.test(s)){
   const isSpanish=/^(que|qué|fecha)/.test(s);
   const wantTime=/time|hora/.test(s);
@@ -64,16 +64,17 @@ function extract(result){
 }
 async function answerWithAI(question){
  if(mode==="google"&&googleSession){
-  return String(await googleSession.prompt(question));
+  try{return String(await googleSession.prompt(question));}
+  catch(err){googleSession=null;mode="auto";updateStatus("Google AI stopped responding. Switching to the free browser model…");}
  }
  if(!cpuGenerator){
-  if("LanguageModel" in window){
+  if("LanguageModel" in window && !googleSession && !cpuGenerator && mode!=="cpu"){
    try{await prepareGoogle();return String(await googleSession.prompt(question));}
    catch(err){updateStatus("Google AI unavailable here. Switching to the free browser model…");googleSession=null;mode="auto";}
   }
   await prepareCPU();
  }
- const turns=conversation.slice(-9);
+ const turns=[conversation[0],...conversation.slice(1).slice(-8),{role:"user",content:question}];
  const result=await cpuGenerator(turns,{max_new_tokens:220,do_sample:false,return_full_text:false});
  return extract(result);
 }
