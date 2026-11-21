@@ -47,17 +47,17 @@ html.jcd-reduced-motion *,html.jcd-reduced-motion *::before,html.jcd-reduced-mot
 @media(prefers-reduced-motion:reduce){#jcd-accessibility *,#jcd-owner-panel *{animation:none!important;transition:none!important}}
 
 /* Responsive feedback for archive navigation and controls. */
-:where(.button,.latest-button,.site-language-button,#archiveDock button,.filing-search-actions button) {
-  transition: translate 170ms ease-out, box-shadow 170ms ease-out, background-color 170ms ease-out;
+html .button, html .latest-button, html .site-language-button, html #archiveDock button, html .filing-search-actions button {
+  transition: translate 170ms ease-out, transform 170ms ease-out, box-shadow 170ms ease-out, background-color 170ms ease-out, filter 170ms ease-out;
 }
-:where(.resource-card) {
-  transition: translate 200ms ease-out, box-shadow 200ms ease-out;
+html .resource-card {
+  transition: translate 200ms ease-out, transform 200ms ease-out, box-shadow 200ms ease-out;
 }
-:not(.jcd-high-contrast) :where(.button,.latest-button,.site-language-button,#archiveDock button,.filing-search-actions button):focus-visible {
+html:not(.jcd-high-contrast) :where(.button,.latest-button,.site-language-button,#archiveDock button,.filing-search-actions button):focus-visible {
   outline: 2px solid #a47524;
   outline-offset: 3px;
 }
-:not(.jcd-high-contrast) :where(.resource-card):focus-within {
+html:not(.jcd-high-contrast) :where(.resource-card):focus-within {
   box-shadow: inset 3px 0 #b88b37, 0 6px 18px #102b4018;
 }
 @media (hover: hover) and (pointer: fine) {
@@ -85,7 +85,7 @@ html.jcd-reduced-motion *,html.jcd-reduced-motion *::before,html.jcd-reduced-mot
 }
 @media (prefers-reduced-motion: reduce) {
   :where(.button,.latest-button,.site-language-button,#archiveDock button,.filing-search-actions button,.resource-card) {
-    transition: none;
+    transition: none !important;
   }
 }
 @keyframes jcd-panel-enter {
