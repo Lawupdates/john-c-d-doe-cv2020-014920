@@ -304,7 +304,7 @@ html:not(.jcd-high-contrast) nav[aria-label="Primary navigation"] a:focus-visibl
     .resource-grid { perspective: 1250px; }
   }
   @supports (animation-timeline: view()) {
-    html:not(.jcd-reduced-motion) :is(#latest, .stats, .resource-card) {
+    html:not(.jcd-reduced-motion) :where(#latest, .stats, .resource-card) {
       animation: archive-section-arrival linear both;
       animation-timeline: view();
       animation-range: entry 0% entry 28%;
